@@ -1508,6 +1508,7 @@ h1, h2{
   height: 100%;
   width: 100%;
   transition: all 0.4s ease;
+  max-height: 276px;
 }
 .latest-news-area .single-news .image .meta-details {
   display: inline-block;
