@@ -490,7 +490,6 @@ p {
   align-items: center;
   padding: 11px 16px;
   color: var(--dark-1);
-  text-transform: capitalize;
   position: relative;
   border-radius: 5px;
   font-weight: 500;
@@ -822,7 +821,6 @@ p {
   font-weight: 500;
   padding: 8px 0;
   color: var(--dark-3);
-  text-transform: capitalize;
   position: relative;
   border-radius: 5px;
   -webkit-transition: all 0.3s ease-out 0s;
@@ -1504,15 +1502,20 @@ h1, h2{
   border-radius: 4px;
   overflow: hidden;
 }
+.latest-news-area .single-news .image a {
+  display: block;
+}
 .latest-news-area .single-news .image img {
-  height: 100%;
   width: 100%;
-  transition: all 0.4s ease;
-  max-height: 276px;
+  height: 276px;      /* Set your desired height */
+  object-fit: cover;  /* Crop and zoom to fill the box without stretching */
+  /* Or use 'object-fit: fill;' if you want to stretch without preserving aspect ratio */
+  display: block;     /* Remove inline spacing */
+
 }
 .latest-news-area .single-news .image .meta-details {
   display: inline-block;
-  padding: 6px 15px 6px 7px;
+  padding: 6px 15px 8px 7px;
   border-radius: 30px;
   background-color: var(--primary);
   position: absolute;
@@ -1529,7 +1532,7 @@ h1, h2{
   color: var(--white);
   display: inline-block;
   margin-left: 10px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
 }
 .latest-news-area .single-news .content-body .title {
@@ -1848,7 +1851,7 @@ h1, h2{
 .footer-eleven .f-link li:last-child {
   margin: 0;
 }
-.footer-eleven .f-link li a {
+.footer-eleven .f-link li a, .contact-section a {
   color: var(--dark-3);
   -webkit-transition: all 0.4s ease-out 0s;
   -moz-transition: all 0.4s ease-out 0s;
@@ -1856,7 +1859,7 @@ h1, h2{
   -o-transition: all 0.4s ease-out 0s;
   transition: all 0.4s ease-out 0s;
 }
-.footer-eleven .f-link li a:hover {
+.footer-eleven .f-link li a:hover, .contact-section a:hover {
   color: var(--primary);
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 1400px) {
@@ -1919,4 +1922,8 @@ h1, h2{
 .leaf-logo {
   max-width: 40px;
   margin-top: -6px;
+}
+
+.footer-eleven .f-link li a {
+  co
 }
