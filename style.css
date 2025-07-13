@@ -1363,6 +1363,7 @@ h1, h2{
 }
 .pricing-style-fourteen .price {
   padding-top: 30px;
+  padding-bottom: 30px;
 }
 .pricing-style-fourteen .amount {
   font-weight: 600;
@@ -1851,7 +1852,10 @@ h1, h2{
 .footer-eleven .f-link li:last-child {
   margin: 0;
 }
-.footer-eleven .f-link li a, .contact-section a {
+.about-area a {
+  color: var(--primary);
+}
+.footer-eleven .f-link li a, .contact-section a  {
   color: var(--dark-3);
   -webkit-transition: all 0.4s ease-out 0s;
   -moz-transition: all 0.4s ease-out 0s;
@@ -1917,6 +1921,7 @@ h1, h2{
   font-family: var(--font-family-header);
   color: var(--dark-1);
   font-size: 2.25rem;
+  font-weight: 700;
 }
 
 .leaf-logo {
