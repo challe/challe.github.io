@@ -664,7 +664,7 @@
           <div class="inner-content">
             <h2>Varför jag samlar på och odlar ovanliga Saintpaulior</h2>
             <p>
-              Jag gillar växter som inte ser ut som alla andra. Saintpaulior har blivit en favorit – delvis för att de är så variationsrika, men också för att många fina sorter är svåra att hitta. Det är just de jag vill göra tillgängliga.
+              Jag gillar växter som inte ser ut som alla andra. Saintpaulior har blivit en favorit - delvis för att de är så variationsrika, men också för att många fina sorter är svåra att hitta. Det är just de jag vill göra tillgängliga.
             </p>
             <!--
             <div class="light-rounded-buttons">
@@ -829,6 +829,28 @@
       link.href = `mailto:${user}@${domain}`;
       link.textContent = `${user}@${domain}`;
     });
+    
+     document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll('.page-scroll');
+        const navbarCollapse = document.getElementById('navbarNine');
+        const toggleButton = document.querySelector('.navbar-toggler');
+
+        navLinks.forEach(link => {
+          link.addEventListener('click', function () {
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+              toggle: false
+            });
+            bsCollapse.hide();
+
+            // Reset toggle button state
+            if (toggleButton) {
+              toggleButton.setAttribute('aria-expanded', 'false');
+              toggleButton.classList.remove('active'); // if Bootstrap uses this
+              // optionally remove any custom 'active' class you might be using
+            }
+          });
+        });
+      });
   </script>
 </body>
 

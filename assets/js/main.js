@@ -53,7 +53,7 @@
             e.preventDefault();
             document.querySelector(elem.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth',
-                offsetTop: 1 - 60,
+                offsetTop: 1 - 120,
             });
         });
     });

@@ -1929,6 +1929,6 @@ h1, h2{
   margin-top: -6px;
 }
 
-.footer-eleven .f-link li a {
-  co
+* {
+  scroll-margin-top: 50px;
 }
