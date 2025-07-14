@@ -1478,86 +1478,6 @@ h1, h2{
   color: var(--white);
 }
 
-
-
-/*===== latest-news-area =====*/
-.latest-news-area {
-  background: var(--white);
-  padding: 100px 0;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .latest-news-area {
-    padding: 80px;
-  }
-}
-@media (max-width: 767px) {
-  .latest-news-area {
-    padding: 60px 0;
-  }
-}
-.latest-news-area .single-news {
-  margin-top: 30px;
-}
-.latest-news-area .single-news .image {
-  position: relative;
-  border-radius: 4px;
-  overflow: hidden;
-}
-.latest-news-area .single-news .image a {
-  display: block;
-}
-.latest-news-area .single-news .image img {
-  width: 100%;
-  height: 276px;      /* Set your desired height */
-  object-fit: cover;  /* Crop and zoom to fill the box without stretching */
-  /* Or use 'object-fit: fill;' if you want to stretch without preserving aspect ratio */
-  display: block;     /* Remove inline spacing */
-
-}
-.latest-news-area .single-news .image .meta-details {
-  display: inline-block;
-  padding: 6px 15px 8px 7px;
-  border-radius: 30px;
-  background-color: var(--primary);
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-}
-.latest-news-area .single-news .image .meta-details img {
-  height: 28px;
-  width: 28px;
-  border-radius: 50%;
-  display: inline-block;
-}
-.latest-news-area .single-news .image .meta-details span {
-  color: var(--white);
-  display: inline-block;
-  margin-left: 10px;
-  font-size: 12px;
-  font-weight: 500;
-}
-.latest-news-area .single-news .content-body .title {
-  margin: 30px 0 20px 0;
-}
-.latest-news-area .single-news .content-body .title a {
-  color: var(--black);
-  -webkit-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
-}
-.latest-news-area .single-news .content-body .title a:hover {
-  color: var(--primary);
-}
-.latest-news-area .single-news .content-body p {
-  color: var(--dark-3);
-}
-.latest-news-area .single-news:hover .image .thumb {
-  transform: scale(1.1) rotate(1deg);
-}
-
-
 /*======================================
     Brand CSS
 ========================================*/
@@ -1931,4 +1851,211 @@ h1, h2{
 
 * {
   scroll-margin-top: 50px;
+}
+
+
+
+
+
+/*===== portfolio THREE =====*/
+.portfolio-three {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .portfolio-three {
+    padding: 80px;
+  }
+}
+@media (max-width: 767px) {
+  .portfolio-three {
+    padding: 60px 0;
+  }
+}
+.portfolio-three .portfolio-menu {
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .portfolio-three .portfolio-menu {
+    margin-bottom: 15px;
+  }
+}
+.portfolio-three .portfolio-menu button {
+  border: none;
+  background: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dark-3);
+  line-height: 48px;
+  padding: 0 30px;
+  position: relative;
+  display: inline-block;
+  z-index: 5;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  cursor: pointer;
+  margin: 0 2px;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .portfolio-three .portfolio-menu button {
+    font-size: 14px;
+    padding: 0 26px;
+  }
+}
+@media (max-width: 767px) {
+  .portfolio-three .portfolio-menu button {
+    font-size: 14px;
+    padding: 0 22px;
+    line-height: 42px;
+  }
+}
+.portfolio-three .portfolio-menu button::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary);
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  border-radius: 4px;
+}
+.portfolio-three .portfolio-menu button:hover, .portfolio-three .portfolio-menu button.active {
+  color: var(--primary);
+}
+.portfolio-three .portfolio-menu button:hover::before, .portfolio-three .portfolio-menu button.active::before {
+  opacity: 1;
+}
+.portfolio-three .hide {
+  display: none;
+}
+.portfolio-three .show {
+  display: block;
+}
+
+.portfolio-style-three {
+  margin-top: 30px;
+}
+.portfolio-style-three .portfolio-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.portfolio-style-three .portfolio-image img {
+  width: 100%;
+  height: 276px;      /* Set your desired height */
+  object-fit: cover;  /* Crop and zoom to fill the box without stretching */
+  /* Or use 'object-fit: fill;' if you want to stretch without preserving aspect ratio */
+  display: block;     /* Remove inline spacing */
+}
+.portfolio-style-three .portfolio-image img {
+  width: 100%;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.portfolio-style-three .portfolio-image .portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s ease-out 0s;
+  -moz-transition: all 0.5s ease-out 0s;
+  -ms-transition: all 0.5s ease-out 0s;
+  -o-transition: all 0.5s ease-out 0s;
+  transition: all 0.5s ease-out 0s;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  transform: scale(0.95);
+  border-radius: 8px;
+}
+.portfolio-style-three .portfolio-image .portfolio-content {
+  padding: 16px;
+}
+.portfolio-style-three .portfolio-image .portfolio-icon {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+}
+.portfolio-style-three .portfolio-image .portfolio-icon a {
+  font-size: 28px;
+  color: var(--white);
+  position: relative;
+  z-index: 5;
+  line-height: 60px;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  line-height: 60px;
+  background-color: var(--primary);
+  border-radius: 8px;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.portfolio-style-three .portfolio-image .portfolio-icon a:hover {
+  background-color: var(--primary-dark);
+}
+.portfolio-style-three .portfolio-text {
+  padding-top: 16px;
+}
+.portfolio-style-three .portfolio-title a {
+  color: var(--black);
+  font-size: 24px;
+  line-height: 30px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .portfolio-style-three .portfolio-title a {
+    font-size: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .portfolio-style-three .portfolio-title a {
+    font-size: 20px;
+  }
+}
+.portfolio-style-three .text {
+  color: var(--black);
+  margin-top: 8px;
+}
+.portfolio-style-three:hover .portfolio-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.portfolio-three .portfolio-image .meta-details {
+  display: inline-block;
+  padding: 6px 15px 8px 7px;
+  border-radius: 30px;
+  background-color: var(--primary);
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+.portfolio-three .portfolio-image .meta-details span {
+  color: var(--white);
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: 500;
 }
