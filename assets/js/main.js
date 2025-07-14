@@ -156,7 +156,7 @@
         },
         {
           "title": "Kleopatra",
-          "description": "Stora, dubbla stjärnblommor med lila kant och blå stänk och strimmor i kontrastfärg. Mellangrönt, slätt bladverk.",
+          "description": "Stora, dubbla stjärnblommor med lila kant, blått stänk och strimmor i kontrastfärg. Mellangrönt, slätt bladverk.",
           "imagePath": "assets/images/blog/kleopatra.jpg",
           "category": "premium"
         },
