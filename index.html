@@ -463,48 +463,87 @@
       <div class="row">
         <div class="col-xl-4">
           <div class="contact-item-wrapper">
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="lni lni-phone"></i>
+            <div class="row">
+              <div class="col-12 col-md-6 col-xl-12">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="lni lni-phone"></i>
+                  </div>
+                  <div class="contact-content">
+                    <h4>Kontaktuppgifter</h4>
+                    <p>072 212 17 24</p>
+                    <p><a id="email-link" href="#" rel="nofollow"></a></p>
+                  </div>
+                </div>
               </div>
-              <div class="contact-content">
-                <h4>Kontaktuppgifter</h4>
-                <p>072 212 17 24</p>
-                <p><a id="email-link" href="#" rel="nofollow"></a></p>
+              <div class="col-12 col-md-6 col-xl-12">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="lni lni-map-marker"></i>
+                  </div>
+                  <div class="contact-content">
+                    <h4>Adress</h4>
+                    <p>Åkre 103</p>
+                    <p>82493 Hudiksvall</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-xl-12">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="lni lni-alarm-clock"></i>
+                  </div>
+                  <div class="contact-content">
+                    <h4>Öppettider</h4>
+                    <p>Alla dagar: 08:00 - 17:00</p>
+                    <p>&nbsp;</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-xl-4">
-          <div class="contact-item-wrapper">
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="lni lni-map-marker"></i>
-              </div>
-              <div class="contact-content">
-                <h4>Adress</h4>
-                <p>Åkre 103</p>
-                <p>82493 Hudiksvall</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4">
-          <div class="contact-item-wrapper">
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="lni lni-alarm-clock"></i>
-              </div>
-              <div class="contact-content">
-                <h4>Öppettider</h4>
-                <p>Alla dagar: 08:00 - 17:00</p>
-                <p>&nbsp;</p>
+        <div class="col-xl-8">
+          <div class="contact-form-wrapper">
+            <div class="row">
+              <div class="col-xl-10 col-lg-8 mx-auto">
+                <div class="section-title text-center">
+                  <span>Hör av dig</span>
+                  <h2>
+                    Intresserad av sticklingar?
+                  </h2>
+                  <p>
+                    Skicka ett meddelande med vilka sorter du är intresserad av, så svarar jag så snart jag kan. Sticklingarna hämtas hemma hos mig i Rogsta, Hudiksvall.
+                  </p>
+                </div>
               </div>
             </div>
+            <form action="#" class="contact-form">
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="name" id="name" placeholder="Namn" required="">
+                </div>
+                <div class="col-md-6">
+                  <input type="email" name="email" id="email" placeholder="E-post" required="">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <textarea name="message" id="message" placeholder="Meddelande" rows="5"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="button text-center rounded-buttons">
+                    <button type="submit" class="btn primary-btn rounded-full">
+                      Skicka meddelande
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
-        
-        
       </div>
     </div>
   </section>
@@ -557,6 +596,7 @@
   </a>
 
   <!--====== js ======-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/tiny-slider.js"></script>

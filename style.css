@@ -1409,9 +1409,6 @@ h1, h2{
   color: var(--dark-3);
 }
 
-
-
-
 /* ===== Buttons Css ===== */
 .call-action .inner-content .light-rounded-buttons .primary-btn-outline {
   border-color: var(--primary);
@@ -1697,7 +1694,7 @@ h1, h2{
   border-radius: 18px;
 }
 .map-style-9 {
-  margin-top: 100px;
+  margin-top: -75px;
 }
 
 
@@ -1852,10 +1849,6 @@ h1, h2{
 * {
   scroll-margin-top: 50px;
 }
-
-
-
-
 
 /*===== portfolio THREE =====*/
 .portfolio-three {
@@ -2058,4 +2051,44 @@ h1, h2{
   margin-left: 10px;
   font-size: 12px;
   font-weight: 500;
+}
+
+/* Contact form alert styling */
+.contact-alert {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: slideInFromTop 0.3s ease-out;
+}
+
+.contact-alert.alert-success {
+  background-color: var(--success-light);
+  color: var(--success-dark);
+  border-left: 4px solid var(--success);
+}
+
+.contact-alert .lni {
+  font-size: 18px;
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button loading state */
+.contact-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.contact-form .spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
 }
