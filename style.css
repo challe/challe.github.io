@@ -1769,7 +1769,7 @@ h1, h2{
 .footer-eleven .f-link li:last-child {
   margin: 0;
 }
-.about-area a {
+.about-area a.instagram-link {
   color: var(--primary);
 }
 .footer-eleven .f-link li a, .contact-section a  {
@@ -2091,4 +2091,8 @@ h1, h2{
 .contact-form .spinner-border-sm {
   width: 1rem;
   height: 1rem;
+}
+
+.care-content p {
+  margin-bottom: 20px;
 }
