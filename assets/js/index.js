@@ -66,7 +66,7 @@
                 "category": "premium"
             },
             {
-                "title": "Glaspärlespelet",
+                "title": "Pearl Game",
                 "description": "Ett stort antal enkla vita blommor med ljusblå kant och öga. Blommar rikligt och länge. Bladen är ljusgröna med brokiga färger.",
                 "imagePath": "assets/images/blog/biser.jpg",
                 "category": "premium"
@@ -90,7 +90,7 @@
                 "category": "premium"
             },
             {
-                "title": "Red summer",
+                "title": "Red Summer",
                 "description": "Halvdubbla röda stjärnblommor med vågiga, vita kanter som varierar i bredd. Mellangrönt, snäckkantat bladverk.",
                 "imagePath": "assets/images/blog/redsummer.jpg",
                 "category": "exklusiv"
@@ -102,7 +102,7 @@
                 "category": "exklusiv"
             },
             {
-                "title": "Min blåögda flicka",
+                "title": "My Blue-Eyed Girl",
                 "description": "Dubbla vita blommor med vacker form och mörkblå mitt, yttre kronblad med grön ton. Symmetrisk rosett med runda, snittade och brokiga blad.",
                 "imagePath": "assets/images/blog/flicka.jpg",
                 "category": "exklusiv"
