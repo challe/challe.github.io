@@ -1,0 +1,82 @@
+{
+  "products": [
+    {
+      "title": "Rob's Mad Cat",
+      "description": "Dubbla rosaskära blommor med blå fantasistänk och röd-lila kanter. Mörkt, sågtandat lövverk i semiminiatyrformat.",
+      "imagePath": "assets/images/blog/madcat.jpg",
+      "category": "premium"
+    },
+    {
+      "title": "Two W Miss Sophie",
+      "description": "Dubbla ljusrosa stjärnblommor med tunna fuchsiaröda kanter. Mörkgrönt, snäckkantat bladverk med lätt textur. Rikblommande och pålitlig sort.",
+      "imagePath": "assets/images/blog/misssohpie.jpg",
+      "category": "premium"
+    },
+    {
+      "title": "Rhapsodie Rosalie",
+      "description": "Halvdubbla korallrosa och vita blommor med krusiga kanter. Mellangrönt, slätt bladverk.",
+      "imagePath": "assets/images/blog/rosalie.jpg",
+      "category": "premium"
+    },
+    {
+      "title": "Edge of darkness",
+      "description": "Halvdubbla mörklila stjärnblommor med krusiga vita kanter. Brokligt mörkgrönt och elfenbensfärgat bladverk, sågtandat med röd undersida.",
+      "imagePath": "assets/images/blog/edge.jpg",
+      "category": "premium"
+    },
+    {
+      "title": "Pearl Game",
+      "description": "Ett stort antal enkla vita blommor med ljusblå kant och öga. Blommar rikligt och länge. Bladen är ljusgröna med brokiga färger.",
+      "imagePath": "assets/images/blog/biser.jpg",
+      "category": "premium"
+    },
+    {
+      "title": "Rob's Vanilla Trail",
+      "description": "Fyllda blommor i gräddvitt till svagt rosaskimrande nyanser. Mörkgrönt bladverk i semiminiatyrformat med sågtandade, spetsiga blad och en lätt bucklig struktur.",
+      "imagePath": "assets/images/blog/vanilla.jpg",
+      "category": "premium"
+    },
+    {
+      "title": "Kleopatra",
+      "description": "Stora, dubbla stjärnblommor med lila kant, blått stänk och strimmor i kontrastfärg. Mellangrönt, slätt bladverk.",
+      "imagePath": "assets/images/blog/kleopatra.jpg",
+      "category": "premium"
+    },
+    {
+      "title": "Optimara My Love",
+      "description": "Enkel vit stjärnblomma med röd till purpurröd mitt och kronblad som sitter kvar länge. Mellangrönt, slätt och hjärtformat bladverk.",
+      "imagePath": "assets/images/blog/optimara.jpg",
+      "category": "premium"
+    },
+    {
+      "title": "Red Summer",
+      "description": "Halvdubbla röda stjärnblommor med vågiga, vita kanter som varierar i bredd. Mellangrönt, snäckkantat bladverk.",
+      "imagePath": "assets/images/blog/redsummer.jpg",
+      "category": "exklusiv"
+    },
+    {
+      "title": "Motsart",
+      "description": "Dubbla, krusiga blommor i vit med djup lila mitt som mjukt tonar ut. Mellangrönt, slätt bladverk.",
+      "imagePath": "assets/images/blog/motsart.jpg",
+      "category": "exklusiv"
+    },
+    {
+      "title": "My Blue-Eyed Girl",
+      "description": "Dubbla vita blommor med vacker form och mörkblå mitt, yttre kronblad med grön ton. Symmetrisk rosett med runda, snittade och brokiga blad.",
+      "imagePath": "assets/images/blog/flicka.jpg",
+      "category": "exklusiv"
+    },
+    {
+      "title": "Blå Saintpaulia",
+      "description": "Enkla men vackra blå blommor. Mellangrönt, slätt bladverk.",
+      "imagePath": "assets/images/blog/blue.jpg",
+      "category": "standard"
+    },
+    {
+      "title": "Cerise Saintpaulia",
+      "description": "Enkla men vackra cerisa blommor. Mellangrönt, slätt bladverk.",
+      "imagePath": "assets/images/blog/lila.jpg",
+      "category": "standard"
+    }
+  ]
+}
