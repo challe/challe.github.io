@@ -102,6 +102,18 @@
       box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
     }
 
+    .product-selector button {
+      transition: background-color 0.2s ease;
+    }
+
+    .product-selector button:hover {
+      background-color: #0056b3 !important;
+    }
+
+    .product-selector button:active {
+      background-color: #004085 !important;
+    }
+
     #front, #back {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -163,7 +175,6 @@
         0 100%
       );
     }
-    .back-image { margin-left: 0px;}
 
     .qr-code {
       position: absolute;
@@ -240,15 +251,22 @@
       font-family: sans-serif;
     }
     .back-image {
-      margin: 0px 5px 0px 0px;
+      margin: 0px 0px 0px 8px;
     }
   </style>
 </head>
 <body>
   <div class="product-selector">
     <label for="productSelect">Välj produkt:</label>
-    <select id="productSelect">
-    </select>
+    <div style="display: flex; gap: 10px; align-items: flex-end;">
+      <div style="flex: 1;">
+        <select id="productSelect">
+        </select>
+      </div>
+      <button id="generateAllBtn" style="padding: 10px 20px; border: 1px solid #ced4da; border-radius: 6px; font-size: 16px; background-color: #007bff; color: white; cursor: pointer; font-family: 'Merriweather', serif; font-weight: 600;">
+        Alla
+      </button>
+    </div>
   </div>
   <div id="front">
     <div class="label">
@@ -284,6 +302,8 @@
     var useDomToImage = true;
     var numberOfLabels = 26;
     var productsData = config;
+    var generateAllMode = false;
+    var productMixArray = [];
 
     // Populate the product dropdown
     function populateProductDropdown() {
@@ -309,15 +329,56 @@
 
       // Add event listener for product selection
       productSelect.addEventListener('change', function() {
+        generateAllMode = false;
         const selectedIndex = this.value;
         if (selectedIndex !== '') {
           updateProductDisplay(productsData.products[selectedIndex]);
         }
       });
+
+      // Add event listener for "Alla" button
+      const generateAllBtn = document.getElementById('generateAllBtn');
+      if (generateAllBtn) {
+        generateAllBtn.addEventListener('click', function() {
+          generateAllMode = true;
+          createProductMixArray();
+          generateLabels();
+        });
+      }
+    }
+
+    // Create an array of products for the mix (24 labels total, at least one per product)
+    function createProductMixArray() {
+      productMixArray = [];
+      const totalProducts = productsData.products.length; // 13 products
+      const maxLabels = 24;
+      
+      // First, add one of each product (13 labels)
+      productsData.products.forEach((product, index) => {
+        productMixArray.push(index);
+      });
+      
+      // Then add additional labels to reach 24 total
+      // We need 11 more labels (24 - 13 = 11)
+      const remainingLabels = maxLabels - totalProducts;
+      
+      // Distribute the remaining labels evenly, starting from the beginning
+      for (let i = 0; i < remainingLabels; i++) {
+        const productIndex = i % totalProducts;
+        productMixArray.push(productIndex);
+      }
+      
+      // Update numberOfLabels for this generation
+      numberOfLabels = maxLabels;
     }
 
     // Update the product display based on selection
     function updateProductDisplay(product) {
+      // Reset to original numberOfLabels when not in generateAll mode
+      if (!generateAllMode) {
+        numberOfLabels = 26;
+      }
+      
       // Update the flower image
       const flowerImg = document.querySelector('.flower');
       if (flowerImg) {
@@ -447,12 +508,44 @@
           existingLabels[i].remove();
         }
         
-        // Clone the template to create additional labels
-        for (var i = 1; i < numberOfLabels; i++) {
-          var clonedLabel = templateLabel.cloneNode(true);
-          labelContainer.appendChild(clonedLabel);
+        if (generateAllMode) {
+          // Update the first label with the first product in the mix
+          updateLabelContent(templateLabel, productsData.products[productMixArray[0]], containerId);
+          
+          // Clone the template to create additional labels with different products
+          for (var i = 1; i < numberOfLabels; i++) {
+            var clonedLabel = templateLabel.cloneNode(true);
+            var productIndex = productMixArray[i];
+            updateLabelContent(clonedLabel, productsData.products[productIndex], containerId);
+            labelContainer.appendChild(clonedLabel);
+          }
+        } else {
+          // Original behavior - clone the same product
+          for (var i = 1; i < numberOfLabels; i++) {
+            var clonedLabel = templateLabel.cloneNode(true);
+            labelContainer.appendChild(clonedLabel);
+          }
         }
       });
+    }
+
+    // Helper function to update label content with specific product data
+    function updateLabelContent(labelElement, product, containerId) {
+      if (containerId === 'front') {
+        // Update flower image
+        const flowerImg = labelElement.querySelector('.flower');
+        if (flowerImg) {
+          flowerImg.src = product.imagePath;
+          flowerImg.alt = product.title;
+        }
+        
+        // Update text
+        const textWrapper = labelElement.querySelector('.text-wrapper span');
+        if (textWrapper) {
+          textWrapper.textContent = product.title;
+        }
+      }
+      // Back labels remain the same (QR code and logo)
     }
 
     window.onload = function () {
