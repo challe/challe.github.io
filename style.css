@@ -2096,3 +2096,7 @@ h1, h2{
 .care-content p {
   margin-bottom: 20px;
 }
+
+.carousel-indicators {
+  bottom: -60px;
+}
