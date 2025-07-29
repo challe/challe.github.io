@@ -82,11 +82,46 @@ import productsConfig from '/products.json' with { type: 'json' };
             // Initialize portfolio filtering after products are loaded
             initializePortfolioFilter();
             
+            // Initialize GLightbox with products data
+            initializeGLightbox(products);
+            
         } catch (error) {
             console.error('Error loading products:', error);
         }
     }
-    
+
+    // Initialize GLightbox with products data
+    function initializeGLightbox(products) {
+        // Wait for DOM to be updated, then add attributes and initialize GLightbox
+        setTimeout(() => {
+            const portfolioImages = document.querySelectorAll('.portfolio-image img');
+            
+            // Add GLightbox attributes to each image
+            portfolioImages.forEach((img, index) => {
+                const product = products[index];
+                if (product) {
+                    img.setAttribute('href', product.imagePath);
+                    img.setAttribute('data-gallery', 'portfolio-gallery');
+                    img.setAttribute('data-title', product.title);
+                    img.style.cursor = 'pointer';
+                }
+            });
+            
+            // Initialize GLightbox with mobile-friendly settings
+            const myGallery3 = GLightbox({
+                selector: '.portfolio-image img',
+                width: 900,
+                height: 'auto',
+                descPosition: 'bottom',
+                touchNavigation: true,
+                keyboardNavigation: true,
+                closeOnOutsideClick: true,
+                loop: true,
+                skin: 'clean'
+            });
+        }, 50);
+    }
+
     // Initialize portfolio filtering functionality compatible with CSS classes
     function initializePortfolioFilter() {
         const filterButtons = document.querySelectorAll('.portfolio-menu button');
