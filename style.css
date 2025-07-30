@@ -2048,9 +2048,13 @@ h1, h2{
 .portfolio-three .portfolio-image .meta-details span {
   color: var(--white);
   display: inline-block;
-  margin-left: 10px;
-  font-size: 12px;
+  margin-left: 5px;
+  font-size: 13px;
   font-weight: 500;
+}
+
+.portfolio-three .portfolio-image .meta-details i {
+  margin-right: 5px;
 }
 
 /* Contact form alert styling */

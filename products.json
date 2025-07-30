@@ -75,6 +75,12 @@
     {
       "title": "Cerise Saintpaulia",
       "description": "Enkla men vackra cerisa blommor. Mellangrönt, slätt bladverk.",
+      "imagePath": "assets/images/blog/cerise.jpg",
+      "category": "standard"
+    },
+    {
+      "title": "Lila Saintpaulia",
+      "description": "Enkla men vackra lila blommor. Mellangrönt, slätt bladverk.",
       "imagePath": "assets/images/blog/lila.jpg",
       "category": "standard"
     }

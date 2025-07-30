@@ -54,13 +54,29 @@ import productsConfig from '/products.json' with { type: 'json' };
             products.forEach(product => {
                 const categoryLabel = product.category.charAt(0).toUpperCase() + product.category.slice(1);
                 
+                // Define icons based on category
+                let iconClass;
+                switch(product.category) {
+                    case 'premium':
+                        iconClass = 'lni lni-crown';
+                        break;
+                    case 'exklusiv':
+                        iconClass = 'lni lni-diamond';
+                        break;
+                    case 'standard':
+                        iconClass = 'lni lni-circle-plus';
+                        break;
+                    default:
+                        iconClass = 'lni lni-tag';
+                }
+                
                 const productHTML = `
                     <div class="col-lg-4 col-sm-6" data-filter="${product.category}">
                         <div class="portfolio-style-three">
                             <div class="portfolio-image">
                                 <img src="${product.imagePath}" alt="${product.title}">
                                 <div class="meta-details">
-                                    <span>${categoryLabel}</span>
+                                    <span><i class="${iconClass}"></i> ${categoryLabel}</span>
                                 </div>
                             </div>
                             <div class="portfolio-text">
@@ -103,6 +119,7 @@ import productsConfig from '/products.json' with { type: 'json' };
                     img.setAttribute('href', product.imagePath);
                     img.setAttribute('data-gallery', 'portfolio-gallery');
                     img.setAttribute('data-title', product.title);
+                    img.setAttribute('data-description', product.description);
                     img.style.cursor = 'pointer';
                 }
             });
