@@ -2104,3 +2104,41 @@ h1, h2{
 .carousel-indicators {
   bottom: -60px;
 }
+
+/* Quote styling */
+.quote h2 {
+  font-family: "Merriweather", serif;
+  font-style: italic;
+  font-weight: 400;
+  position: relative;
+  color: var(--white);
+  margin-bottom: 33px !important;
+}
+
+.quote h2::before {
+  content: "\201C";
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--white);
+  opacity: 0.7;
+  position: absolute;
+  left: -0.3em;
+  top: -0.1em;
+}
+
+.quote h2::after {
+  content: "\201D";
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--white);
+  opacity: 0.7;
+  position: absolute;
+  right: -0.2em;
+  bottom: -0.3em;
+}
+
+.quote p::before {
+  content: "\2014\00A0";
+  color: var(--white);
+  opacity: 0.8;
+}
