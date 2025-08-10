@@ -6,9 +6,9 @@ class HeaderComponent extends HTMLElement {
                        window.location.pathname.endsWith('/index.html') || 
                        window.location.pathname === '/index.html';
     
-    // Check if we're on the care page
-    const isCarePage = window.location.pathname.endsWith('/care.html') || 
-                      window.location.pathname === '/care.html';
+    // Check if we're on the raspberries page
+    const isRaspberriesPage = window.location.pathname.endsWith('/raspberries.html') || 
+                          window.location.pathname === '/raspberries.html';
     
     // Set the base URL for navigation links
     const baseUrl = isIndexPage ? '' : 'index.html';
@@ -48,7 +48,7 @@ class HeaderComponent extends HTMLElement {
                       <a class="page-scroll" href="${baseUrl}#contact">Kontaktuppgifter</a>
                     </li>
                     <li class="nav-item">
-                      <a class="page-separate${isCarePage ? ' active' : ''}" href="care.html">Skötselråd</a>
+                      <a class="page-separate${isRaspberriesPage ? ' active' : ''}" href="raspberries.html">Hallon</a>
                     </li>
                   </ul>
                 </div>
@@ -85,6 +85,7 @@ class HeaderComponent extends HTMLElement {
               <li><a href="${baseUrl}#products">Produkter</a></li>
               <li><a href="${baseUrl}#pricing">Priser</a></li>
               <li><a href="${baseUrl}#contact">Kontaktuppgifter</a></li>
+              <li><a href="raspberries.html">Hallon</a></li>
             </ul>
           </div>
           <!-- menu -->
