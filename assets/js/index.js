@@ -8,17 +8,6 @@ import productsConfig from '/products.json' with { type: 'json' };
 (function () {
     "use strict";
 
-    // Hide email from bots
-    document.addEventListener("DOMContentLoaded", function() {
-        const user = "lindberg.therese";
-        const domain = "outlook.com";
-        const link = document.getElementById("email-link");
-        if (link) {
-            link.href = `mailto:${user}@${domain}`;
-            link.textContent = `${user}@${domain}`;
-        }
-    });
-
     // section menu active
 	function onScroll(event) {
 		var sections = document.querySelectorAll('.page-scroll');

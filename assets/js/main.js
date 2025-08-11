@@ -117,4 +117,15 @@
       });
     });
 
+    // Hide email from bots
+    document.addEventListener("DOMContentLoaded", function() {
+        const user = "lindberg.therese";
+        const domain = "outlook.com";
+        const link = document.getElementById("email-link");
+        if (link) {
+            link.href = `mailto:${user}@${domain}`;
+            link.textContent = `${user}@${domain}`;
+        }
+    });
+
 }) ();
