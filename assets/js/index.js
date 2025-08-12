@@ -278,23 +278,42 @@ import productsConfig from '/products.json' with { type: 'json' };
     // Generate and inject structured data for products
     function injectProductStructuredData() {
         const products = productsConfig.products;
+        const categoryPrices = {
+            standard: 45,
+            exklusiv: 75,
+            premium: 125
+        };
+
         const structuredData = {
             "@context": "https://schema.org",
             "@type": "ItemList",
-            "itemListElement": products.map((product, index) => ({
-                "@type": "ListItem",
-                "position": index + 1,
-                "item": {
-                    "@type": "Product",
-                    "name": product.title,
-                    "description": product.description,
-                    "image": `https://drumla.se/${product.imagePath}`,
-                    "brand": {
-                        "@type": "Brand",
-                        "name": "Drumla"
+            "itemListElement": products.map((product, index) => {
+                const price = categoryPrices[product.category];
+                const offers = {
+                    "@type": "Offer",
+                    "priceCurrency": "SEK",
+                    "price": price.toString(),
+                    "itemCondition": "https://schema.org/NewCondition",
+                    "availability": "https://schema.org/InStock",
+                    "url": `https://drumla.se/price.html`
+                };
+
+                return {
+                    "@type": "ListItem",
+                    "position": index + 1,
+                    "item": {
+                        "@type": "Product",
+                        "name": product.title,
+                        "description": product.description,
+                        "image": `https://drumla.se/${product.imagePath}`,
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Drumla"
+                        },
+                        offers
                     }
-                }
-            }))
+                };
+            })
         };
 
         const script = document.createElement('script');
