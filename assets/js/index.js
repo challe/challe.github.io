@@ -275,6 +275,34 @@ import productsConfig from '/products.json' with { type: 'json' };
         }, 7000);
     }
 
+    // Generate and inject structured data for products
+    function injectProductStructuredData() {
+        const products = productsConfig.products;
+        const structuredData = {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": products.map((product, index) => ({
+                "@type": "ListItem",
+                "position": index + 1,
+                "item": {
+                    "@type": "Product",
+                    "name": product.title,
+                    "description": product.description,
+                    "image": `https://drumla.se/${product.imagePath}`,
+                    "brand": {
+                        "@type": "Brand",
+                        "name": "Drumla"
+                    }
+                }
+            }))
+        };
+
+        const script = document.createElement('script');
+        script.setAttribute('type', 'application/ld+json');
+        script.textContent = JSON.stringify(structuredData);
+        document.head.appendChild(script);
+    }
+
     // Initialize index-specific functionality when DOM is ready
     document.addEventListener("DOMContentLoaded", function () {
         // Load products when DOM is ready
@@ -282,6 +310,9 @@ import productsConfig from '/products.json' with { type: 'json' };
         
         // Initialize contact form
         initializeContactForm();
+        
+        // Inject structured data for products
+        injectProductStructuredData();
     });
 
 })();
