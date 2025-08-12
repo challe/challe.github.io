@@ -294,8 +294,7 @@ import productsConfig from '/products.json' with { type: 'json' };
                     "priceCurrency": "SEK",
                     "price": price.toString(),
                     "itemCondition": "https://schema.org/NewCondition",
-                    "availability": "https://schema.org/InStock",
-                    "url": `https://drumla.se/price.html`
+                    "availability": "https://schema.org/InStock"
                 };
 
                 return {
