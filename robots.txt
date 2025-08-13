@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /price.html
+Disallow: /generator.html
