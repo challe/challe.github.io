@@ -252,17 +252,6 @@
                   <p>Jag har ingen webbutik - istället säljer jag direkt, i liten skala. Vill du köpa sticklingar går det bra att höra av dig via mail, sms eller helt enkelt komma förbi hemma i Rogsta.</p>
                   <p>Jag står också på marknader, bakluckeloppisar och skördedagar lite då och då. <a target="_blank" class="instagram-link" href="https://www.instagram.com/drumla.se">Följ mig gärna på Instagram</a> - där lägger jag upp vad som är på gång och var jag dyker upp nästa gång.</p>
                 </div>
-                <!--
-                <div class="tab-pane fade" id="nav-vision" role="tabpanel" aria-labelledby="nav-vision-tab">
-                  <p>It is a long established fact that a reader will be distracted by the readable content of a page
-                    when
-                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                    distribution of letters, look like readable English.</p>
-                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have in some
-                    form,
-                    by injected humour.</p>
-                </div>
-                -->
                 <div class="tab-pane fade" id="nav-history" role="tabpanel" aria-labelledby="nav-history-tab">
                   <p>Idén till företaget växte fram under våren 2025, ur ett växande intresse för Saintpaulior. Jag började samla på sorter som är svåra att få tag på, och insåg ganska snart att det fanns ett värde i att dela med sig av dem.</p>
                   <p>Företaget startades den 27 juni 2025. Just nu håller jag på att bygga upp ett lager av sticklingar och plantor - med fokus på ovanliga Saintpaulior som inte går att hitta i vanliga butiker.</p>
@@ -568,14 +557,22 @@
             </div>
             <form action="#" class="contact-form">
               <div class="row">
+                <!-- Name and Phone in one row -->
                 <div class="col-md-6">
                   <input type="text" name="name" id="name" placeholder="Namn" required="" aria-label="Namn" />
                 </div>
                 <div class="col-md-6">
+                  <input type="tel" name="phone" id="phone" placeholder="Telefonnummer" required="" aria-label="Telefonnummer" />
+                </div>
+              </div>
+              <div class="row">
+                <!-- Email in a separate row -->
+                <div class="col-12">
                   <input type="email" name="email" id="email" placeholder="E-post" required="" aria-label="E-post" />
                 </div>
               </div>
               <div class="row">
+                <!-- Message field -->
                 <div class="col-12">
                   <textarea name="message" id="message" placeholder="Meddelande" rows="5" aria-label="Meddelande"></textarea>
                 </div>
@@ -627,7 +624,7 @@
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/glightbox.min.js"></script>
   <script src="assets/js/main.js"></script>
-  <script type="module" src="assets/js/index.js?v=20250812"></script>
+  <script type="module" src="assets/js/index.js?v=20250815"></script>
   <script src="assets/js/tiny-slider.js"></script>
 </body>
 

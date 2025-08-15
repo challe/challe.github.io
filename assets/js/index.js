@@ -177,6 +177,7 @@ import productsConfig from '/products.json' with { type: 'json' };
             const templateParams = {
                 name: formData.get('name'),
                 email: formData.get('email'),
+                phone: formData.get('phone'),
                 message: formData.get('message')
             };
             
