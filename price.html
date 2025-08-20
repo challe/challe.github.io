@@ -115,37 +115,24 @@
         premium: "125 kr"
       };
 
-      // Group products by category
-      const groupedProducts = products.reduce((acc, product) => {
-        acc[product.category] = acc[product.category] || [];
-        acc[product.category].push(product);
-        return acc;
-      }, {});
+      // Sort products by number
+      products.sort((a, b) => a.number - b.number);
 
-      // Render products grouped by category
-      Object.keys(groupedProducts).forEach(category => {
-        const categoryHeader = `
-          <h2 class="text-center product-category">${category.charAt(0).toUpperCase() + category.slice(1)}</h2>
-        `;
-        productGrid.innerHTML += categoryHeader;
-
-        groupedProducts[category].forEach(product => {
-          const price = categoryPrices[product.category] || "Okänd pris";
-
-          const productHTML = `
-            <div class="row align-items-center mb-4">
-              <div class="col-3">
-                <img src="${product.imagePath}" class="product-image" alt="${product.title}">
-              </div>
-              <div class="col-9 d-flex justify-content-between align-items-center">
-                <h5 class="mb-0 product-title">${product.title}</h5>
-                <p class="mb-0 product-price">${price}</p>
-              </div>
+      // Render products in order
+      products.forEach(product => {
+        const price = categoryPrices[product.category] || "Okänd pris";
+        const productHTML = `
+          <div class="row align-items-center mb-4">
+            <div class="col-3">
+              <img src="${product.imagePath}" class="product-image" alt="${product.title}">
             </div>
-          `;
-
-          productGrid.innerHTML += productHTML;
-        });
+            <div class="col-9 d-flex justify-content-between align-items-center">
+              <h5 class="mb-0 product-title">${product.number}. ${product.title}</h5>
+              <p class="mb-0 product-price">${price}</p>
+            </div>
+          </div>
+        `;
+        productGrid.innerHTML += productHTML;
       });
     });
   </script>
