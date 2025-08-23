@@ -97,6 +97,13 @@
       "description": "Enkla men vackra lila blommor. Mellangrönt, slätt bladverk.",
       "imagePath": "assets/images/blog/lila.jpg",
       "category": "standard"
+    },
+    {
+      "number": 15,
+      "title": "Vit Saintpaulia",
+      "description": "Enkla men vackra vita blommor. Mellangrönt, slätt bladverk.",
+      "imagePath": "assets/images/blog/white.jpg",
+      "category": "standard"
     }
   ]
 }
