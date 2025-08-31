@@ -1,4 +1,51 @@
+const CleanCSS = require("clean-css");
+const fs = require("fs");
+const path = require("path");
+
 module.exports = function(eleventyConfig) {
+  // CSS Minification for copied files
+  eleventyConfig.on('eleventy.after', async ({ dir, results, runMode, outputMode }) => {
+    const isProduction = process.env.NODE_ENV === "production";
+    
+    if (isProduction) {
+      const cssDir = path.join(dir.output, 'assets', 'css');
+      
+      if (fs.existsSync(cssDir)) {
+        const cssFiles = fs.readdirSync(cssDir).filter(file => 
+          file.endsWith('.css') && !file.endsWith('.min.css')
+        );
+        
+        console.log('Minifying CSS files...');
+        let totalSavings = 0;
+        let filesProcessed = 0;
+        
+        for (const fileName of cssFiles) {
+          const cssFile = path.join(cssDir, fileName);
+          const css = fs.readFileSync(cssFile, 'utf8');
+          
+          const minified = new CleanCSS({
+            level: 2, // Advanced optimizations
+            returnPromise: false
+          }).minify(css);
+          
+          if (minified.errors.length === 0) {
+            fs.writeFileSync(cssFile, minified.styles);
+            const savings = ((css.length - minified.styles.length) / css.length * 100);
+            console.log(`${fileName}: ${savings.toFixed(1)}% size reduction`);
+            totalSavings += savings;
+            filesProcessed++;
+          } else {
+            console.log(`CSS minification errors in ${fileName}:`, minified.errors);
+          }
+        }
+        
+        if (filesProcessed > 0) {
+          console.log(`Total: ${filesProcessed} CSS files minified, average ${(totalSavings/filesProcessed).toFixed(1)}% reduction`);
+        }
+      }
+    }
+  });
+
   // Add a shortcode for cache-busted asset URLs
   eleventyConfig.addShortcode("asset", function(url) {
     return `${url}?v=${this.ctx.build.hash}`;
