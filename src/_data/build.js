@@ -1,10 +1,11 @@
 module.exports = function() {
   // Generate a unique build hash based on current timestamp
-  // You could also use git commit hash, package.json version, or other methods
   const buildHash = Date.now().toString();
+  const now = new Date();
   
   return {
     hash: buildHash,
-    timestamp: new Date().toISOString()
+    // Simple date format for sitemaps (YYYY-MM-DD)
+    date: now.toISOString().split('T')[0]
   };
 };

@@ -5,7 +5,7 @@ description: "Drumla säljer sticklingar av Saintpaulior och färska hallon frå
 keywords: "Saintpaulior, sticklingar, växter, hallon, Rogsta, Hudiksvall, ekologiska bär, odling"
 ogTitle: "Drumla | Växter och bär från Rogsta, Hudiksvall."
 ogDescription: "Drumla erbjuder sticklingar av Saintpaulior och färska hallon från Rogsta, Hudiksvall. Ekologiskt och handplockat."
-ogImage: "assets/images/header/hero-image-flower.jpg"
+ogImage: "/assets/images/header/hero-image-flower.jpg"
 ogUrl: "https://drumla.se/"
 ---
 
@@ -22,19 +22,19 @@ ogUrl: "https://drumla.se/"
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Drumla",
-  "description": "Drumla erbjuder sticklingar av Saintpaulior och färska hallon från Rogsta, Hudiksvall. Ekologiskt och handplockat.",
-  "image": "https://drumla.se/assets/images/header/hero-image-flower.jpg",
+  "name": "{{ site.business.name }}",
+  "description": "{{ description }}",
+  "image": "{{ site.url }}{{ site.defaultImage }}",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Åkre 103",
-    "addressLocality": "Hudiksvall",
-    "postalCode": "82493",
-    "addressCountry": "SE"
+    "streetAddress": "{{ site.business.address.streetAddress }}",
+    "addressLocality": "{{ site.business.address.addressLocality }}",
+    "postalCode": "{{ site.business.address.postalCode }}",
+    "addressCountry": "{{ site.business.address.addressCountry }}"
   },
-  "telephone": "+46722121724",
-  "url": "https://drumla.se",
-  "openingHours": "Mo,We,Fr 12:00-17:00"
+  "telephone": "{{ site.business.telephone }}",
+  "url": "{{ site.url }}",
+  "openingHours": "{{ site.business.openingHours }}"
 }
 </script>
 <script type="application/ld+json">
@@ -56,10 +56,10 @@ ogUrl: "https://drumla.se/"
     "@type": "Product",
     "name": "Färska Hallon",
     "description": "Färska hallon från Rogsta, Hudiksvall. Handplockade och ekologiska, perfekta för alla tillfällen.",
-    "image": "https://drumla.se/assets/images/askar.jpeg",
+    "image": "{{ site.url }}/assets/images/askar.jpeg",
     "brand": {
       "@type": "Brand",
-      "name": "Drumla"
+      "name": "{{ site.business.name }}"
     },
     "offers": {
       "@type": "Offer",
@@ -67,7 +67,7 @@ ogUrl: "https://drumla.se/"
       "price": "50",
       "itemCondition": "https://schema.org/NewCondition",
       "availability": "https://schema.org/InStock",
-      "url": "https://drumla.se/raspberries.html"
+      "url": "{{ site.url }}/raspberries.html"
     }
   }
 }
@@ -91,10 +91,10 @@ ogUrl: "https://drumla.se/"
         "@type": "Product",
         "name": "{{ product.title }}",
         "description": "{{ product.description }}",
-        "image": "https://drumla.se/{{ product.imagePath }}",
+        "image": "{{ site.url }}/{{ product.imagePath }}",
         "brand": {
           "@type": "Brand",
-          "name": "Drumla"
+          "name": "{{ site.business.name }}"
         },
         "offers": {
           "@type": "Offer",
@@ -406,7 +406,7 @@ ogUrl: "https://drumla.se/"
         <div class="col-lg-4 col-md-6 col-12">
           <div class="pricing-style-fourteen">
             <div class="table-head">
-              <h6 class="title">Standard</h4>
+              <h6 class="title">Standard</h6>
                 <p>En vacker och vanlig sort med enkla blad och klassiska färger.</p>
                 <div class="price">
                   <h2 class="amount">
@@ -428,7 +428,7 @@ ogUrl: "https://drumla.se/"
         <div class="col-lg-4 col-md-6 col-12">
           <div class="pricing-style-fourteen middle">
             <div class="table-head">
-              <h6 class="title">Exklusiv</h4>
+              <h6 class="title">Exklusiv</h6>
                 <p>En fin och lite mer ovanlig variant med extra vackra blad och blomfärger.</p>
                 <div class="price">
                   <h2 class="amount">
@@ -450,7 +450,7 @@ ogUrl: "https://drumla.se/"
         <div class="col-lg-4 col-md-6 col-12">
           <div class="pricing-style-fourteen">
             <div class="table-head">
-              <h6 class="title">Premium</h4>
+              <h6 class="title">Premium</h6>
                 <p>En sällsynt och unik sort med ovanliga färger och former, för dig som vill ha något extra.</p>
                 <div class="price">
                   <h2 class="amount">

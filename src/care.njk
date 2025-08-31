@@ -1,0 +1,117 @@
+---
+layout: base.njk
+permalink: "/care.html"
+title: "Skötselråd för Saintpaulior - Drumla"
+description: "Lär dig hur du sköter Saintpaulior för att få dem att trivas och blomma vackert. Tips om placering, vattning, näring och omplantering."
+keywords: "saintpaulior, skötsel, växtråd, vattning, näring, placering, omplantering, krukväxter, blommor"
+ogTitle: "Skötselråd för Saintpaulior - Drumla"
+ogDescription: "Lär dig hur du sköter Saintpaulior för att få dem att trivas och blomma vackert. Tips om placering, vattning, näring och omplantering."
+ogImage: "/assets/images/header/hero-image-flower.jpg"
+ogUrl: "https://drumla.se/care.html"
+---
+
+{% block jsonld %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ title }}",
+  "description": "{{ description }}",
+  "image": "{{ site.url }}{{ ogImage }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.business.name }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/assets/images/leaf.svg"
+    }
+  },
+  "datePublished": "{{ build.date }}T00:00:00Z",
+  "dateModified": "{{ build.date }}T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}/care.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Så sköter du Saintpaulior",
+  "description": "{{ description }}",
+  "image": "{{ site.url }}{{ ogImage }}",
+  "totalTime": "PT10M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Placering",
+      "text": "Placera din saintpaulia ljust men inte i direkt sol. Den gillar värme och mår bäst om temperaturen inte går under 16 grader."
+    },
+    {
+      "@type": "HowToStep", 
+      "name": "Vattning",
+      "text": "Vattna med ljummet vatten, gärna underifrån. Låt jorden torka upp ordentligt mellan vattningarna."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Näring",
+      "text": "Från mars till oktober tillsätt svag näring i vattnet varannan till var fjärde vecka."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Omplantering", 
+      "text": "Plantera gärna om en gång om året, helst på våren. Saintpaulia gillar luftig jord och en liten kruka."
+    }
+  ]
+}
+</script>
+{% endblock %}
+
+<!-- Start Care Guide Hero Area -->
+<section id="care-hero" class="header-area header-eight">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-12 col-md-12 col-12">
+        <div class="header-content text-center">
+          <h1>Skötselråd för Saintpaulior</h1>
+          <p>
+            Allt du behöver veta för att få dina Saintpaulior att trivas och blomma vackert.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Care Guide Hero Area -->
+
+<!--====== CARE CONTENT START ======-->
+<section id="care-guide" class="care-guide-area about-five">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="care-content">
+          <p>Saintpaulia är en av världens mest populära krukväxter, och det är lätt att förstå varför. Den blommar ofta och länge, trivs i vanlig rumstemperatur och tar inte mycket plats. Blommorna finns i många färger och former. De kan vara enkla eller dubbla, krusiga, fransiga eller tvåfärgade. Det blir extra fint att samla flera plantor i samma färgton men med olika utseende på blommorna.</p>
+          
+          <p>Placera din saintpaulia ljust men inte i direkt sol. Den gillar värme och mår bäst om temperaturen inte går under 16 grader. Undvik drag och kalla fönster, särskilt under vintern. Vattna med ljummet vatten, gärna underifrån. Låt jorden torka upp ordentligt mellan vattningarna. Om du vattnar i ett fat eller ytterkruka, häll bort överflödigt vatten efter ungefär tio minuter. Växten vill inte stå blött. Undvik att blöta bladen eftersom kallt vatten kan ge fula fläckar.</p>
+          
+          <p>Från mars till oktober går det bra att tillsätta svag näring i vattnet varannan till var fjärde vecka. På vintern räcker det med vanligt vatten. Ta bort vissna blommor och blad regelbundet. Om plantan får mycket blad men få blommor kan du prova att minska gödslingen och plocka bort de största bladen.</p>
+          
+          <p>Saintpaulia gillar luftig jord och en liten kruka. Plantera gärna om en gång om året, helst på våren.</p>
+
+          <p>Trots sitt nätta utseende är saintpaulia en tålig växt. Den klarar vår torra inomhusluft bra tack vare sina tjocka blad som lagrar vatten. Med rätt skötsel håller den sig frisk länge och blommar om och om igen.</p>
+          
+          <div class="text-center mt-5">
+            <a href="/" class="btn primary-btn" title="Tillbaka till startsidan">Tillbaka till startsidan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- container -->
+</section>
+<!--====== CARE CONTENT ENDS ======-->

@@ -9,9 +9,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <!--====== Title ======-->
-  <title>{{ title or 'Växter och bär från Rogsta, Hudiksvall - Drumla' }}</title>
+  <title>{{ title or site.title }}</title>
 
-  <!--====== Bootstrap css ======-->
+  <!--====== Meta tags ======-->
+  <meta name="description" content="{{ description or site.description }}" />
+  <meta name="keywords" content="{{ keywords or 'Saintpaulior, sticklingar, växter, hallon, Rogsta, Hudiksvall, ekologiska bär, odling' }}" />
+  <meta name="author" content="{{ site.author }}" />
+  <meta name="language" content="{{ site.language }}" />
+  
+  <!--====== Open Graph ======-->
+  <meta property="og:title" content="{{ ogTitle or title or site.title }}" />
+  <meta property="og:description" content="{{ ogDescription or description or site.description }}" />
+  <meta property="og:image" content="{{ site.url }}{{ ogImage or site.defaultImage }}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="{{ site.locale }}" />
+  
+  <!--====== Twitter Cards ======-->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ ogTitle or title or site.title }}" />
+  <meta name="twitter:description" content="{{ ogDescription or description or site.description }}" />
+  <meta name="twitter:image" content="{{ site.url }}{{ ogImage or site.defaultImage }}" />
+
+  <!--====== Canonical URL ======-->
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 
   <!--====== Line Icons css ======-->
@@ -38,17 +59,8 @@
   <meta name="apple-mobile-web-app-title" content="Drumla" />
   <link rel="manifest" href="/assets/images/site.webmanifest" />
 
-  <meta name="keywords" content="{{ keywords or 'Saintpaulior, sticklingar, växter, hallon, Rogsta, Hudiksvall, ekologiska bär, odling' }}" />
-  <meta name="author" content="Drumla" />
-  <meta property="og:title" content="{{ ogTitle or title or 'Drumla | Växter och bär från Rogsta, Hudiksvall.' }}" />
-  <meta property="og:description" content="{{ ogDescription or description or 'Drumla erbjuder sticklingar av Saintpaulior och färska hallon från Rogsta, Hudiksvall. Ekologiskt och handplockat.' }}" />
-  <meta property="og:image" content="{{ ogImage or 'assets/images/header/hero-image-flower.jpg' }}" />
-  <meta property="og:url" content="{{ ogUrl or 'https://drumla.se/' }}" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="{{ ogTitle or title or 'Drumla | Växter och bär från Rogsta, Hudiksvall.' }}" />
-  <meta name="twitter:description" content="{{ ogDescription or description or 'Drumla erbjuder sticklingar av Saintpaulior och färska hallon från Rogsta, Hudiksvall. Ekologiskt och handplockat.' }}" />
-  <meta name="twitter:image" content="{{ ogImage or 'assets/images/header/hero-image-flower.jpg' }}" />
+  <!--====== Bootstrap css ======-->
+
 
   {% block jsonld %}{% endblock %}
 </head>
