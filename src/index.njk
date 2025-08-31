@@ -128,7 +128,7 @@ ogUrl: "https://drumla.se/"
         </div>
         <div class="col-lg-6 col-md-12 col-12">
           <div class="header-image">
-            <img src="assets/images/header/hero-image-flower.jpg" alt="Saintpaulior och växter från Rogsta" />
+            {% image "assets/images/header/hero-image-flower.jpg", "Saintpaulior och växter från Rogsta", "(max-width: 768px) 100vw, 50vw", "eager" %}
           </div>
         </div>
       </div>
@@ -226,7 +226,7 @@ ogUrl: "https://drumla.se/"
               <circle cx="60.333" cy="132" r="1.66667" fill="#DADADA" />
               <circle cx="104" cy="132" r="1.66667" fill="#DADADA" />
             </svg>
-            <img src="assets/images/about/about-img2.jpg" alt="En inspirerande bild av växter och odling" />
+            {% image "assets/images/about/about-img2.jpg", "En inspirerande bild av växter och odling", "(max-width: 768px) 100vw, 50vw" %}
           </div>
         </div>
         <div class="col-lg-6 col-12">
@@ -313,7 +313,7 @@ ogUrl: "https://drumla.se/"
         <div class="col-lg-4 col-sm-6" data-filter="{{ product.category }}">
           <div class="portfolio-style-three">
             <div class="portfolio-image">
-              <img src="{{ product.imagePath }}" alt="{{ product.title }}" href="{{ product.imagePath }}" data-gallery="portfolio-gallery" data-title="{{ product.title }}" data-description="{{ product.description }}">
+              {% productImage product.imagePath, product.title, product.imagePath, product.title, product.description %}
               <div class="meta-details">
                 <span><i class="{{ iconClass }}"></i> {{ categoryLabel }}</span>
               </div>

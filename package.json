@@ -13,7 +13,12 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-img": "^6.0.4",
     "clean-css": "^5.3.3",
-    "cross-env": "^10.0.0"
+    "cross-env": "^10.0.0",
+    "sharp": "^0.34.3"
+  },
+  "dependencies": {
+    "simplelightbox": "^2.14.3"
   }
 }

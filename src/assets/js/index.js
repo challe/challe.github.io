@@ -27,19 +27,24 @@
 
     window.document.addEventListener('scroll', onScroll);
     
-    // Initialize GLightbox for product images
-    function initializeGLightbox() {
-        // Initialize GLightbox with mobile-friendly settings
-        const myGallery3 = GLightbox({
-            selector: '.portfolio-image img',
-            width: 900,
-            height: 'auto',
-            descPosition: 'bottom',
-            touchNavigation: true,
-            keyboardNavigation: true,
-            closeOnOutsideClick: true,
+    // Initialize Simple Lightbox for product images
+    function initializeLightbox() {
+        // Initialize Simple Lightbox - much simpler and works great with picture elements
+        var lightbox = new SimpleLightbox('.gallery-item', {
+            showCaptions: true,
+            captionAttribute: 'title',
+            captionDelay: 250,
+            overlay: true,
+            spinner: true,
+            close: true,
+            showCounter: true,
+            enableKeyboard: true,
             loop: true,
-            skin: 'clean'
+            docClose: true,
+            swipeClose: true,
+            alertError: true,
+            alertErrorMessage: 'Image not found, next image will be loaded',
+            additionalHtml: false
         });
     }
 
@@ -197,7 +202,7 @@
         initializePortfolioFilter();
         
         // Initialize lightbox
-        initializeGLightbox();
+        initializeLightbox();
         
         // Initialize contact form
         initializeContactForm();
