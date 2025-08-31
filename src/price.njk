@@ -1,0 +1,86 @@
+---
+permalink: price.html
+layout: base.njk
+title: "Drumla | Prislista"
+description: "Prislista för Drumlas sticklingar av Saintpaulior från Rogsta, Hudiksvall."
+keywords: "prislista, saintpaulior, sticklingar, växter, Rogsta, Hudiksvall"
+ogTitle: "Drumla | Prislista"
+ogDescription: "Prislista för Drumlas sticklingar av Saintpaulior från Rogsta, Hudiksvall."
+ogImage: "assets/images/header/hero-image-flower.jpg"
+ogUrl: "https://drumla.se/price.html"
+---
+
+{% block styles %}
+<style>
+  .product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+  .product-category {
+    margin: 50px 0;
+  }
+  .product-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  .product-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #000; /* Ensure price is not gray */
+  }
+</style>
+{% endblock %}
+
+  <!-- Start Care Guide Hero Area -->
+  <section id="care-hero" class="header-area header-eight">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-12 col-md-12 col-12">
+          <div class="header-content text-center">
+            <h1>Prislista</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Care Guide Hero Area -->
+
+  <!--====== CARE CONTENT START ======-->
+  <section id="care-guide" class="care-guide-area about-five" style="padding-top: 0;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="care-content">
+            <div id="product-grid">
+              {%- set sortedProducts = products.products | sort(false, false, 'number') %}
+              {%- for product in sortedProducts %}
+              {%- set price = "45 kr" %}
+              {%- if product.category == 'exklusiv' %}
+                {%- set price = "75 kr" %}
+              {%- elif product.category == 'premium' %}
+                {%- set price = "125 kr" %}
+              {%- endif %}
+              <div class="row align-items-center mb-4">
+                <div class="col-3">
+                  <img src="{{ product.imagePath }}" class="product-image" alt="{{ product.title }}">
+                </div>
+                <div class="col-9 d-flex justify-content-between align-items-center">
+                  <h5 class="mb-0 product-title">{{ product.number }}. {{ product.title }}</h5>
+                  <p class="mb-0 product-price">{{ price }}</p>
+                </div>
+              </div>
+              {%- endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- container -->
+  </section>
+  <!--====== CARE CONTENT ENDS ======-->
+
+{% block scripts %}
+{% endblock %}

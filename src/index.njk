@@ -1,118 +1,115 @@
-<!DOCTYPE html>
-<html lang="sv">
+---
+layout: base.njk
+title: "Växter och bär från Rogsta, Hudiksvall - Drumla"
+description: "Drumla säljer sticklingar av Saintpaulior och färska hallon från Rogsta, Hudiksvall. Ekologiskt och handplockat."
+keywords: "Saintpaulior, sticklingar, växter, hallon, Rogsta, Hudiksvall, ekologiska bär, odling"
+ogTitle: "Drumla | Växter och bär från Rogsta, Hudiksvall."
+ogDescription: "Drumla erbjuder sticklingar av Saintpaulior och färska hallon från Rogsta, Hudiksvall. Ekologiskt och handplockat."
+ogImage: "assets/images/header/hero-image-flower.jpg"
+ogUrl: "https://drumla.se/"
+---
 
-<head>
-  <!--====== Required meta tags ======-->
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <meta name="description" content="Drumla säljer sticklingar av Saintpaulior och färska hallon från Rogsta, Hudiksvall. Ekologiskt och handplockat." />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-  <!--====== Title ======-->
-  <title>Växter och bär från Rogsta, Hudiksvall - Drumla</title>
-
-  <!--====== Bootstrap css ======-->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-
-  <!--====== Line Icons css ======-->
-  <link rel="stylesheet" href="assets/css/lineicons.css" />
-
-  <!--====== Tiny Slider css ======-->
-  <link rel="stylesheet" href="assets/css/tiny-slider.css" />
-
-  <!--====== gLightBox css ======-->
-  <link rel="stylesheet" href="assets/css/glightbox.min.css" />
-
-  <link rel="stylesheet" href="style.css?v=202508122036" />
-
-  <style>
-    .header-image img {
-      border-radius: 8px;
-    }
-  </style>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
-
-  <link rel="icon" type="image/png" href="/assets/images/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
-  <link rel="shortcut icon" href="/assets/images/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="Drumla" />
-  <link rel="manifest" href="/assets/images/site.webmanifest" />
-
-  <meta name="keywords" content="Saintpaulior, sticklingar, växter, hallon, Rogsta, Hudiksvall, ekologiska bär, odling" />
-  <meta name="author" content="Drumla" />
-  <meta property="og:title" content="Drumla | Växter och bär från Rogsta, Hudiksvall." />
-  <meta property="og:description" content="Drumla erbjuder sticklingar av Saintpaulior och färska hallon från Rogsta, Hudiksvall. Ekologiskt och handplockat." />
-  <meta property="og:image" content="assets/images/header/hero-image-flower.jpg" />
-  <meta property="og:url" content="https://drumla.se/" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Drumla | Växter och bär från Rogsta, Hudiksvall." />
-  <meta name="twitter:description" content="Drumla erbjuder sticklingar av Saintpaulior och färska hallon från Rogsta, Hudiksvall. Ekologiskt och handplockat." />
-  <meta name="twitter:image" content="assets/images/header/hero-image-flower.jpg" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Drumla",
-    "description": "Drumla erbjuder sticklingar av Saintpaulior och färska hallon från Rogsta, Hudiksvall. Ekologiskt och handplockat.",
-    "image": "https://drumla.se/assets/images/header/hero-image-flower.jpg",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Åkre 103",
-      "addressLocality": "Hudiksvall",
-      "postalCode": "82493",
-      "addressCountry": "SE"
-    },
-    "telephone": "+46722121724",
-    "url": "https://drumla.se",
-    "openingHours": "Mo,We,Fr 12:00-17:00"
+{% block styles %}
+<style>
+  .header-image img {
+    border-radius: 8px;
   }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    "author": {
-      "@type": "Person",
-      "name": "Berit"
+</style>
+{% endblock %}
+
+{% block jsonld %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Drumla",
+  "description": "Drumla erbjuder sticklingar av Saintpaulior och färska hallon från Rogsta, Hudiksvall. Ekologiskt och handplockat.",
+  "image": "https://drumla.se/assets/images/header/hero-image-flower.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Åkre 103",
+    "addressLocality": "Hudiksvall",
+    "postalCode": "82493",
+    "addressCountry": "SE"
+  },
+  "telephone": "+46722121724",
+  "url": "https://drumla.se",
+  "openingHours": "Mo,We,Fr 12:00-17:00"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "author": {
+    "@type": "Person",
+    "name": "Berit"
+  },
+  "datePublished": "2025-08-02",
+  "reviewBody": "Idag köpte jag jättefina och väldigt goda hallon, tack Therese🌸 och utmärkt rensade också, så lyxigt👍",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  },
+  "itemReviewed": {
+    "@type": "Product",
+    "name": "Färska Hallon",
+    "description": "Färska hallon från Rogsta, Hudiksvall. Handplockade och ekologiska, perfekta för alla tillfällen.",
+    "image": "https://drumla.se/assets/images/askar.jpeg",
+    "brand": {
+      "@type": "Brand",
+      "name": "Drumla"
     },
-    "datePublished": "2025-08-02",
-    "reviewBody": "Idag köpte jag jättefina och väldigt goda hallon, tack Therese🌸 och utmärkt rensade också, så lyxigt👍",
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "5",
-      "bestRating": "5"
-    },
-    "itemReviewed": {
-      "@type": "Product",
-      "name": "Färska Hallon",
-      "description": "Färska hallon från Rogsta, Hudiksvall. Handplockade och ekologiska, perfekta för alla tillfällen.",
-      "image": "https://drumla.se/assets/images/askar.jpeg",
-      "brand": {
-        "@type": "Brand",
-        "name": "Drumla"
-      },
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "SEK",
-        "price": "50",
-        "itemCondition": "https://schema.org/NewCondition",
-        "availability": "https://schema.org/InStock",
-        "url": "https://drumla.se/raspberries.html"
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "SEK",
+      "price": "50",
+      "itemCondition": "https://schema.org/NewCondition",
+      "availability": "https://schema.org/InStock",
+      "url": "https://drumla.se/raspberries.html"
+    }
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {%- for product in products.products %}
+    {%- set price = 45 %}
+    {%- if product.category == 'exklusiv' %}
+      {%- set price = 75 %}
+    {%- elif product.category == 'premium' %}
+      {%- set price = 125 %}
+    {%- endif %}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "item": {
+        "@type": "Product",
+        "name": "{{ product.title }}",
+        "description": "{{ product.description }}",
+        "image": "https://drumla.se/{{ product.imagePath }}",
+        "brand": {
+          "@type": "Brand",
+          "name": "Drumla"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "SEK",
+          "price": "{{ price }}",
+          "itemCondition": "https://schema.org/NewCondition",
+          "availability": "https://schema.org/InStock"
+        }
       }
-    }
-  }
-  </script>
-</head>
-
-<body>
-  <!-- Header component -->
-  <header-component></header-component>
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>
+{% endblock %}
 
   <!-- Start header Area -->
   <section id="hero-area" class="header-area header-eight">
@@ -303,7 +300,36 @@
       </div>
       <!-- row -->
       <div id="portfolio-container" class="row grid">
-        <!-- Products will be dynamically loaded here -->
+        {%- for product in products.products %}
+        {%- set categoryLabel = product.category | capitalize %}
+        {%- set iconClass = 'lni lni-tag' %}
+        {%- if product.category == 'premium' %}
+          {%- set iconClass = 'lni lni-crown' %}
+        {%- elif product.category == 'exklusiv' %}
+          {%- set iconClass = 'lni lni-diamond' %}
+        {%- elif product.category == 'standard' %}
+          {%- set iconClass = 'lni lni-circle-plus' %}
+        {%- endif %}
+        <div class="col-lg-4 col-sm-6" data-filter="{{ product.category }}">
+          <div class="portfolio-style-three">
+            <div class="portfolio-image">
+              <img src="{{ product.imagePath }}" alt="{{ product.title }}" href="{{ product.imagePath }}" data-gallery="portfolio-gallery" data-title="{{ product.title }}" data-description="{{ product.description }}">
+              <div class="meta-details">
+                <span><i class="{{ iconClass }}"></i> {{ categoryLabel }}</span>
+              </div>
+            </div>
+            <div class="portfolio-text">
+              <h4 class="portfolio-title">
+                {{ product.title }}
+              </h4>
+              <p class="text">
+                {{ product.description }}
+              </p>
+            </div>
+          </div>
+          <!-- single portfolio -->
+        </div>
+        {%- endfor %}
       </div>
       <!-- row -->
     </div>
@@ -618,23 +644,6 @@
   </section>
   <!-- ========================= map-section end ========================= -->
 
-  <!-- Footer component -->
-  <footer-component></footer-component>
-
-  <!--====== js ======-->
-  <script src="components.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script>
-    // Only load on production environment.
-    if (window.location.host !== 'drumla.se')
-        window.goatcounter = {no_onload: true}
-  </script>
-  <script data-goatcounter="https://drumla.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/glightbox.min.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script type="module" src="assets/js/index.js?v=20250815"></script>
-  <script src="assets/js/tiny-slider.js"></script>
-</body>
-
-</html>
+{% block scripts %}
+<script src="{% asset 'assets/js/index.js' %}"></script>
+{% endblock %}
