@@ -3,8 +3,6 @@
  * This file contains code that's only needed on the index page
  */
 
-import productsConfig from '/products.json' with { type: 'json' };
-
 (function () {
     "use strict";
 
@@ -29,103 +27,20 @@ import productsConfig from '/products.json' with { type: 'json' };
 
     window.document.addEventListener('scroll', onScroll);
     
-    // Load and display products from imported JSON data
-    function loadProducts() {
-        try {
-            const products = productsConfig.products;
-            
-            const portfolioContainer = document.getElementById('portfolio-container');
-            if (!portfolioContainer) return;
-            
-            portfolioContainer.innerHTML = '';
-            
-            // Add all products directly to container (no row grouping for better filtering)
-            products.forEach(product => {
-                const categoryLabel = product.category.charAt(0).toUpperCase() + product.category.slice(1);
-                
-                // Define icons based on category
-                let iconClass;
-                switch(product.category) {
-                    case 'premium':
-                        iconClass = 'lni lni-crown';
-                        break;
-                    case 'exklusiv':
-                        iconClass = 'lni lni-diamond';
-                        break;
-                    case 'standard':
-                        iconClass = 'lni lni-circle-plus';
-                        break;
-                    default:
-                        iconClass = 'lni lni-tag';
-                }
-                
-                const productHTML = `
-                    <div class="col-lg-4 col-sm-6" data-filter="${product.category}">
-                        <div class="portfolio-style-three">
-                            <div class="portfolio-image">
-                                <img src="${product.imagePath}" alt="${product.title}">
-                                <div class="meta-details">
-                                    <span><i class="${iconClass}"></i> ${categoryLabel}</span>
-                                </div>
-                            </div>
-                            <div class="portfolio-text">
-                                <h4 class="portfolio-title">
-                                    ${product.title}
-                                </h4>
-                                <p class="text">
-                                    ${product.description}
-                                </p>
-                            </div>
-                        </div>
-                        <!-- single portfolio -->
-                    </div>
-                `;
-                
-                portfolioContainer.innerHTML += productHTML;
-            });
-            
-            // Initialize portfolio filtering after products are loaded
-            initializePortfolioFilter();
-            
-            // Initialize GLightbox with products data
-            initializeGLightbox(products);
-            
-        } catch (error) {
-            console.error('Error loading products:', error);
-        }
-    }
-
-    // Initialize GLightbox with products data
-    function initializeGLightbox(products) {
-        // Wait for DOM to be updated, then add attributes and initialize GLightbox
-        setTimeout(() => {
-            const portfolioImages = document.querySelectorAll('.portfolio-image img');
-            
-            // Add GLightbox attributes to each image
-            portfolioImages.forEach((img, index) => {
-                const product = products[index];
-                if (product) {
-                    img.setAttribute('href', product.imagePath);
-                    img.setAttribute('data-gallery', 'portfolio-gallery');
-                    img.setAttribute('data-title', product.title);
-                    img.setAttribute('data-description', product.description);
-                    img.style.cursor = 'pointer';
-                }
-            });
-            
-            // Initialize GLightbox with mobile-friendly settings
-            const myGallery3 = GLightbox({
-                selector: '.portfolio-image img',
-                width: 900,
-                height: 'auto',
-                descPosition: 'bottom',
-                touchNavigation: true,
-                keyboardNavigation: true,
-                closeOnOutsideClick: true,
-                loop: true,
-                skin: 'clean'
-            });
-        }, 50);
+    // Initialize GLightbox for product images
+    function initializeGLightbox() {
+        // Initialize GLightbox with mobile-friendly settings
+        const myGallery3 = GLightbox({
+            selector: '.portfolio-image img',
+            width: 900,
+            height: 'auto',
+            descPosition: 'bottom',
+            touchNavigation: true,
+            keyboardNavigation: true,
+            closeOnOutsideClick: true,
+            loop: true,
+            skin: 'clean'
+        });
     }
 
     // Initialize portfolio filtering functionality compatible with CSS classes
@@ -276,62 +191,16 @@ import productsConfig from '/products.json' with { type: 'json' };
         }, 7000);
     }
 
-    // Generate and inject structured data for products
-    function injectProductStructuredData() {
-        const products = productsConfig.products;
-        const categoryPrices = {
-            standard: 45,
-            exklusiv: 75,
-            premium: 125
-        };
-
-        const structuredData = {
-            "@context": "https://schema.org",
-            "@type": "ItemList",
-            "itemListElement": products.map((product, index) => {
-                const price = categoryPrices[product.category];
-                const offers = {
-                    "@type": "Offer",
-                    "priceCurrency": "SEK",
-                    "price": price.toString(),
-                    "itemCondition": "https://schema.org/NewCondition",
-                    "availability": "https://schema.org/InStock"
-                };
-
-                return {
-                    "@type": "ListItem",
-                    "position": index + 1,
-                    "item": {
-                        "@type": "Product",
-                        "name": product.title,
-                        "description": product.description,
-                        "image": `https://drumla.se/${product.imagePath}`,
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Drumla"
-                        },
-                        offers
-                    }
-                };
-            })
-        };
-
-        const script = document.createElement('script');
-        script.setAttribute('type', 'application/ld+json');
-        script.textContent = JSON.stringify(structuredData);
-        document.head.appendChild(script);
-    }
-
     // Initialize index-specific functionality when DOM is ready
     document.addEventListener("DOMContentLoaded", function () {
-        // Load products when DOM is ready
-        loadProducts();
+        // Initialize portfolio filtering
+        initializePortfolioFilter();
+        
+        // Initialize lightbox
+        initializeGLightbox();
         
         // Initialize contact form
         initializeContactForm();
-        
-        // Inject structured data for products
-        injectProductStructuredData();
     });
 
 })();

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <!--====== Required meta tags ======-->
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="description" content="{{ description or 'Drumla säljer sticklingar av Saintpaulior och färska hallon från Rogsta, Hudiksvall. Ekologiskt och handplockat.' }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!--====== Title ======-->
+  <title>{{ title or 'Växter och bär från Rogsta, Hudiksvall - Drumla' }}</title>
+
+  <!--====== Bootstrap css ======-->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+  <!--====== Line Icons css ======-->
+  <link rel="stylesheet" href="assets/css/lineicons.css" />
+
+  <!--====== Tiny Slider css ======-->
+  <link rel="stylesheet" href="assets/css/tiny-slider.css" />
+
+  <!--====== gLightBox css ======-->
+  <link rel="stylesheet" href="assets/css/glightbox.min.css" />
+
+  <link rel="stylesheet" href="{% asset 'assets/css/style.css' %}" />
+
+  {% block styles %}{% endblock %}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="/assets/images/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Drumla" />
+  <link rel="manifest" href="/assets/images/site.webmanifest" />
+
+  <meta name="keywords" content="{{ keywords or 'Saintpaulior, sticklingar, växter, hallon, Rogsta, Hudiksvall, ekologiska bär, odling' }}" />
+  <meta name="author" content="Drumla" />
+  <meta property="og:title" content="{{ ogTitle or title or 'Drumla | Växter och bär från Rogsta, Hudiksvall.' }}" />
+  <meta property="og:description" content="{{ ogDescription or description or 'Drumla erbjuder sticklingar av Saintpaulior och färska hallon från Rogsta, Hudiksvall. Ekologiskt och handplockat.' }}" />
+  <meta property="og:image" content="{{ ogImage or 'assets/images/header/hero-image-flower.jpg' }}" />
+  <meta property="og:url" content="{{ ogUrl or 'https://drumla.se/' }}" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ ogTitle or title or 'Drumla | Växter och bär från Rogsta, Hudiksvall.' }}" />
+  <meta name="twitter:description" content="{{ ogDescription or description or 'Drumla erbjuder sticklingar av Saintpaulior och färska hallon från Rogsta, Hudiksvall. Ekologiskt och handplockat.' }}" />
+  <meta name="twitter:image" content="{{ ogImage or 'assets/images/header/hero-image-flower.jpg' }}" />
+
+  {% block jsonld %}{% endblock %}
+</head>
+
+<body>
+  <!-- Header -->
+  {% include "header.njk" %}
+
+  <!-- Main content -->
+  {{ content | safe }}
+
+  <!-- Footer -->
+  {% include "footer.njk" %}
+
+  <!--====== js ======-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    // Only load on production environment.
+    if (window.location.host !== 'drumla.se')
+        window.goatcounter = {no_onload: true}
+  </script>
+  <script data-goatcounter="https://drumla.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/glightbox.min.js"></script>
+  <script src="{% asset 'assets/js/main.js' %}"></script>
+  <script src="assets/js/tiny-slider.js"></script>
+  
+  {% block scripts %}{% endblock %}
+</body>
+
+</html>
