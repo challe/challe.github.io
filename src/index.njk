@@ -27,14 +27,55 @@ ogUrl: "https://drumla.se/"
   "image": "{{ site.url }}{{ site.defaultImage }}",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "{{ site.business.address.streetAddress }}",
-    "addressLocality": "{{ site.business.address.addressLocality }}",
-    "postalCode": "{{ site.business.address.postalCode }}",
-    "addressCountry": "{{ site.business.address.addressCountry }}"
+    "streetAddress": "Åkre 103",
+    "addressLocality": "Hudiksvall",
+    "postalCode": "82493",
+    "addressCountry": "SE",
+    "addressRegion": "Gävleborgs län"
   },
-  "telephone": "{{ site.business.telephone }}",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "61.751296",
+    "longitude": "17.121280"
+  },
+  "telephone": "+46722121724",
   "url": "{{ site.url }}",
-  "openingHours": "{{ site.business.openingHours }}"
+  "openingHours": "Mo,We,Fr 12:00-17:00",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Hudiksvall"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Gävleborgs län"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Växter och bär",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Sticklingar av Saintpaulia",
+          "category": "Växter"
+        }
+      },
+      {
+        "@type": "Offer", 
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Färska hallon",
+          "category": "Bär"
+        }
+      }
+    ]
+  },
+  "paymentAccepted": "Swish",
+  "currenciesAccepted": "SEK",
+  "priceRange": "45-125 SEK"
 }
 </script>
 <script type="application/ld+json">

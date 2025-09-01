@@ -9,20 +9,12 @@ module.exports = {
   // SEO defaults
   defaultImage: "/assets/images/header/hero-image-flower.jpg",
   
-  // Business info for structured data
+  // Only truly dynamic business data
   business: {
-    name: "Drumla",
-    address: {
-      streetAddress: "Åkre 103",
-      addressLocality: "Hudiksvall", 
-      postalCode: "82493",
-      addressCountry: "SE"
-    },
-    telephone: "+46722121724",
-    openingHours: "Mo,We,Fr 12:00-17:00"
+    name: "Drumla"
   },
   
-  // Product pricing by category
+  // Product pricing by category (these prices may change)
   pricing: {
     standard: {
       price: 45,

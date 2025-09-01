@@ -210,7 +210,6 @@ module.exports = function(eleventyConfig) {
 
   // Copy root files that need to be in the final site root
   eleventyConfig.addPassthroughCopy("src/robots.txt");
-  eleventyConfig.addPassthroughCopy("src/sitemap.xml");
   eleventyConfig.addPassthroughCopy("src/google*.html"); // For Google verification files
   eleventyConfig.addPassthroughCopy("src/CNAME");
   eleventyConfig.addPassthroughCopy("src/.nojekyll"); // Disable Jekyll processing
