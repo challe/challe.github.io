@@ -240,7 +240,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("blog", function(collectionApi) {
     return collectionApi.getFilteredByGlob("**/*.md")
       .filter(post => post.inputPath.includes("aktuellt/posts"))
-      .sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
+      .sort((a, b) => new Date(a.data.date) - new Date(b.data.date));
   });
 
   // Ignore Google verification files from template processing

@@ -10,7 +10,6 @@ tags:
   - blog
   - bakluckeförsäljning
   - forsa
-  - hälsingekretsen
 layout: post.njk
 permalink: "aktuellt/halsingekretsens-bakluckeforsaljning-frano/"
 ---
