@@ -78,12 +78,7 @@ ogUrl: "https://drumla.se/"
   "@type": "ItemList",
   "itemListElement": [
     {%- for product in products.products %}
-    {%- set price = 45 %}
-    {%- if product.category == 'exklusiv' %}
-      {%- set price = 75 %}
-    {%- elif product.category == 'premium' %}
-      {%- set price = 125 %}
-    {%- endif %}
+    {%- set price = site.pricing[product.category].price or site.pricing.standard.price %}
     {
       "@type": "ListItem",
       "position": {{ loop.index }},
@@ -403,72 +398,29 @@ ogUrl: "https://drumla.se/"
     <!--======  End Section Title Five ======-->
     <div class="container">
       <div class="row">
+        {%- for key, category in site.pricing %}
         <div class="col-lg-4 col-md-6 col-12">
-          <div class="pricing-style-fourteen">
+          <div class="pricing-style-fourteen{% if key == 'exklusiv' %} middle{% endif %}">
             <div class="table-head">
-              <h6 class="title">Standard</h6>
-                <p>En vacker och vanlig sort med enkla blad och klassiska färger.</p>
-                <div class="price">
-                  <h2 class="amount">
-                    <!--<span class="currency">$</span>-->45<span class="duration">kr</span>
-                  </h2>
-                </div>
+              <h6 class="title">{{ category.title }}</h6>
+              <p>{{ category.description }}</p>
+              <div class="price">
+                <h2 class="amount">
+                  {{ category.price }}<span class="duration">kr</span>
+                </h2>
+              </div>
             </div>
 
             <div class="table-content">
               <ul class="table-list">
-                <li> <i class="lni lni-checkmark-circle"></i> Klassisk sort</li>
-                <li> <i class="lni lni-checkmark-circle"></i> Vanliga färger</li>
-                <li> <i class="lni lni-checkmark-circle"></i> Enkel form</li>
-                <li> <i class="lni lni-checkmark-circle"></i> Prisvänlig</li>
+                {%- for feature in category.features %}
+                <li><i class="lni lni-checkmark-circle"></i> {{ feature }}</li>
+                {%- endfor %}
               </ul>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-12">
-          <div class="pricing-style-fourteen middle">
-            <div class="table-head">
-              <h6 class="title">Exklusiv</h6>
-                <p>En fin och lite mer ovanlig variant med extra vackra blad och blomfärger.</p>
-                <div class="price">
-                  <h2 class="amount">
-                    <!--<span class="currency">$</span>-->75<span class="duration">kr</span>
-                  </h2>
-                </div>
-            </div>
-
-            <div class="table-content">
-              <ul class="table-list">
-                <li> <i class="lni lni-checkmark-circle"></i> Lite ovanligare färger</li>
-                <li> <i class="lni lni-checkmark-circle"></i> Mer varierande former</li>
-                <li> <i class="lni lni-checkmark-circle"></i> Snyggare utseende</li>
-                <li> <i class="lni lni-checkmark-circle"></i> Populär bland kunder</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-12">
-          <div class="pricing-style-fourteen">
-            <div class="table-head">
-              <h6 class="title">Premium</h6>
-                <p>En sällsynt och unik sort med ovanliga färger och former, för dig som vill ha något extra.</p>
-                <div class="price">
-                  <h2 class="amount">
-                    <!--<span class="currency">$</span>-->125<span class="duration">kr</span>
-                  </h2>
-                </div>
-            </div>
-
-            <div class="table-content">
-              <ul class="table-list">
-                <li> <i class="lni lni-checkmark-circle"></i> Sällsynta sorter</li>
-                <li> <i class="lni lni-checkmark-circle"></i> Unika färger</li>
-                <li> <i class="lni lni-checkmark-circle"></i> Ovanliga former</li>
-                <li> <i class="lni lni-checkmark-circle"></i> För dig som vill ha något extra</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        {%- endfor %}
       </div>
     </div>
   </section>

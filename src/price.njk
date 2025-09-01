@@ -57,19 +57,14 @@ ogUrl: "https://drumla.se/price.html"
             <div id="product-grid">
               {%- set sortedProducts = products.products | sort(false, false, 'number') %}
               {%- for product in sortedProducts %}
-              {%- set price = "45 kr" %}
-              {%- if product.category == 'exklusiv' %}
-                {%- set price = "75 kr" %}
-              {%- elif product.category == 'premium' %}
-                {%- set price = "125 kr" %}
-              {%- endif %}
+              {%- set price = site.pricing[product.category].price or site.pricing.standard.price %}
               <div class="row align-items-center mb-4">
                 <div class="col-3">
                   {% image product.imagePath, product.title, "150px" %}
                 </div>
                 <div class="col-9 d-flex justify-content-between align-items-center">
                   <h5 class="mb-0 product-title">{{ product.number }}. {{ product.title }}</h5>
-                  <p class="mb-0 product-price">{{ price }}</p>
+                  <p class="mb-0 product-price">{{ price }} kr</p>
                 </div>
               </div>
               {%- endfor %}
