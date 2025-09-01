@@ -1850,6 +1850,12 @@ h1, h2{
   scroll-margin-top: 50px;
 }
 
+/* Custom badge styling for pastel colors */
+.badge.bg-secondary {
+  background-color: #e8e9ea !important; /* Light pastel gray */
+  color: #495057 !important; /* Darker gray text for contrast */
+}
+
 /*===== portfolio THREE =====*/
 .portfolio-three {
   padding-top: 100px;

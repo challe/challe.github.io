@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "eleventy",
-    "build:prod": "cross-env NODE_ENV=production eleventy",
+    "build": "eleventy && npm run validate:seo",
+    "build:prod": "cross-env NODE_ENV=production eleventy && npm run validate:seo",
     "serve": "eleventy --serve",
-    "serve:prod": "cross-env NODE_ENV=production eleventy --serve"
+    "serve:prod": "cross-env NODE_ENV=production eleventy --serve",
+    "validate:seo": "node validate-structured-data.js"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +17,8 @@
     "@11ty/eleventy-img": "^6.0.4",
     "clean-css": "^5.3.3",
     "cross-env": "^10.0.0",
-    "sharp": "^0.34.3"
+    "sharp": "^0.34.3",
+    "structured-data-testing-tool": "^4.0.0"
   },
   "dependencies": {
     "simplelightbox": "^2.14.3"

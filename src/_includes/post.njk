@@ -32,6 +32,7 @@ layout: base.njk
   "datePublished": "{{ date | date('iso') }}",
   "dateModified": "{{ date | date('iso') }}",
   "url": "{{ site.url }}{{ page.url }}",
+  "image": "{{ site.url }}/{{ image or 'assets/images/blog/forsagarden.jpg' }}",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "{{ site.url }}{{ page.url }}"

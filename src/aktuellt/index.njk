@@ -65,7 +65,7 @@ permalink: "aktuellt{% if pagination.pageNumber > 0 %}/sida-{{ pagination.pageNu
                     {% if post.data.tags %}
                       {% for tag in post.data.tags %}
                         {% if tag != "blog" %}
-                          <span class="badge bg-secondary me-1">{{ tag }}</span>
+                          <span class="badge bg-secondary me-1">{{ tag | capitalize }}</span>
                         {% endif %}
                       {% endfor %}
                     {% endif %}
