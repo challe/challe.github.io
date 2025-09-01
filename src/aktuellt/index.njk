@@ -47,7 +47,7 @@ permalink: "aktuellt{% if pagination.pageNumber > 0 %}/sida-{{ pagination.pageNu
               <div class="mb-4 p-4 border rounded">
                 <div class="mb-2 text-muted small">
                   <i class="lni lni-calendar"></i>
-                  {{ post.data.date | date("D MMMM YYYY", "sv") }}
+                  Publicerat: {{ post.data.date | date("D MMMM YYYY", "sv") }}
                 </div>
                 
                 <h2 class="h4 mb-2">
