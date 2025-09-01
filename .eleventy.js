@@ -199,7 +199,48 @@ module.exports = function(eleventyConfig) {
 
   // Add a shortcode for cache-busted asset URLs
   eleventyConfig.addShortcode("asset", function(url) {
-    return `${url}?v=${this.ctx.build.hash}`;
+    const timestamp = Date.now();
+    return `${url}?v=${timestamp}`;
+  });
+
+  // Truncate filter for shortening text
+  eleventyConfig.addFilter("truncate", function(str, limit = 50) {
+    if (!str) return "";
+    if (str.length <= limit) return str;
+    return str.substring(0, limit) + "...";
+  });
+
+  // Date filter for formatting dates
+  eleventyConfig.addFilter("date", function(date, format, locale = "en") {
+    if (!date) return "";
+    
+    const dateObj = new Date(date);
+    
+    if (format === "D MMMM YYYY" && locale === "sv") {
+      const months = [
+        "januari", "februari", "mars", "april", "maj", "juni",
+        "juli", "augusti", "september", "oktober", "november", "december"
+      ];
+      return `${dateObj.getDate()} ${months[dateObj.getMonth()]} ${dateObj.getFullYear()}`;
+    }
+    
+    if (format === "D/M YYYY") {
+      return `${dateObj.getDate()}/${dateObj.getMonth() + 1} ${dateObj.getFullYear()}`;
+    }
+    
+    if (format === "iso") {
+      return dateObj.toISOString();
+    }
+    
+    // Default format
+    return dateObj.toLocaleDateString(locale);
+  });
+
+  // Blog collection for aktuellt posts
+  eleventyConfig.addCollection("blog", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("**/*.md")
+      .filter(post => post.inputPath.includes("aktuellt/posts"))
+      .sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
   });
 
   // Ignore Google verification files from template processing

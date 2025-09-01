@@ -1,0 +1,95 @@
+---
+layout: base.njk
+title: "Aktuellt - Drumla"
+description: "Senaste nytt från Drumla - när och var du kan hitta oss på marknader och evenemang i Hudiksvall och omnejd."
+keywords: "marknader, evenemang, Hudiksvall, Drumla, sticklingar, hallon, aktuellt, nyheter"
+ogTitle: "Aktuellt från Drumla - Marknader och Evenemang"
+ogDescription: "Se var vi dyker upp härnäst! Marknader, evenemang och nyheter från Drumla i Hudiksvall."
+ogImage: "/assets/images/header/hero-image-flower.jpg"
+ogUrl: "https://drumla.se/aktuellt/"
+pagination:
+  data: collections.blog
+  size: 10
+  reverse: true
+  alias: posts
+permalink: "aktuellt{% if pagination.pageNumber > 0 %}/sida-{{ pagination.pageNumber + 1 }}{% endif %}/"
+---
+
+{% block styles %}
+{% endblock %}
+
+<!-- Start Aktuellt Hero Area -->
+<section id="aktuellt-hero" class="header-area header-eight">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-12 col-md-12 col-12">
+        <div class="header-content text-center">
+          <h1>Aktuellt från Drumla</h1>
+          <p>
+            Håll dig uppdaterad med mina senaste nyheter, marknader och evenemang.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Aktuellt Hero Area -->
+
+<!--====== AKTUELLT CONTENT START ======-->
+<section id="aktuellt-guide" class="aktuellt-guide-area about-five">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <div class="aktuellt-content">
+          {% if posts.length > 0 %}
+            {% for post in posts %}
+              <div class="mb-4 p-4 border rounded">
+                <div class="mb-2 text-muted small">
+                  <i class="lni lni-calendar"></i>
+                  {{ post.data.date | date("D MMMM YYYY", "sv") }}
+                </div>
+                
+                <h2 class="h4 mb-2">
+                  <a href="{{ post.url }}" class="text-decoration-none text-dark">
+                    {{ post.data.title }}
+                  </a>
+                </h2>
+                
+                <p class="mb-3">
+                  {{ post.data.description }}
+                </p>
+                
+                <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                  <div>
+                    {% if post.data.tags %}
+                      {% for tag in post.data.tags %}
+                        {% if tag != "blog" %}
+                          <span class="badge bg-secondary me-1">{{ tag }}</span>
+                        {% endif %}
+                      {% endfor %}
+                    {% endif %}
+                  </div>
+                  <a href="{{ post.url }}" class="btn btn-sm primary-btn">
+                    Läs mer
+                  </a>
+                </div>
+              </div>
+            {% endfor %}
+          
+          {% else %}
+            <div class="text-center py-5">
+              <i class="lni lni-empty-file display-1 text-muted mb-3"></i>
+              <h3>Inga inlägg än</h3>
+              <p class="text-muted">Jag kommer snart att dela nyheter och marknadsinfo här!</p>
+            </div>
+          {% endif %}
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!-- container -->
+</section>
+<!--====== AKTUELLT CONTENT ENDS ======-->

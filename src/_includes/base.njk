@@ -38,18 +38,18 @@
 
   <!--====== Canonical URL ======-->
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-  <link rel="stylesheet" href="assets/css/bootstrap.css" />
+  <link rel="stylesheet" href="/assets/css/bootstrap.css" />
 
   <!--====== Line Icons css ======-->
-  <link rel="stylesheet" href="assets/css/lineicons.css" />
+  <link rel="stylesheet" href="/assets/css/lineicons.css" />
 
   <!--====== Tiny Slider css ======-->
-  <link rel="stylesheet" href="assets/css/tiny-slider.css" />
+  <link rel="stylesheet" href="/assets/css/tiny-slider.css" />
 
   <!--====== Simple Lightbox css ======-->
-  <link rel="stylesheet" href="assets/css/simple-lightbox.min.css" />
+  <link rel="stylesheet" href="/assets/css/simple-lightbox.min.css" />
 
-  <link rel="stylesheet" href="{% asset 'assets/css/style.css' %}" />
+  <link rel="stylesheet" href="{% asset '/assets/css/style.css' %}" />
 
   {% block styles %}{% endblock %}
 
@@ -88,10 +88,10 @@
         window.goatcounter = {no_onload: true}
   </script>
   <script data-goatcounter="https://drumla.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/simple-lightbox.min.js"></script>
-  <script src="{% asset 'assets/js/main.js' %}"></script>
-  <script src="assets/js/tiny-slider.js"></script>
+  <script src="/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/simple-lightbox.min.js"></script>
+  <script src="{% asset '/assets/js/main.js' %}"></script>
+  <script src="/assets/js/tiny-slider.js"></script>
   
   {% block scripts %}{% endblock %}
 </body>
