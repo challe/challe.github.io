@@ -55,6 +55,8 @@ module.exports = {
   excludedPages: [
     "/price.html",
     "/generator.html",
-    "/404.html"
+    "/404.html",
+    "/raspberries.html",
+    "/care.html"
   ]
 };

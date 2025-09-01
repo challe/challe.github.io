@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-lg-12">
         <nav class="navbar navbar-expand-lg">
-          <a class="navbar-brand" href="/index.html">
+          <a class="navbar-brand" href="/">
             <img src="/assets/images/leaf.svg" alt="#" class="leaf-logo" /> Drumla
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNine"
@@ -17,19 +17,19 @@
           <div class="collapse navbar-collapse sub-menu-bar" id="navbarNine">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="page-scroll{% if page.url == '/' %} active{% endif %}" href="{% if page.url == '/' %}#hero-area{% else %}/index.html#hero-area{% endif %}">Hem</a>
+                <a class="page-scroll{% if page.url == '/' %} active{% endif %}" href="{% if page.url == '/' %}#hero-area{% else %}/#hero-area{% endif %}">Hem</a>
               </li>
               <li class="nav-item">
-                <a class="page-scroll" href="{% if page.url == '/' %}#about{% else %}/index.html#about{% endif %}">Om Drumla</a>
+                <a class="page-scroll" href="{% if page.url == '/' %}#about{% else %}/#about{% endif %}">Om Drumla</a>
               </li>
               <li class="nav-item">
-                <a class="page-scroll" href="{% if page.url == '/' %}#products{% else %}/index.html#products{% endif %}">Produkter</a>
+                <a class="page-scroll" href="{% if page.url == '/' %}#products{% else %}/#products{% endif %}">Produkter</a>
               </li>
               <li class="nav-item">
-                <a class="page-scroll" href="{% if page.url == '/' %}#pricing{% else %}/index.html#pricing{% endif %}">Priser</a>
+                <a class="page-scroll" href="{% if page.url == '/' %}#pricing{% else %}/#pricing{% endif %}">Priser</a>
               </li>
               <li class="nav-item">
-                <a class="page-scroll" href="{% if page.url == '/' %}#contact{% else %}/index.html#contact{% endif %}">Kontaktuppgifter</a>
+                <a class="page-scroll" href="{% if page.url == '/' %}#contact{% else %}/#contact{% endif %}">Kontaktuppgifter</a>
               </li>
               <li class="nav-item">
                 <a class="page-separate{% if '/aktuellt' in page.url %} active{% endif %}" href="/aktuellt/">Aktuellt</a>
@@ -64,13 +64,13 @@
     <div class="sidebar-menu">
       <h5 class="menu-title">Snabblänkar</h5>
       <ul>
-        <li><a href="{% if page.url == '/' %}#hero-area{% else %}/index.html#hero-area{% endif %}">Hem</a></li>
-        <li><a href="{% if page.url == '/' %}#about{% else %}/index.html#about{% endif %}">Om Drumla</a></li>
-        <li><a href="{% if page.url == '/' %}#products{% else %}/index.html#products{% endif %}">Produkter</a></li>
-        <li><a href="{% if page.url == '/' %}#pricing{% else %}/index.html#pricing{% endif %}">Priser</a></li>
-        <li><a href="{% if page.url == '/' %}#contact{% else %}/index.html#contact{% endif %}">Kontaktuppgifter</a></li>
+        <li><a href="{% if page.url == '/' %}#hero-area{% else %}/#hero-area{% endif %}">Hem</a></li>
+        <li><a href="{% if page.url == '/' %}#about{% else %}/#about{% endif %}">Om Drumla</a></li>
+        <li><a href="{% if page.url == '/' %}#products{% else %}/#products{% endif %}">Produkter</a></li>
+        <li><a href="{% if page.url == '/' %}#pricing{% else %}/#pricing{% endif %}">Priser</a></li>
+        <li><a href="{% if page.url == '/' %}#contact{% else %}/#contact{% endif %}">Kontaktuppgifter</a></li>
         <li><a href="/aktuellt/">Aktuellt</a></li>
-        <li><a href="/raspberries.html">Hallon</a></li>
+        <li><a href="/hallon/">Hallon</a></li>
       </ul>
     </div>
     <!-- menu -->
