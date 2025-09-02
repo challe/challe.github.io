@@ -18,7 +18,8 @@
     "clean-css": "^5.3.3",
     "cross-env": "^10.0.0",
     "sharp": "^0.34.3",
-    "structured-data-testing-tool": "^4.0.0"
+    "structured-data-testing-tool": "^4.0.0",
+    "terser": "^5.43.1"
   },
   "dependencies": {
     "simplelightbox": "^2.14.3"

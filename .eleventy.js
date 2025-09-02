@@ -1,4 +1,5 @@
 const CleanCSS = require("clean-css");
+const { minify } = require("terser");
 const fs = require("fs");
 const path = require("path");
 const Image = require("@11ty/eleventy-img");
@@ -128,6 +129,52 @@ module.exports = function(eleventyConfig) {
         
         if (filesProcessed > 0) {
           console.log(`Total: ${filesProcessed} CSS files minified, average ${(totalSavings/filesProcessed).toFixed(1)}% reduction`);
+        }
+      }
+
+      // JavaScript Minification
+      const jsDir = path.join(dir.output, 'assets', 'js');
+      
+      if (fs.existsSync(jsDir)) {
+        const jsFiles = fs.readdirSync(jsDir).filter(file => 
+          file.endsWith('.js') && !file.endsWith('.min.js')
+        );
+        
+        console.log('Minifying JavaScript files...');
+        let totalJsSavings = 0;
+        let jsFilesProcessed = 0;
+        
+        for (const fileName of jsFiles) {
+          const jsFile = path.join(jsDir, fileName);
+          const js = fs.readFileSync(jsFile, 'utf8');
+          
+          try {
+            const minified = await minify(js, {
+              compress: {
+                drop_console: true, // Remove console statements in production
+                drop_debugger: true, // Remove debugger statements
+                pure_funcs: ['console.log', 'console.info'] // Remove specific console methods
+              },
+              mangle: true, // Shorten variable names
+              format: {
+                comments: false // Remove comments
+              }
+            });
+            
+            if (minified.code) {
+              fs.writeFileSync(jsFile, minified.code);
+              const savings = ((js.length - minified.code.length) / js.length * 100);
+              console.log(`${fileName}: ${savings.toFixed(1)}% size reduction`);
+              totalJsSavings += savings;
+              jsFilesProcessed++;
+            }
+          } catch (error) {
+            console.log(`JavaScript minification error in ${fileName}:`, error.message);
+          }
+        }
+        
+        if (jsFilesProcessed > 0) {
+          console.log(`Total: ${jsFilesProcessed} JavaScript files minified, average ${(totalJsSavings/jsFilesProcessed).toFixed(1)}% reduction`);
         }
       }
 
