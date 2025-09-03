@@ -1,0 +1,46 @@
+{% if breadcrumbs %}
+<!-- Breadcrumbs -->
+<section class="breadcrumbs py-3 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            {% for item in breadcrumbs %}
+              {% if item.current %}
+                <li class="breadcrumb-item active text-muted" aria-current="page">
+                  {{ item.name }}
+                </li>
+              {% else %}
+                <li class="breadcrumb-item">
+                  <a href="{{ item.url }}" class="text-decoration-none text-dark">{{ item.name }}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Breadcrumbs -->
+
+<!-- BreadcrumbList Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {%- set comma = joiner(",") -%}
+    {%- for item in breadcrumbs -%}
+      {{ comma() }}{
+        "@type": "ListItem",
+        "position": {{ loop.index }},
+        "name": "{{ item.name }}",
+        "item": "{{ site.url }}{{ item.url }}"
+      }
+    {%- endfor -%}
+  ]
+}
+</script>
+{% endif %}

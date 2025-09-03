@@ -93,7 +93,7 @@ async function validateAllFiles() {
         const lines = output.split('\n');
         console.log('   📋 Validation details:');
         for (const line of lines) {
-          if (line.includes('✕') || line.includes('❌')) {
+          if (line.includes('✕') || line.includes('❌') || line.toLowerCase().includes('error')) {
             console.log(`      ${line.trim()}`);
           }
         }

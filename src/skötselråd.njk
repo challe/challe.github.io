@@ -8,6 +8,13 @@ ogTitle: "Skötselråd för Saintpaulior - Drumla"
 ogDescription: "Allt du behöver veta om Saintpaulia-skötsel: ljus, vattning, näring, omplantering. Inklusive FAQ med lösningar på vanliga problem."
 ogImage: "/assets/images/header/hero-image-flower.jpg"
 ogUrl: "https://drumla.se/skötselråd/"
+breadcrumbs:
+  - name: "Hem"
+    url: "/"
+    current: false
+  - name: "Skötselråd"
+    url: "/skötselråd/"
+    current: true
 ---
 
 {% block jsonld %}
@@ -107,26 +114,7 @@ ogUrl: "https://drumla.se/skötselråd/"
 </section>
 <!-- End Care Guide Hero Area -->
 
-<!-- Breadcrumbs -->
-<section class="breadcrumbs py-3 bg-light">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item">
-              <a href="/" class="text-decoration-none text-dark">Hem</a>
-            </li>
-            <li class="breadcrumb-item active text-muted" aria-current="page">
-              Skötselråd
-            </li>
-          </ol>
-        </nav>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Breadcrumbs -->
+{% include "breadcrumbs.njk" %}
 
 <!--====== CARE CONTENT START ======-->
 <section id="care-guide" class="care-guide-area about-five">

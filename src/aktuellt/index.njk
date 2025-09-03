@@ -1,10 +1,10 @@
 ---
 layout: base.njk
 title: "Aktuellt - Drumla"
-description: "Senaste nytt från Drumla - när och var du kan hitta oss på marknader och evenemang i Hudiksvall och omnejd."
+description: "Senaste nytt från Drumla - när och var du kan hitta mig på marknader och evenemang i Hudiksvall och omnejd."
 keywords: "marknader, evenemang, Hudiksvall, Drumla, sticklingar, hallon, aktuellt, nyheter"
 ogTitle: "Aktuellt från Drumla - Marknader och Evenemang"
-ogDescription: "Se var vi dyker upp härnäst! Marknader, evenemang och nyheter från Drumla i Hudiksvall."
+ogDescription: "Se var jag dyker upp härnäst! Marknader, evenemang och nyheter från Drumla i Hudiksvall."
 ogImage: "/assets/images/header/hero-image-flower.jpg"
 ogUrl: "https://drumla.se/aktuellt/"
 pagination:
@@ -13,6 +13,13 @@ pagination:
   reverse: true
   alias: posts
 permalink: "aktuellt{% if pagination.pageNumber > 0 %}/sida-{{ pagination.pageNumber + 1 }}{% endif %}/"
+breadcrumbs:
+  - name: "Hem"
+    url: "/"
+    current: false
+  - name: "Aktuellt"
+    url: "/aktuellt/"
+    current: true
 ---
 
 {% block styles %}
@@ -35,26 +42,7 @@ permalink: "aktuellt{% if pagination.pageNumber > 0 %}/sida-{{ pagination.pageNu
 </section>
 <!-- End Aktuellt Hero Area -->
 
-<!-- Breadcrumbs -->
-<section class="breadcrumbs py-3 bg-light">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item">
-              <a href="/" class="text-decoration-none text-dark">Hem</a>
-            </li>
-            <li class="breadcrumb-item active text-muted" aria-current="page">
-              Aktuellt
-            </li>
-          </ol>
-        </nav>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Breadcrumbs -->
+{% include "breadcrumbs.njk" %}
 
 <!--====== AKTUELLT CONTENT START ======-->
 <section id="aktuellt-guide" class="aktuellt-guide-area about-five">
