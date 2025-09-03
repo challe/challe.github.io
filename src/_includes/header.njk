@@ -20,9 +20,6 @@
                 <a class="page-scroll{% if page.url == '/' %} active{% endif %}" href="{% if page.url == '/' %}#hero-area{% else %}/#hero-area{% endif %}">Hem</a>
               </li>
               <li class="nav-item">
-                <a class="page-scroll" href="{% if page.url == '/' %}#about{% else %}/#about{% endif %}">Om Drumla</a>
-              </li>
-              <li class="nav-item">
                 <a class="page-scroll" href="{% if page.url == '/' %}#products{% else %}/#products{% endif %}">Produkter</a>
               </li>
               <li class="nav-item">
@@ -30,6 +27,9 @@
               </li>
               <li class="nav-item">
                 <a class="page-scroll" href="{% if page.url == '/' %}#contact{% else %}/#contact{% endif %}">Kontaktuppgifter</a>
+              </li>
+              <li class="nav-item">
+                <a class="page-separate{% if '/skötselråd' in page.url %} active{% endif %}" href="/skötselråd/">Skötselråd</a>
               </li>
               <li class="nav-item">
                 <a class="page-separate{% if '/aktuellt' in page.url %} active{% endif %}" href="/aktuellt/">Aktuellt</a>
@@ -69,6 +69,7 @@
         <li><a href="{% if page.url == '/' %}#products{% else %}/#products{% endif %}">Produkter</a></li>
         <li><a href="{% if page.url == '/' %}#pricing{% else %}/#pricing{% endif %}">Priser</a></li>
         <li><a href="{% if page.url == '/' %}#contact{% else %}/#contact{% endif %}">Kontaktuppgifter</a></li>
+        <li><a href="/skötselråd/">Skötselråd</a></li>
         <li><a href="/aktuellt/">Aktuellt</a></li>
         <li><a href="/hallon/">Hallon</a></li>
       </ul>

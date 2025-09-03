@@ -1,11 +1,11 @@
 ---
 layout: base.njk
 permalink: "/skötselråd/"
-title: "Skötselråd för Saintpaulior - Drumla"
-description: "Lär dig hur du sköter Saintpaulior för att få dem att trivas och blomma vackert. Tips om placering, vattning, näring och omplantering."
-keywords: "saintpaulior, skötsel, växtråd, vattning, näring, placering, omplantering, krukväxter, blommor"
+title: "Skötselråd för Saintpaulior - Vattning, ljus, näringsråd och FAQ"
+description: "Lär dig allt om Saintpaulia-skötsel: optimal placering, rätt vattning, näring, omplantering. Inklusive FAQ med svar på vanliga problem och lösningar."
+keywords: "saintpaulior, skötsel, växtråd, vattning, näring, placering, omplantering, krukväxter, blommor, förökring, FAQ, växtproblem"
 ogTitle: "Skötselråd för Saintpaulior - Drumla"
-ogDescription: "Lär dig hur du sköter Saintpaulior för att få dem att trivas och blomma vackert. Tips om placering, vattning, näring och omplantering."
+ogDescription: "Allt du behöver veta om Saintpaulia-skötsel: ljus, vattning, näring, omplantering. Inklusive FAQ med lösningar på vanliga problem."
 ogImage: "/assets/images/header/hero-image-flower.jpg"
 ogUrl: "https://drumla.se/skötselråd/"
 ---
@@ -70,6 +70,24 @@ ogUrl: "https://drumla.se/skötselråd/"
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for faq in site.careGuide.faq %}
+    {
+      "@type": "Question",
+      "name": "{{ faq.question }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ faq.answer }}"
+      }
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>
 {% endblock %}
 
 <!-- Start Care Guide Hero Area -->
@@ -80,7 +98,7 @@ ogUrl: "https://drumla.se/skötselråd/"
         <div class="header-content text-center">
           <h1>Skötselråd för Saintpaulior</h1>
           <p>
-            Allt du behöver veta för att få dina Saintpaulior att trivas och blomma vackert.
+            Praktiska tips för att få dina Saintpaulior att trivas och blomma vackert.
           </p>
         </div>
       </div>
@@ -95,23 +113,86 @@ ogUrl: "https://drumla.se/skötselråd/"
     <div class="row">
       <div class="col-lg-8 mx-auto">
         <div class="care-content">
-          <p>Saintpaulia är en av världens mest populära krukväxter, och det är lätt att förstå varför. Den blommar ofta och länge, trivs i vanlig rumstemperatur och tar inte mycket plats. Blommorna finns i många färger och former. De kan vara enkla eller dubbla, krusiga, fransiga eller tvåfärgade. Det blir extra fint att samla flera plantor i samma färgton men med olika utseende på blommorna.</p>
+          <h2>Grundläggande skötsel av Saintpaulior</h2>
+          <p>Saintpaulia blommar ofta och länge, trivs i vanlig rumstemperatur och tar inte mycket plats. Blommorna finns i många färger och former. De kan vara enkla eller dubbla, krusiga, fransiga eller tvåfärgade.</p>
           
-          <p>Placera din saintpaulia ljust men inte i direkt sol. Den gillar värme och mår bäst om temperaturen inte går under 16 grader. Undvik drag och kalla fönster, särskilt under vintern. Vattna med ljummet vatten, gärna underifrån. Låt jorden torka upp ordentligt mellan vattningarna. Om du vattnar i ett fat eller ytterkruka, häll bort överflödigt vatten efter ungefär tio minuter. Växten vill inte stå blött. Undvik att blöta bladen eftersom kallt vatten kan ge fula fläckar.</p>
-          
-          <p>Från mars till oktober går det bra att tillsätta svag näring i vattnet varannan till var fjärde vecka. På vintern räcker det med vanligt vatten. Ta bort vissna blommor och blad regelbundet. Om plantan får mycket blad men få blommor kan du prova att minska gödslingen och plocka bort de största bladen.</p>
-          
-          <p>Saintpaulia gillar luftig jord och en liten kruka. Plantera gärna om en gång om året, helst på våren.</p>
-
-          <p>Trots sitt nätta utseende är saintpaulia en tålig växt. Den klarar vår torra inomhusluft bra tack vare sina tjocka blad som lagrar vatten. Med rätt skötsel håller den sig frisk länge och blommar om och om igen.</p>
-          
-          <div class="text-center mt-5">
-            <a href="/" class="btn primary-btn" title="Tillbaka till startsidan">Tillbaka till startsidan</a>
+          <div class="mt-4 p-4 border rounded bg-light">
+            <h3 class="mb-3 mt-0"><i class="lni lni-clipboard"></i> Snabbguide</h3>
+            <div class="row">
+              <div class="col-md-4 mb-2">
+                <strong><i class="lni lni-drop"></i> Vattning:</strong><br>
+                Vattna när jorden känns torr. Hellre för lite än för mycket.
+              </div>
+              <div class="col-md-4 mb-2">
+                <strong><i class="lni lni-sun"></i> Ljus:</strong><br>
+                Ljust men inte i direkt sol. Östfönster är perfekt.
+              </div>
+              <div class="col-md-4 mb-2">
+                <strong><i class="lni lni-home"></i> Temperatur:</strong><br>
+                Vanlig rumstemperatur (18-24°C). Undvik drag.
+              </div>
+            </div>
           </div>
+          
+          <h3>Ljus, temperatur och placering</h3>
+          <p>Placera din saintpaulia ljust men inte i direkt sol. Ett östfönster är perfekt, här får plantan morgonljus utan het middagssol. Västfönster fungerar också bra, men undvik südfönster under sommaren då det kan bli för varmt. Ett nordfönster kan fungera, men då behöver plantan extra mycket ljus (eventuellt växtbelysning) för att blomma bra.</p>
+          
+          <p>Saintpaulia mår bäst om temperaturen inte går under 16 grader, med ett optimalt område mellan 18-24°C. Undvik drag och kalla fönster, särskilt under vintern. Plötsliga temperaturförändringar kan få plantan att tappa blommor och bli stressad. Saintpaulia är en tålig växt som klarar vår torra inomhusluft bra tack vare sina tjocka blad som lagrar vatten.</p>
+
+          <h3>Vattning och luftfuktighet</h3>
+          <p>Vattna med ljummet vatten, gärna underifrån. Låt jorden torka upp ordentligt mellan vattningarna, detta är mycket viktigt för att undvika rotröta. Om du vattnar i ett fat eller ytterkruka, häll bort överflödig vatten efter en stund. Växten vill inte stå blött.</p>
+          
+          <p>Undvik att blöta bladen eftersom kallt vatten kan ge fula fläckar. Om du råkar få vatten på bladen, torka försiktigt. De ludna bladen är känsliga och kan lätt skadas. En bra tumregel är att sticka fingret cirka 1 cm ner i jorden, känns den torr så är det dags att vattna. I genomsnitt behöver de flesta saintpaulior vatten 1-2 gånger per vecka.</p>
+
+          <h3>Näring och omplantering</h3>
+          <p>Från mars till oktober går det bra att tillsätta svag näring i vattnet varannan till var fjärde vecka. Vanlig växtgödning utspädd till halv styrka fungerar utmärkt. På vintern räcker det med vanligt vatten eftersom plantan då vilar och växer långsammare. För mycket gödning kan ge rikligt bladverk men få blommor.</p>
+          
+          <p>Saintpaulia gillar luftig jord och en liten kruka. Plantera gärna om en gång om året, helst på våren när plantan börjar växa aktivt igen. Vanlig krukväxtjord fungerar bra. Välj en kruka som endast är något större än den gamla, saintpaulior blommar bäst när de sitter lite trångt.</p>
+
+          <h3>Skötsel och vanliga problem</h3>
+          <p>Ta bort vissna blommor och gula blad regelbundet för att hålla plantan frisk och uppmuntra ny blomning. Vrid plantan då och då så att den växer jämnt åt alla håll. Om plantan slutar blomma kan det bero på för lite ljus, för mycket gödning eller att den behöver vila. Gula blad tyder ofta på för mycket vatten eller för lite ljus. Bruna fläckar på bladen kan komma av kallt vatten eller direkt sol.</p>
+          
+          <p>Med rätt skötsel håller sig plantan frisk länge och blommar om och om igen. Det är en tacksam växt som blommar länge när den trivs.</p>
         </div>
       </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="/#products" class="btn primary-btn" title="Se mina Saintpaulior">Se mina sticklingar</a>
     </div>
   </div>
   <!-- container -->
 </section>
 <!--====== CARE CONTENT ENDS ======-->
+
+<!--====== FAQ SECTION START ======-->
+<section id="faq" class="faq-area about-five bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">        
+        <div class="section-title text-center mb-5">
+          <h2 class="fw-bold">Vanliga frågor om Saintpaulia-skötsel</h2>
+          <p>Här hittar du svar på de mest vanliga frågorna om att sköta Saintpaulior.</p>
+        </div>
+        
+        <div class="accordion" id="faqAccordion">
+          {%- for faq in site.careGuide.faq %}
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="heading{{ loop.index }}">
+              <button class="accordion-button{% if not loop.first %} collapsed{% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ loop.index }}" aria-expanded="{% if loop.first %}true{% else %}false{% endif %}" aria-controls="collapse{{ loop.index }}">
+                {{ faq.question }}
+              </button>
+            </h3>
+            <div id="collapse{{ loop.index }}" class="accordion-collapse collapse{% if loop.first %} show{% endif %}" aria-labelledby="heading{{ loop.index }}" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                {{ faq.detailedAnswer }}
+              </div>
+            </div>
+          </div>
+          {%- endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--====== FAQ SECTION ENDS ======-->
