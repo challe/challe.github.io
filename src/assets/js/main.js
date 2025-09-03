@@ -126,6 +126,23 @@
             link.href = `mailto:${user}@${domain}`;
             link.textContent = `${user}@${domain}`;
         }
+
+        // Handle dropdown close when main "Produkter" link is clicked
+        const produkterDropdown = document.querySelector('.navbar-nav .dropdown');
+        const produkterMainLink = produkterDropdown?.querySelector('.dropdown-toggle');
+        
+        if (produkterMainLink && produkterDropdown) {
+            produkterMainLink.addEventListener('click', function(e) {
+                // Small delay to allow navigation, then force close dropdown
+                setTimeout(() => {
+                    produkterDropdown.classList.remove('show');
+                    const dropdownMenu = produkterDropdown.querySelector('.dropdown-menu');
+                    if (dropdownMenu) {
+                        dropdownMenu.classList.remove('show');
+                    }
+                }, 100);
+            });
+        }
     });
 
 }) ();

@@ -488,7 +488,7 @@ p {
 .navbar-area.navbar-nine .navbar .navbar-nav .nav-item a {
   display: flex;
   align-items: center;
-  padding: 11px 16px;
+  padding: 6px 16px;
   color: var(--dark-1);
   position: relative;
   border-radius: 5px;
@@ -498,7 +498,7 @@ p {
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
-  margin: 14px 0;
+  margin: 8px 0;
   opacity: 0.7;
 }
 .navbar-area.navbar-nine .navbar .navbar-nav .nav-item a:hover {
@@ -910,7 +910,7 @@ p {
 ========================================*/
 .header-eight {
   position: relative;
-  padding:160px 0 100px 0;
+  padding:160px 0 80px 0;
   background: var(--beige-1);
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -920,7 +920,7 @@ p {
 }
 @media (max-width: 767px) {
   .header-eight {
-    padding: 100px 0 60px 0;
+    padding: 100px 0 40px 0;
   }
 }
 .header-eight .header-image img {
@@ -1005,18 +1005,18 @@ h1, h2{
 ===========================*/
 .about-five {
   background-color: var(--light-3);
-  padding-top: 70px;
+  padding-top: 40px;
   padding-bottom: 90px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .about-five {
-    padding-top: 100px;
+    padding-top: 40px;
     padding-bottom:70px;
   }
 }
 @media (max-width: 767px) {
   .about-five {
-    padding-top: 40px;
+    padding-top: 10px;
     padding-bottom:60px;
   }
 }
@@ -1773,6 +1773,94 @@ h1, h2{
   color: var(--black);
   font-weight: 500;
 }
+
+/* Sidebar submenu styling */
+.sidebar-menu ul li.submenu-item {
+  padding-left: 1rem;
+}
+
+.sidebar-menu ul li.submenu-item a {
+  font-size: 0.9em;
+  opacity: 0.8;
+  padding-left: 0.75rem;
+}
+
+.sidebar-menu ul li.submenu-item a:hover {
+  opacity: 1;
+}
+
+/* Dropdown menu styling */
+.navbar-nav .dropdown-menu {
+  background-color: var(--white);
+  border: 1px solid var(--gray-4);
+  border-radius: 8px;
+  box-shadow: var(--shadow-3);
+  margin-top: 0.5rem;
+  min-width: 160px;
+  padding: 2px;
+}
+
+.navbar-area.navbar-nine .navbar .navbar-nav .nav-item a.dropdown-item {
+  color: var(--dark-1);
+  padding: 0.6rem 0.75rem;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .dropdown-item:hover,
+.navbar-nav .dropdown-item:focus {
+  background-color: var(--light-2);
+  color: var(--black);
+}
+
+.navbar-nav .dropdown-item.active {
+  background-color: var(--light-2) !important;
+  color: var(--black) !important;
+  font-weight: 600;
+}
+
+/* Hover functionality for desktop */
+@media (min-width: 992px) {
+  .navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+  
+  .navbar-nav .dropdown .dropdown-menu {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-nav .dropdown-menu {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    margin-top: 0;
+    padding-left: 1rem;
+    display: block !important;
+    position: static !important;
+    transform: none !important;
+  }
+  
+  .navbar-nav .dropdown-item {
+    padding: 0.5rem 0;
+    border-left: 2px solid var(--gray-3);
+    padding-left: 1rem;
+  }
+  
+  .navbar-nav .dropdown-item.active {
+    background-color: transparent !important;
+    color: var(--black) !important;
+    border-left-color: var(--black);
+    font-weight: 600;
+  }
+  
+  /* Dölj dropdown-pilen på mobil */
+  .navbar-nav .dropdown-toggle::after {
+    display: none;
+  }
+}
 .footer-eleven .f-link li a, .contact-section a  {
   color: var(--dark-3);
   -webkit-transition: all 0.4s ease-out 0s;
@@ -2244,7 +2332,7 @@ h1, h2{
 
 .faq-area .accordion-body {
   padding: 1.5rem;
-  background-color: var(--light-3);
+  background-color: var(--light-4);
   font-size: 1rem;
   line-height: 1.7;
 }
