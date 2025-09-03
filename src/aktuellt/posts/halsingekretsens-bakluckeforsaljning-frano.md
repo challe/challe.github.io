@@ -1,6 +1,6 @@
 ---
 title: "Hälsingekretsens bakluckeförsäljning i Fränö"
-description: "Jag deltar i Hälsingekretsens bakluckeförsäljning på Forsa Forngård. Kom och handla sticklingar av Saintpaulior!"
+description: "Jag deltar i Hälsingekretsens bakluckeförsäljning på Forsa Forngård den 6 september. Kom och handla sticklingar av Saintpaulior!"
 date: 2025-09-01
 eventDate: 2025-09-06
 eventTime: "12:00 - 14:00"

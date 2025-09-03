@@ -1769,8 +1769,9 @@ h1, h2{
 .footer-eleven .f-link li:last-child {
   margin: 0;
 }
-.about-area a.instagram-link {
-  color: var(--primary);
+.about-area a {
+  color: var(--black);
+  font-weight: 500;
 }
 .footer-eleven .f-link li a, .contact-section a  {
   color: var(--dark-3);
