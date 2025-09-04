@@ -1,0 +1,14 @@
+---
+pagination:
+  data: products.products
+  size: 1
+  alias: flower
+permalink: "saintpaulior/{{ flower.title | slugify }}/"
+layout: base.njk
+---
+
+<h1>{{ flower.title }}</h1>
+<p>{{ flower.description }}</p>
+<p>Kategori: {{ flower.category }}</p>
+
+<a href="/saintpaulior/">← Tillbaka till alla Saintpaulior</a>
