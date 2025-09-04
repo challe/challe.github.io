@@ -7,6 +7,7 @@ keywords: "hallon, färska hallon, ekologiska hallon, Rogsta, Hudiksvall, handpl
 ogDescription: "Färska hallon från Rogsta, Hudiksvall. Handplockade och ekologiska, perfekta för alla tillfällen."
 ogImage: "/assets/images/askar.jpeg"
 ogUrl: "https://drumla.se/hallon/"
+for_sale: true
 breadcrumbs:
   - name: "Hem"
     url: "/"
@@ -100,10 +101,12 @@ breadcrumbs:
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <div class="care-content mb-5">
+            {% if not for_sale %}
             <div class="alert alert-warning text-center" style="margin-bottom: 2rem;">
               Hallonen är <strong>slut för säsongen</strong>! Tack till alla som handlat. <br>
               Följ mig gärna på <a href="https://www.instagram.com/drumla.se" target="_blank" class="instagram-link">Instagram</a> - där berättar jag när det går att köpa igen nästa säsong.
             </div>
+            {% endif %}
             <p>Mina hallon odlas utan bekämpningsmedel och plockas för hand. Färdigrensade och redo att ätas, bakas med eller frysas in.</p>
 
             <p><strong>Pris:</strong> 50 kr per ask (250 g) - motsvarar 200 kr/kg</p>
@@ -114,6 +117,7 @@ breadcrumbs:
 
           {% set heading = "Intresserad av färska hallon?" %}
           {% set description = "Skicka ett meddelande med hur mycket hallon du är intresserad av, så svarar jag så snart jag kan. Allt hämtas hemma hos mig i Rogsta, Hudiksvall." %}
+          {% set disabled = not for_sale %}
           {% include "contact-form.njk" %}
         </div>
       </div>
@@ -129,6 +133,7 @@ breadcrumbs:
         <div class="col-xl-8 mx-auto">
           {% set heading = "Intresserad av färska hallon?" %}
           {% set description = "Skicka ett meddelande med hur mycket hallon du är intresserad av, så svarar jag så snart jag kan. Allt hämtas hemma hos mig i Rogsta, Hudiksvall." %}
+          {% set disabled = not for_sale %}
           {% include "contact-form.njk" %}
         </div>
       </div>
