@@ -58,7 +58,7 @@ module.exports = function(eleventyConfig) {
 
     try {
       const metadata = await Image(imagePath, {
-        widths: [300, 600, 900],
+        widths: [300, 600, 900, 1200],
         formats: ["webp", "jpeg"],
         outputDir: "_site/assets/images/optimized/",
         urlPath: "/assets/images/optimized/",
@@ -75,8 +75,8 @@ module.exports = function(eleventyConfig) {
       
       const htmlOutput = `<a href="${href}" class="gallery-item" title="${caption}">
         <picture>
-          <source type="image/webp" srcset="${webp.map(img => `${img.url} ${img.width}w`).join(', ')}" sizes="(max-width: 768px) 100vw, 33vw">
-          <source type="image/jpeg" srcset="${jpeg.map(img => `${img.url} ${img.width}w`).join(', ')}" sizes="(max-width: 768px) 100vw, 33vw">
+          <source type="image/webp" srcset="${webp.map(img => `${img.url} ${img.width}w`).join(', ')}" sizes="(max-width: 768px) 100vw, 400px">
+          <source type="image/jpeg" srcset="${jpeg.map(img => `${img.url} ${img.width}w`).join(', ')}" sizes="(max-width: 768px) 100vw, 400px">
           <img src="${jpeg[0].url}" alt="${alt}" loading="lazy" decoding="async">
         </picture>
       </a>`;

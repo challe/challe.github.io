@@ -1,3 +1,20 @@
+
+
+/* Shared height for .rounded-3 and images inside it */
+.rounded-3,
+.rounded-3 img,
+.rounded-3 picture img {
+  height: 300px !important;
+}
+
+/* Image-specific styles */
+.rounded-3 img,
+.rounded-3 picture img {
+  width: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
 /*===========================
   COMMON css 
@@ -938,7 +955,7 @@ p {
   z-index: 1;
   text-align: left;
 }
-h1, h2{
+h1, h2, h3 {
   font-family: var(--font-family-header);
 }
 .header-eight .header-content h1 {
