@@ -43,31 +43,23 @@ canonical: "https://drumla.se/saintpaulior/"
 </script>
 {% endblock %}
 
-<!-- Start header Area -->
-<section id="hero-area" class="header-area header-eight">
+<!-- Start Saintpaulior Hero Area (matches skötselråd.njk) -->
+<section id="saintpaulior-hero" class="header-area header-eight">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-lg-6 col-md-12 col-12">
-        <div class="header-content">
+      <div class="col-lg-12 col-md-12 col-12">
+        <div class="header-content text-center">
           <h1>Saintpaulior</h1>
           <p>
-            Upptäck mina sorter av vackra Saintpaulior. Jag odlar och säljer {{ products.products.length }} olika sorter, från enkla standardblommor till exklusiva och premium-varianter.
+            Många av sorterna jag odlar är svåra att få tag på och går inte att köpa i vanliga butiker.<br>
+            Klicka på en blomma för att se mer detaljer och beställningsinformation.
           </p>
-          <div class="button header-buttons">
-            <a href="#products" class="btn primary-btn" title="Se mina sorter">Se mina sorter</a>
-            <a href="/skötselråd/" class="btn border-btn" title="Läs skötselråd">Skötselråd</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-12 col-12 header-image-parent">
-        <div class="header-image">
-          {% image "assets/images/blog/madcat.jpg", "Saintpaulior från Drumla", "(max-width: 768px) 100vw, 50vw", "eager" %}
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End header Area -->
+<!-- End Saintpaulior Hero Area -->
 
 {# Inline filtering script for portfolio #}
 <script>
@@ -92,25 +84,16 @@ canonical: "https://drumla.se/saintpaulior/"
   });
 </script>
 
+{% set breadcrumbs = [
+  { name: "Hem", url: "/", current: false },
+  { name: "Saintpaulior", url: page.url, current: true }
+] %}
+{% set breadcrumbsColor = 'bg-white' %}
+{% include "breadcrumbs.njk" %}
+
 <section id="products" class="portfolio-area portfolio-three">
   <!--======  Start Section Title Five ======-->
-  <div class="section-title-five">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="content">
-            <h6>Mina sorter</h6>
-            <h2 class="fw-bold">Saintpaulior</h2>
-            <p>
-              Många av sorterna jag odlar är svåra att få tag på och går inte att köpa i vanliga butiker. Klicka på en blomma för att se mer detaljer och beställningsinformation.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- row -->
-    </div>
-    <!-- container -->
-  </div>
+
   <!--======  End Section Title Five ======-->
   <div class="container">
     <div class="row">

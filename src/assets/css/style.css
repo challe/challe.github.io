@@ -1964,7 +1964,7 @@ h1, h2, h3 {
 
 /*===== portfolio THREE =====*/
 .portfolio-three {
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 100px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
