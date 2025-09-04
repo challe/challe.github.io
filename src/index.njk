@@ -1,9 +1,8 @@
 ---
 layout: base.njk
-title: "Växter och bär från Rogsta, Hudiksvall - Drumla"
+title: "Växter och bär från Rogsta, Hudiksvall"
 description: "Drumla säljer sticklingar av Saintpaulior och färska hallon från Rogsta, Hudiksvall. Ekologiskt och handplockat."
 keywords: "Saintpaulior, sticklingar, växter, hallon, Rogsta, Hudiksvall, ekologiska bär, odling"
-ogTitle: "Drumla | Växter och bär från Rogsta, Hudiksvall."
 ogDescription: "Drumla erbjuder sticklingar av Saintpaulior och färska hallon från Rogsta, Hudiksvall. Ekologiskt och handplockat."
 ogImage: "/assets/images/header/hero-image-flower.jpg"
 ogUrl: "https://drumla.se/"
@@ -118,38 +117,6 @@ ogUrl: "https://drumla.se/"
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "itemListElement": [
-    {%- for product in products.products %}
-    {%- set price = site.pricing[product.category].price or site.pricing.standard.price %}
-    {
-      "@type": "ListItem",
-      "position": {{ loop.index }},
-      "item": {
-        "@type": "Product",
-        "name": "{{ product.title }}",
-        "description": "{{ product.description }}",
-        "image": "{{ site.url }}/{{ product.imagePath }}",
-        "brand": {
-          "@type": "Brand",
-          "name": "{{ site.business.name }}"
-        },
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "SEK",
-          "price": "{{ price }}",
-          "itemCondition": "https://schema.org/NewCondition",
-          "availability": "https://schema.org/InStock"
-        }
-      }
-    }{% if not loop.last %},{% endif %}
-    {%- endfor %}
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
@@ -200,7 +167,7 @@ ogUrl: "https://drumla.se/"
               Jag driver ett litet företag i Rogsta som odlar och säljer sticklingar av Saintpaulior - en växt som är lätt att tycka om och rolig att samla.
             </p>
             <div class="button">
-              <a href="#products" class="btn primary-btn" title="Läs mer om mina produkter">Läs mer</a>
+              <a href="/saintpaulior/" class="btn primary-btn" title="Läs mer om mina Saintpaulior">Se mina Saintpaulior</a>
             </div>
           </div>
         </div>
@@ -344,129 +311,6 @@ ogUrl: "https://drumla.se/"
 
 
 
-  <section id="products" class="portfolio-area portfolio-three">
-    <!--======  Start Section Title Five ======-->
-    <div class="section-title-five">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="content">
-              <h6>Produkter</h6>
-              <h2 class="fw-bold">Saintpaulior</h2>
-              <p>
-                Många av sorterna jag odlar är svåra att få tag på och går inte att köpa i vanliga butiker.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- row -->
-      </div>
-      <!-- container -->
-    </div>
-    <!--======  End Section Title Five ======-->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="portfolio-menu text-center">
-            <button data-filter="all" class="active">ALLA</button>
-            <button data-filter="premium">PREMIUM</button>
-            <button data-filter="exklusiv" class="">EXKLUSIV</button>
-            <button data-filter="standard" class="">STANDARD</button>
-          </div>
-          <!-- portfolio menu -->
-        </div>
-      </div>
-      <!-- row -->
-      <div id="portfolio-container" class="row grid">
-        {%- for product in products.products %}
-        {%- set categoryLabel = product.category | capitalize %}
-        {%- set iconClass = 'lni lni-tag' %}
-        {%- if product.category == 'premium' %}
-          {%- set iconClass = 'lni lni-crown' %}
-        {%- elif product.category == 'exklusiv' %}
-          {%- set iconClass = 'lni lni-diamond' %}
-        {%- elif product.category == 'standard' %}
-          {%- set iconClass = 'lni lni-circle-plus' %}
-        {%- endif %}
-        <div class="col-lg-4 col-sm-6" data-filter="{{ product.category }}">
-          <div class="portfolio-style-three">
-            <div class="portfolio-image">
-              {% productImage product.imagePath, product.title, product.imagePath, product.title, product.description %}
-              <div class="meta-details">
-                <span><i class="{{ iconClass }}"></i> {{ categoryLabel }}</span>
-              </div>
-            </div>
-            <div class="portfolio-text">
-              <h4 class="portfolio-title">
-                {{ product.title }}
-              </h4>
-              <p class="text">
-                {{ product.description }}
-              </p>
-            </div>
-          </div>
-          <!-- single portfolio -->
-        </div>
-        {%- endfor %}
-      </div>
-      <!-- row -->
-    </div>
-    <!-- container -->
-  </section>
-
-  <!-- Start Pricing  Area -->
-  <section id="pricing" class="pricing-area pricing-fourteen">
-    <!--======  Start Section Title Five ======-->
-    <div class="section-title-five">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="content">
-              <h6>Priser</h6>
-              <h2 class="fw-bold">Priser & Kategorier</h2>
-              <p>
-                Det finns flera olika sorter att välja mellan, med varierande utseende och exklusivitet. Här hittar du en översikt över mina kategorier och deras priser.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- row -->
-      </div>
-      <!-- container -->
-    </div>
-    <!--======  End Section Title Five ======-->
-    <div class="container">
-      <div class="row">
-        {%- for key, category in site.pricing %}
-        <div class="col-lg-4 col-md-6 col-12">
-          <div class="pricing-style-fourteen{% if key == 'exklusiv' %} middle{% endif %}">
-            <div class="table-head">
-              <h6 class="title">{{ category.title }}</h6>
-              <p>{{ category.description }}</p>
-              <div class="price">
-                <h2 class="amount">
-                  {{ category.price }}<span class="duration">kr</span>
-                </h2>
-              </div>
-            </div>
-
-            <div class="table-content">
-              <ul class="table-list">
-                {%- for feature in category.features %}
-                <li><i class="lni lni-checkmark-circle"></i> {{ feature }}</li>
-                {%- endfor %}
-              </ul>
-            </div>
-          </div>
-        </div>
-        {%- endfor %}
-      </div>
-    </div>
-  </section>
-  <!--/ End Pricing  Area -->
-
-
-
   <!-- Start Cta Area -->
   <section id="call-action" class="call-action">
     <div class="container">
@@ -567,53 +411,9 @@ ogUrl: "https://drumla.se/"
           </div>
         </div>
         <div class="col-xl-8">
-          <div class="contact-form-wrapper">
-            <div class="row">
-              <div class="col-xl-10 col-lg-8 mx-auto">
-                <div class="section-title text-center">
-                  <span>Hör av dig</span>
-                  <h2>
-                    Intresserad av sticklingar eller hallon?
-                  </h2>
-                  <p>
-                    Skicka ett meddelande med vilka sticklingar eller hur mycket hallon du är intresserad av, så svarar jag så snart jag kan. Allt hämtas hemma hos mig i Rogsta, Hudiksvall.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <form action="#" class="contact-form">
-              <div class="row">
-                <!-- Name and Phone in one row -->
-                <div class="col-md-6">
-                  <input type="text" name="name" id="name" placeholder="Namn" required="" aria-label="Namn" />
-                </div>
-                <div class="col-md-6">
-                  <input type="tel" name="phone" id="phone" placeholder="Telefonnummer" required="" aria-label="Telefonnummer" />
-                </div>
-              </div>
-              <div class="row">
-                <!-- Email in a separate row -->
-                <div class="col-12">
-                  <input type="email" name="email" id="email" placeholder="E-post" required="" aria-label="E-post" />
-                </div>
-              </div>
-              <div class="row">
-                <!-- Message field -->
-                <div class="col-12">
-                  <textarea name="message" id="message" placeholder="Meddelande" rows="5" aria-label="Meddelande"></textarea>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div class="button text-center rounded-buttons">
-                    <button type="submit" class="btn primary-btn rounded-full" title="Skicka meddelande">
-                      Skicka meddelande
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
+          {% set heading = "Intresserad av sticklingar eller hallon?" %}
+          {% set description = "Skicka ett meddelande med vilka sticklingar eller hur mycket hallon du är intresserad av, så svarar jag så snart jag kan. Allt hämtas hemma hos mig i Rogsta, Hudiksvall." %}
+          {% include "contact-form.njk" %}
         </div>
       </div>
     </div>
@@ -637,4 +437,17 @@ ogUrl: "https://drumla.se/"
 
 {% block scripts %}
 <script src="{% asset 'assets/js/index.js' %}"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    function preventLink(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    }
+    var prodLinks = document.querySelectorAll('#nav-produkter, #nav-produkter-mobile, #sidebar-produkter');
+    prodLinks.forEach(function(link) {
+      link.addEventListener('click', preventLink);
+    });
+  });
+</script>
 {% endblock %}

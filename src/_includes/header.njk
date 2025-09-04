@@ -20,15 +20,12 @@
                 <a class="page-scroll{% if page.url == '/' %} active{% endif %}" href="{% if page.url == '/' %}#hero-area{% else %}/#hero-area{% endif %}">Hem</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="dropdown-toggle d-lg-block d-none{% if page.url == '/' %} page-scroll{% endif %}" href="{% if page.url == '/' %}#products{% else %}/#products{% endif %}"{% if page.url == '/' %} role="button" data-bs-toggle="dropdown" aria-expanded="false"{% endif %}>Produkter</a>
-                <a class="d-lg-none{% if page.url == '/' %} page-scroll{% endif %}" href="{% if page.url == '/' %}#products{% else %}/#products{% endif %}">Produkter</a>
+                <a id="nav-produkter" class="dropdown-toggle d-lg-block d-none" href="#" style="cursor:default;" tabindex="-1">Produkter</a>
+                <a id="nav-produkter-mobile" class="d-lg-none" href="#" style="cursor:default;" tabindex="-1">Produkter</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item{% if page.url == '/' %} page-scroll{% endif %}" href="{% if page.url == '/' %}#products{% else %}/#products{% endif %}">Saintpaulior</a></li>
+                  <li><a class="dropdown-item" href="/saintpaulior/">Saintpaulior</a></li>
                   <li><a class="dropdown-item{% if '/hallon' in page.url %} active{% endif %}" href="/hallon/">Hallon</a></li>
                 </ul>
-              </li>
-              <li class="nav-item">
-                <a class="page-scroll" href="{% if page.url == '/' %}#pricing{% else %}/#pricing{% endif %}">Priser</a>
               </li>
               <li class="nav-item">
                 <a class="page-scroll" href="{% if page.url == '/' %}#contact{% else %}/#contact{% endif %}">Kontaktuppgifter</a>
@@ -71,10 +68,9 @@
       <ul>
         <li><a href="{% if page.url == '/' %}#hero-area{% else %}/#hero-area{% endif %}">Hem</a></li>
         <li><a href="{% if page.url == '/' %}#about{% else %}/#about{% endif %}">Om Drumla</a></li>
-        <li><a href="{% if page.url == '/' %}#products{% else %}/#products{% endif %}">Produkter</a></li>
-        <li class="submenu-item"><a href="{% if page.url == '/' %}#products{% else %}/#products{% endif %}">Saintpaulior</a></li>
+        <li><a id="sidebar-produkter" href="#" style="cursor:default;" tabindex="-1">Produkter</a></li>
+        <li class="submenu-item"><a href="/saintpaulior/">Saintpaulior</a></li>
         <li class="submenu-item"><a href="/hallon/">Hallon</a></li>
-        <li><a href="{% if page.url == '/' %}#pricing{% else %}/#pricing{% endif %}">Priser</a></li>
         <li><a href="{% if page.url == '/' %}#contact{% else %}/#contact{% endif %}">Kontaktuppgifter</a></li>
         <li><a href="/skötselråd/">Skötselråd</a></li>
         <li><a href="/aktuellt/">Aktuellt</a></li>
@@ -103,3 +99,17 @@
 </div>
 <div class="overlay-left"></div>
 <!--====== SIDEBAR PART ENDS ======-->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    function preventLink(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    }
+    var prodLinks = document.querySelectorAll('#nav-produkter, #nav-produkter-mobile, #sidebar-produkter');
+    prodLinks.forEach(function(link) {
+      link.addEventListener('click', preventLink);
+    });
+  });
+</script>

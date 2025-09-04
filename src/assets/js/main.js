@@ -115,7 +115,84 @@
           }
         });
       });
+
+      // Initialize contact form (now global)
+      initializeContactForm();
     });
+
+  // Contact form submission handling with EmailJS
+  function initializeContactForm() {
+    // Initialize EmailJS
+    if (typeof emailjs !== 'undefined') {
+      emailjs.init({
+        publicKey: "pn-y9O1b8hQp5LKOs",
+      });
+    }
+    const contactForm = document.querySelector('.contact-form');
+    if (!contactForm) return; // Exit if no contact form found
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.innerHTML;
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(contactForm);
+      const templateParams = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        message: formData.get('message'),
+        page: formData.get('page')
+      };
+      submitButton.disabled = true;
+      submitButton.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Skickar...';
+      setTimeout(() => {
+        if (typeof emailjs !== 'undefined') {
+          emailjs.send('service_ng4qk4v', 'template_tofjqfo', templateParams).then(
+            (response) => {
+              contactForm.reset();
+              submitButton.disabled = false;
+              submitButton.innerHTML = originalButtonText;
+              setTimeout(() => { showSuccessMessage(); }, 200);
+            },
+            (error) => {
+              submitButton.disabled = false;
+              submitButton.innerHTML = originalButtonText;
+              setTimeout(() => { showErrorMessage(); }, 200);
+            }
+          );
+        }
+      }, 500);
+    });
+  }
+
+  function showSuccessMessage() {
+    const existingAlert = document.querySelector('.contact-alert');
+    if (existingAlert) { existingAlert.remove(); }
+    const alertDiv = document.createElement('div');
+    alertDiv.className = 'alert alert-success alert-dismissible fade show contact-alert mt-3';
+    alertDiv.innerHTML = `
+      <i class="lni lni-checkmark-circle me-2"></i>
+      <strong>Tack!</strong> Ditt meddelande har skickats. Jag svarar så snart jag kan.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    `;
+    const contactForm = document.querySelector('.contact-form');
+    contactForm.parentNode.insertBefore(alertDiv, contactForm.nextSibling);
+    setTimeout(() => { if (alertDiv && alertDiv.parentNode) { alertDiv.remove(); } }, 5000);
+  }
+
+  function showErrorMessage() {
+    const existingAlert = document.querySelector('.contact-alert');
+    if (existingAlert) { existingAlert.remove(); }
+    const alertDiv = document.createElement('div');
+    alertDiv.className = 'alert alert-danger alert-dismissible fade show contact-alert mt-3';
+    alertDiv.innerHTML = `
+      <i class="lni lni-warning me-2"></i>
+      <strong>Ops!</strong> Något gick fel när meddelandet skulle skickas. Försök igen eller kontakta mig direkt.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    `;
+    const contactForm = document.querySelector('.contact-form');
+    contactForm.parentNode.insertBefore(alertDiv, contactForm.nextSibling);
+    setTimeout(() => { if (alertDiv && alertDiv.parentNode) { alertDiv.remove(); } }, 7000);
+  }
 
     // Hide email from bots
     document.addEventListener("DOMContentLoaded", function() {

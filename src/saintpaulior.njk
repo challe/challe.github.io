@@ -1,8 +1,11 @@
 ---
 layout: base.njk
-title: "Saintpaulior - Afrikanska violer"
-description: "Upptäck vårt sortiment av vackra Saintpaulior (afrikanska violer). Vi har allt från standardsorter till exklusiva och premium-varianter."
-ogTitle: "Saintpaulior - Afrikanska violer | Drumla"
+title: "Saintpaulior - Sticklingar och unika sorter hos i Hudiksvall"
+description: "Utforska mina Saintpaulior: sticklingar och ovanliga sorter, exklusivt odlade och tillgängliga hos Drumla i Rogsta, Hudiksvall. Välj mellan premium, exklusiva och standardsorter."
+keywords: "Saintpaulior, sticklingar, unika sorter, premium, exklusiv, standard, Drumla, Hudiksvall, Rogsta, växter, blommor, samlarväxter"
+ogDescription: "Se hela mitt sortiment av Saintpaulior - sticklingar och ovanliga samlarväxter, exklusivt odlade hos Drumla i Hudiksvall."
+ogImage: "/assets/images/blog/madcat.jpg"
+canonical: "https://drumla.se/saintpaulior/"
 ---
 
 {% block jsonld %}
@@ -10,10 +13,6 @@ ogTitle: "Saintpaulior - Afrikanska violer | Drumla"
 {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "Saintpaulior - Afrikanska violer",
-  "description": "{{ description }}",
-  "url": "{{ site.url }}/saintpaulior/",
-  "numberOfItems": {{ products.products.length }},
   "itemListElement": [
     {%- for product in products.products %}
     {%- set price = site.pricing[product.category].price or site.pricing.standard.price %}
@@ -25,7 +24,6 @@ ogTitle: "Saintpaulior - Afrikanska violer | Drumla"
         "name": "{{ product.title }}",
         "description": "{{ product.description }}",
         "image": "{{ site.url }}/{{ product.imagePath }}",
-        "url": "{{ site.url }}/saintpaulior/{{ product.title | slugify }}/",
         "brand": {
           "@type": "Brand",
           "name": "{{ site.business.name }}"
@@ -36,8 +34,7 @@ ogTitle: "Saintpaulior - Afrikanska violer | Drumla"
           "price": "{{ price }}",
           "itemCondition": "https://schema.org/NewCondition",
           "availability": "https://schema.org/InStock"
-        },
-        "category": "Saintpaulia"
+        }
       }
     }{% if not loop.last %},{% endif %}
     {%- endfor %}
@@ -54,15 +51,15 @@ ogTitle: "Saintpaulior - Afrikanska violer | Drumla"
         <div class="header-content">
           <h1>Saintpaulior</h1>
           <p>
-            Upptäck mitt sortiment av vackra afrikanska violer. Jag odlar och säljer {{ products.products.length }} olika sorter från enkla standardblommor till exklusiva premium-varianter.
+            Upptäck mina sorter av vackra Saintpaulior. Jag odlar och säljer {{ products.products.length }} olika sorter, från enkla standardblommor till exklusiva och premium-varianter.
           </p>
-          <div class="button">
+          <div class="button header-buttons">
             <a href="#products" class="btn primary-btn" title="Se mina sorter">Se mina sorter</a>
             <a href="/skötselråd/" class="btn border-btn" title="Läs skötselråd">Skötselråd</a>
           </div>
         </div>
       </div>
-      <div class="col-lg-6 col-md-12 col-12">
+      <div class="col-lg-6 col-md-12 col-12 header-image-parent">
         <div class="header-image">
           {% image "assets/images/blog/madcat.jpg", "Saintpaulior från Drumla", "(max-width: 768px) 100vw, 50vw", "eager" %}
         </div>
@@ -72,6 +69,29 @@ ogTitle: "Saintpaulior - Afrikanska violer | Drumla"
 </section>
 <!-- End header Area -->
 
+{# Inline filtering script for portfolio #}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll('.portfolio-menu button');
+    const portfolioItems = document.querySelectorAll('#portfolio-container [data-filter]');
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        const filterValue = this.getAttribute('data-filter');
+        portfolioItems.forEach(item => {
+          item.classList.remove('show', 'hide');
+          if (filterValue === 'all' || item.getAttribute('data-filter') === filterValue) {
+            item.classList.add('show');
+          } else {
+            item.classList.add('hide');
+          }
+        });
+      });
+    });
+  });
+</script>
+
 <section id="products" class="portfolio-area portfolio-three">
   <!--======  Start Section Title Five ======-->
   <div class="section-title-five">
@@ -80,7 +100,7 @@ ogTitle: "Saintpaulior - Afrikanska violer | Drumla"
         <div class="col-12">
           <div class="content">
             <h6>Mina sorter</h6>
-            <h2 class="fw-bold">{{ products.products.length }} olika Saintpaulior</h2>
+            <h2 class="fw-bold">Saintpaulior</h2>
             <p>
               Många av sorterna jag odlar är svåra att få tag på och går inte att köpa i vanliga butiker. Klicka på en blomma för att se mer detaljer och beställningsinformation.
             </p>

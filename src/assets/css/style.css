@@ -2367,3 +2367,11 @@ h1, h2{
     font-size: 1.25rem;
   }
 }
+
+/* Hide header image and buttons on mobile for saintpaulior page */
+@media (max-width: 767px) {
+  .header-image-parent,
+  .header-buttons {
+    display: none !important;
+  }
+}
