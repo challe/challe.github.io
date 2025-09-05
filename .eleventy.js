@@ -47,11 +47,11 @@ module.exports = function(eleventyConfig) {
     const imagePath = path.join("src", src);
     
     // Combine title and description for caption
-    const caption = description ? `${title} - ${description}` : title;
+    const caption = description ? `${description}` : title;
     
     if (!fs.existsSync(imagePath)) {
       console.warn(`Product image not found: ${imagePath}`);
-      return `<a href="${href}" class="gallery-item" title="${caption}">
+      return `<a href="${href}" title="${caption}">
         <img src="${src}" alt="${alt}">
       </a>`;
     }
