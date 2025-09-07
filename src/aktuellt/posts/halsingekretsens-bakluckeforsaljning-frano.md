@@ -12,6 +12,7 @@ tags:
   - forsa
 layout: post.njk
 permalink: "aktuellt/halsingekretsens-bakluckeforsaljning-frano/"
+image: "assets/images/blog/forsagarden.jpg"
 ---
 
 Kom och handla vackra sticklingar av Saintpaulior på Hälsingekretsens bakluckeförsäljning på Forsa Forngård! Jag tar med mig ett utvalt sortiment av Saintpaulia-sticklingar i olika färger och sorter. Jag ser fram emot att träffa er på lördag! 🌸
