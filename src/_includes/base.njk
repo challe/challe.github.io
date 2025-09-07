@@ -4,15 +4,13 @@
 <head>
   <!--====== Required meta tags ======-->
   <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <meta name="description" content="{{ description or 'Drumla säljer sticklingar av Saintpaulior och färska hallon från Rogsta, Hudiksvall. Ekologiskt och handplockat.' }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <!--====== Title ======-->
-  <title>{{ title or site.title }}</title>
+  <title>{{ ((title or site.title) ~ ' - Drumla') | safe }}</title>
 
   <!--====== Meta tags ======-->
-  <meta name="description" content="{{ description or site.description }}" />
+  <meta name="description" content="{{ description | safe or site.description }}" />
   <meta name="keywords" content="{{ keywords or 'Saintpaulior, sticklingar, växter, hallon, Rogsta, Hudiksvall, ekologiska bär, odling' }}" />
   <meta name="author" content="{{ site.author }}" />
   <meta name="language" content="{{ site.language }}" />
@@ -23,8 +21,8 @@
   <meta name="geo.position" content="61.751296;17.121280" />
   
   <!--====== Open Graph ======-->
-  <meta property="og:title" content="{{ ogTitle or title or site.title }}" />
-  <meta property="og:description" content="{{ ogDescription or description or site.description }}" />
+  <meta property="og:title" content="{{ title | safe or site.title }}" />
+  <meta property="og:description" content="{{ ogDescription | safe or description or site.description }}" />
   <meta property="og:image" content="{{ site.url }}{{ ogImage or site.defaultImage }}" />
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   <meta property="og:type" content="website" />
@@ -32,8 +30,8 @@
   
   <!--====== Twitter Cards ======-->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="{{ ogTitle or title or site.title }}" />
-  <meta name="twitter:description" content="{{ ogDescription or description or site.description }}" />
+  <meta name="twitter:title" content="{{ title | safe or site.title }}" />
+  <meta name="twitter:description" content="{{ ogDescription | safe or description or site.description }}" />
   <meta name="twitter:image" content="{{ site.url }}{{ ogImage or site.defaultImage }}" />
 
   <!--====== Canonical URL ======-->

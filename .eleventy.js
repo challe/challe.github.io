@@ -47,18 +47,18 @@ module.exports = function(eleventyConfig) {
     const imagePath = path.join("src", src);
     
     // Combine title and description for caption
-    const caption = description ? `${title} - ${description}` : title;
+    const caption = description ? `${description}` : title;
     
     if (!fs.existsSync(imagePath)) {
       console.warn(`Product image not found: ${imagePath}`);
-      return `<a href="${href}" class="gallery-item" title="${caption}">
+      return `<a href="${href}" title="${caption}">
         <img src="${src}" alt="${alt}">
       </a>`;
     }
 
     try {
       const metadata = await Image(imagePath, {
-        widths: [300, 600, 900],
+        widths: [300, 600, 900, 1200],
         formats: ["webp", "jpeg"],
         outputDir: "_site/assets/images/optimized/",
         urlPath: "/assets/images/optimized/",
@@ -73,10 +73,10 @@ module.exports = function(eleventyConfig) {
       const webp = metadata.webp;
       const jpeg = metadata.jpeg;
       
-      const htmlOutput = `<a href="${href}" class="gallery-item" title="${caption}">
+      const htmlOutput = `<a href="/${href}" class="gallery-item" title="${caption}">
         <picture>
-          <source type="image/webp" srcset="${webp.map(img => `${img.url} ${img.width}w`).join(', ')}" sizes="(max-width: 768px) 100vw, 33vw">
-          <source type="image/jpeg" srcset="${jpeg.map(img => `${img.url} ${img.width}w`).join(', ')}" sizes="(max-width: 768px) 100vw, 33vw">
+          <source type="image/webp" srcset="${webp.map(img => `${img.url} ${img.width}w`).join(', ')}" sizes="(max-width: 768px) 100vw, 400px">
+          <source type="image/jpeg" srcset="${jpeg.map(img => `${img.url} ${img.width}w`).join(', ')}" sizes="(max-width: 768px) 100vw, 400px">
           <img src="${jpeg[0].url}" alt="${alt}" loading="lazy" decoding="async">
         </picture>
       </a>`;
@@ -84,7 +84,7 @@ module.exports = function(eleventyConfig) {
       return htmlOutput;
     } catch (error) {
       console.warn(`Error processing product image ${src}:`, error.message);
-      return `<a href="${href}" class="gallery-item" title="${caption}">
+      return `<a href="/${href}" class="gallery-item" title="${caption}">
         <img src="${src}" alt="${alt}">
       </a>`;
     }

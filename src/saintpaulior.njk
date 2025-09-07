@@ -1,0 +1,203 @@
+---
+layout: base.njk
+title: "Saintpaulior - Sticklingar och unika sorter hos i Hudiksvall"
+description: "Utforska mina Saintpaulior: sticklingar och ovanliga sorter, exklusivt odlade och tillgängliga hos Drumla i Rogsta, Hudiksvall. Välj mellan premium, exklusiva och standardsorter."
+keywords: "Saintpaulior, sticklingar, unika sorter, premium, exklusiv, standard, Drumla, Hudiksvall, Rogsta, växter, blommor, samlarväxter"
+ogDescription: "Se hela mitt sortiment av Saintpaulior - sticklingar och ovanliga samlarväxter, exklusivt odlade hos Drumla i Hudiksvall."
+ogImage: "/assets/images/blog/madcat.jpg"
+canonical: "https://drumla.se/saintpaulior/"
+---
+
+{% block jsonld %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {%- for product in products.products %}
+    {%- set price = site.pricing[product.category].price or site.pricing.standard.price %}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "item": {
+        "@type": "Product",
+        "name": "{{ product.title }}",
+        "description": "{{ product.description }}",
+        "image": "{{ site.url }}/{{ product.imagePath }}",
+        "brand": {
+          "@type": "Brand",
+          "name": "{{ site.business.name }}"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "SEK",
+          "price": "{{ price }}",
+          "itemCondition": "https://schema.org/NewCondition",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>
+{% endblock %}
+
+<!-- Start Saintpaulior Hero Area (matches skötselråd.njk) -->
+<section id="saintpaulior-hero" class="header-area header-eight">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-12 col-md-12 col-12">
+        <div class="header-content text-center">
+          <h1>Saintpaulior</h1>
+          <p>
+            Många av sorterna jag odlar är svåra att få tag på och går inte att köpa i vanliga butiker.<br>
+            Klicka på en blomma för att se mer detaljer och beställningsinformation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Saintpaulior Hero Area -->
+
+{# Inline filtering script for portfolio #}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll('.portfolio-menu button');
+    const portfolioItems = document.querySelectorAll('#portfolio-container [data-filter]');
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        const filterValue = this.getAttribute('data-filter');
+        portfolioItems.forEach(item => {
+          item.classList.remove('show', 'hide');
+          if (filterValue === 'all' || item.getAttribute('data-filter') === filterValue) {
+            item.classList.add('show');
+          } else {
+            item.classList.add('hide');
+          }
+        });
+      });
+    });
+  });
+</script>
+
+{% set breadcrumbs = [
+  { name: "Hem", url: "/", current: false },
+  { name: "Saintpaulior", url: page.url, current: true }
+] %}
+{% set breadcrumbsColor = 'bg-white' %}
+{% set breadcrumbsWidth = 'col-lg-12' %}
+{% include "breadcrumbs.njk" %}
+
+<section id="products" class="portfolio-area portfolio-three">
+  <!--======  Start Section Title Five ======-->
+
+  <!--======  End Section Title Five ======-->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="portfolio-menu text-center">
+          <button data-filter="all" class="active">ALLA</button>
+          <button data-filter="premium">PREMIUM</button>
+          <button data-filter="exklusiv" class="">EXKLUSIV</button>
+          <button data-filter="standard" class="">STANDARD</button>
+        </div>
+        <!-- portfolio menu -->
+      </div>
+    </div>
+    <!-- row -->
+    <div id="portfolio-container" class="row grid">
+      {%- for product in products.products %}
+      {%- set categoryLabel = product.category | capitalize %}
+      <div class="col-lg-4 col-sm-6" data-filter="{{ product.category }}">
+        <div class="portfolio-style-three">
+          <div class="portfolio-image">
+            {% productImage product.imagePath, product.title, product.imagePath, product.title, product.description %}
+            <div class="meta-details">
+              <span><i class="lni {{ site.pricing[product.category].icon }}"></i> {{ categoryLabel }}</span>
+            </div>
+          </div>
+          <div class="portfolio-text">
+            <h4 class="portfolio-title">
+              <a href="/saintpaulior/{{ product.title | slugify }}/">{{ product.title }}</a>
+            </h4>
+            <p class="text">
+              {{ product.description }}
+            </p>
+          </div>
+        </div>
+        <!-- single portfolio -->
+      </div>
+      {%- endfor %}
+    </div>
+    <!-- row -->
+  </div>
+  <!-- container -->
+</section>
+
+<!-- Start Pricing Area -->
+<section id="pricing" class="pricing-area pricing-fourteen">
+  <!--======  Start Section Title Five ======-->
+  <div class="section-title-five">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="content">
+            <h6>Priser</h6>
+            <h2 class="fw-bold">Priser & Kategorier</h2>
+            <p>
+              Det finns flera olika sorter att välja mellan, med varierande utseende och exklusivitet. Här hittar du en översikt över mina kategorier och deras priser.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- row -->
+    </div>
+    <!-- container -->
+  </div>
+  <!--======  End Section Title Five ======-->
+  <div class="container">
+    <div class="row">
+      {%- for key, category in site.pricing %}
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="pricing-style-fourteen{% if key == 'exklusiv' %} middle{% endif %}">
+          <div class="table-head">
+            <h6 class="title">{{ category.title }}</h6>
+            <p>{{ category.description }}</p>
+            <div class="price">
+              <h2 class="amount">
+                {{ category.price }}<span class="duration">kr</span>
+              </h2>
+            </div>
+          </div>
+
+          <div class="table-content">
+            <ul class="table-list">
+              {%- for feature in category.features %}
+              <li><i class="lni lni-checkmark-circle"></i> {{ feature }}</li>
+              {%- endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+<!--/ End Pricing Area -->
+
+<section>
+  <div class="container contact-section">
+    <div class="row">
+      <div class="col-xl-8 mx-auto">
+        {% set heading = "Intresserad av sticklingar?" %}
+        {% set description = "Skicka ett meddelande med vilka sticklingar du är intresserad av, så svarar jag så snart jag kan. Allt hämtas hemma hos mig i Rogsta, Hudiksvall 🪴" %}
+        {% include "contact-form.njk" %}
+      </div>
+    </div>
+  </div>
+</section>
+

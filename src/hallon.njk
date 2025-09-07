@@ -1,13 +1,20 @@
 ---
 permalink: hallon/
 layout: base.njk
-title: "Hallon i Hudiksvall - Drumla"
+title: "Hallon i Hudiksvall"
 description: "Färska hallon från Rogsta, Hudiksvall. Ekologiska och handplockade, perfekta för dessert, bakning eller snacks."
 keywords: "hallon, färska hallon, ekologiska hallon, Rogsta, Hudiksvall, handplockade bär, sommarbär"
-ogTitle: "Drumla | Hallon i Hudiksvall"
 ogDescription: "Färska hallon från Rogsta, Hudiksvall. Handplockade och ekologiska, perfekta för alla tillfällen."
 ogImage: "/assets/images/askar.jpeg"
 ogUrl: "https://drumla.se/hallon/"
+for_sale: false
+breadcrumbs:
+  - name: "Hem"
+    url: "/"
+    current: false
+  - name: "Hallon"
+    url: "/hallon/"
+    current: true
 ---
 
 {% block jsonld %}
@@ -70,108 +77,50 @@ ogUrl: "https://drumla.se/hallon/"
   </section>
   <!-- End Raspberries Hero Area -->
 
-  <!-- Breadcrumbs -->
-  <section class="breadcrumbs py-3 bg-light">
+
+  {% include "breadcrumbs.njk" %}
+
+  <!-- Post Image (moved up for consistency) -->
+  <section class="post-image py-4 bg-light">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb mb-0">
-              <li class="breadcrumb-item">
-                <a href="/" class="text-decoration-none text-dark">Hem</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="/#products" class="text-decoration-none text-dark">Produkter</a>
-              </li>
-              <li class="breadcrumb-item active text-muted" aria-current="page">
-                Hallon
-              </li>
-            </ol>
-          </nav>
+          <div class="text-center">
+            <div class="rounded-3 overflow-hidden">
+              {% image "assets/images/askar.jpeg", "Färska ekologiska hallon i askar från Drumla, Rogsta Hudiksvall", "(max-width: 768px) 100vw, 80vw" %}
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- End Breadcrumbs -->
 
   <!--====== RASPBERRIES CONTENT START ======-->
   <section id="raspberries-info" class="care-guide-area about-five">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <div class="care-content">
+          <div class="care-content mb-5">
+            {% if not for_sale %}
             <div class="alert alert-warning text-center" style="margin-bottom: 2rem;">
               Hallonen är <strong>slut för säsongen</strong>! Tack till alla som handlat. <br>
               Följ mig gärna på <a href="https://www.instagram.com/drumla.se" target="_blank" class="instagram-link">Instagram</a> - där berättar jag när det går att köpa igen nästa säsong.
             </div>
+            {% endif %}
             <p>Mina hallon odlas utan bekämpningsmedel och plockas för hand. Färdigrensade och redo att ätas, bakas med eller frysas in.</p>
 
             <p><strong>Pris:</strong> 50 kr per ask (250 g) - motsvarar 200 kr/kg</p>
             <p>Säljs i askar på 250 g eller i påsar om ett eller flera kilo.</p>
 
             <p>Säsongen är kort och hallonen tar ofta slut snabbt 😊 Boka idag för att vara säker på att få dina!</p>
-
-            <div class="text-center mt-5">
-              <a href="/#contact" class="btn primary-btn" title="Kontakta mig för att boka hallon">Boka dina hallon</a>
-            </div>
-
-            <div class="text-center mt-5">
-              {% image "assets/images/askar.jpeg", "Färska ekologiska hallon i askar från Drumla, Rogsta Hudiksvall", "(max-width: 768px) 100vw, 80vw" %}
-              <p class="mt-3">Hallonen säljs i askar om 250 g eller i större påsar.</p>
-            </div>
           </div>
+
+          {% set heading = "Intresserad av färska hallon?" %}
+          {% set description = "Skicka ett meddelande med hur mycket hallon du är intresserad av, så svarar jag så snart jag kan. Allt hämtas hemma hos mig i Rogsta, Hudiksvall." %}
+          {% set disabled = not for_sale %}
+          {% include "contact-form.njk" %}
         </div>
       </div>
     </div>
     <!-- container -->
-  </section>
-  <!--====== RASPBERRIES CONTENT ENDS ======-->
-
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="contact-item-wrapper">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="contact-item">
-                  <div class="contact-icon">
-                    <i class="lni lni-phone"></i>
-                  </div>
-                  <div class="contact-content">
-                    <h4>Kontaktuppgifter</h4>
-                    <p>072 212 17 24</p>
-                    <p><a id="email-link" href="#" rel="nofollow"></a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="contact-item">
-                  <div class="contact-icon">
-                    <i class="lni lni-map-marker"></i>
-                  </div>
-                  <div class="contact-content">
-                    <h4>Adress</h4>
-                    <p>Åkre 103</p>
-                    <p>82493 Hudiksvall</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="contact-item">
-                  <div class="contact-icon">
-                    <i class="lni lni-alarm-clock"></i>
-                  </div>
-                  <div class="contact-content">
-                    <h4>Öppettider</h4>
-                    <p>Mån, Ons, Fre: 12:00 - 17:00</p>
-                    <p>&nbsp;</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
