@@ -1,6 +1,6 @@
 ---
 title: "Ystegårns höstmarknad 2025 🍂"
-description: "Jag deltar i Ystegårns höstmarknad söndag 14:e september kl. 11-16. Kom och handla vackra sticklingar!"
+description: "Jag deltar på Ystegårns höstmarknad söndag 14:e september kl. 11-16. Kom och handla vackra sticklingar!"
 date: 2025-09-07
 eventDate: 2025-09-14
 eventTime: "11:00 - 16:00"
