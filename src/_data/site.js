@@ -25,7 +25,8 @@ module.exports = {
         "Vanliga färger",
         "Enkel form",
         "Prisvänlig"
-      ]
+      ],
+      icon: "lni-circle-plus"
     },
     exklusiv: {
       price: 75,
@@ -36,7 +37,8 @@ module.exports = {
         "Mer varierande former",
         "Snyggare utseende",
         "Populär bland kunder"
-      ]
+      ],
+      icon: "lni-diamond"
     },
     premium: {
       price: 125,
@@ -47,7 +49,8 @@ module.exports = {
         "Unika färger",
         "Ovanliga former",
         "För dig som vill ha något extra"
-      ]
+      ],
+      icon: "lni-crown"
     }
   },
   

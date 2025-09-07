@@ -112,20 +112,12 @@ canonical: "https://drumla.se/saintpaulior/"
     <div id="portfolio-container" class="row grid">
       {%- for product in products.products %}
       {%- set categoryLabel = product.category | capitalize %}
-      {%- set iconClass = 'lni lni-tag' %}
-      {%- if product.category == 'premium' %}
-        {%- set iconClass = 'lni lni-crown' %}
-      {%- elif product.category == 'exklusiv' %}
-        {%- set iconClass = 'lni lni-diamond' %}
-      {%- elif product.category == 'standard' %}
-        {%- set iconClass = 'lni lni-circle-plus' %}
-      {%- endif %}
       <div class="col-lg-4 col-sm-6" data-filter="{{ product.category }}">
         <div class="portfolio-style-three">
           <div class="portfolio-image">
-            {% productImage product.imagePath, product.title, "/saintpaulior/" + (product.title | slugify) + "/", product.title, product.description %}
+            {% productImage product.imagePath, product.title, product.imagePath, product.title, product.description %}
             <div class="meta-details">
-              <span><i class="{{ iconClass }}"></i> {{ categoryLabel }}</span>
+              <span><i class="lni {{ site.pricing[product.category].icon }}"></i> {{ categoryLabel }}</span>
             </div>
           </div>
           <div class="portfolio-text">
@@ -196,3 +188,16 @@ canonical: "https://drumla.se/saintpaulior/"
   </div>
 </section>
 <!--/ End Pricing Area -->
+
+<section>
+  <div class="container contact-section">
+    <div class="row">
+      <div class="col-xl-8 mx-auto">
+        {% set heading = "Intresserad av sticklingar?" %}
+        {% set description = "Skicka ett meddelande med vilka sticklingar du är intresserad av, så svarar jag så snart jag kan. Allt hämtas hemma hos mig i Rogsta, Hudiksvall 🪴" %}
+        {% include "contact-form.njk" %}
+      </div>
+    </div>
+  </div>
+</section>
+

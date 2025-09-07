@@ -73,7 +73,7 @@ module.exports = function(eleventyConfig) {
       const webp = metadata.webp;
       const jpeg = metadata.jpeg;
       
-      const htmlOutput = `<a href="${href}" class="gallery-item" title="${caption}">
+      const htmlOutput = `<a href="/${href}" class="gallery-item" title="${caption}">
         <picture>
           <source type="image/webp" srcset="${webp.map(img => `${img.url} ${img.width}w`).join(', ')}" sizes="(max-width: 768px) 100vw, 400px">
           <source type="image/jpeg" srcset="${jpeg.map(img => `${img.url} ${img.width}w`).join(', ')}" sizes="(max-width: 768px) 100vw, 400px">
@@ -84,7 +84,7 @@ module.exports = function(eleventyConfig) {
       return htmlOutput;
     } catch (error) {
       console.warn(`Error processing product image ${src}:`, error.message);
-      return `<a href="${href}" class="gallery-item" title="${caption}">
+      return `<a href="/${href}" class="gallery-item" title="${caption}">
         <img src="${src}" alt="${alt}">
       </a>`;
     }

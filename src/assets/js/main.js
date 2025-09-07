@@ -142,6 +142,26 @@
 
       // Initialize contact form (now global)
       initializeContactForm();
+      
+      // Initialize Simple Lightbox for product images
+      if (typeof SimpleLightbox !== 'undefined') {
+        var lightbox = new SimpleLightbox('.gallery-item', {
+          showCaptions: true,
+          captionAttribute: 'title',
+          captionDelay: 250,
+          overlay: true,
+          spinner: true,
+          close: true,
+          showCounter: true,
+          enableKeyboard: true,
+          loop: true,
+          docClose: true,
+          swipeClose: true,
+          alertError: true,
+          alertErrorMessage: 'Image not found, next image will be loaded',
+          additionalHtml: false
+        });
+      }
     });
 
   // Contact form submission handling with EmailJS
