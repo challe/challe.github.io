@@ -104,6 +104,13 @@
       "description": "Enkla men vackra vita blommor. Mellangrönt, slätt bladverk.",
       "imagePath": "assets/images/blog/white.jpg",
       "category": "standard"
+    },
+    {
+      "number": 16,
+      "title": "Rosa Saintpaulia",
+      "description": "Enkla men vackra rosa blommor. Mellangrönt, slätt bladverk.",
+      "imagePath": "assets/images/blog/rosa.jpg",
+      "category": "standard"
     }
   ]
 }

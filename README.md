@@ -140,3 +140,23 @@ Your content here...
 
 ### Products
 Products are managed in `src/_data/products.json` with automatic schema generation.
+
+#### Adding a new flower
+
+1. **Add the image** — place the photo in `src/assets/images/blog/`, e.g. `rosa.jpg`
+
+2. **Add an entry** to `src/_data/products.json`:
+   ```json
+   {
+     "number": 17,
+     "title": "Rosa Saintpaulia",
+     "description": "Enkla men vackra rosa blommor. Mellangrönt, slätt bladverk.",
+     "imagePath": "assets/images/blog/rosa.jpg",
+     "category": "standard"
+   }
+   ```
+   - `number` — must be unique, increment from the last entry
+   - `title` — shown in the product gallery and price list
+   - `description` — shown in the product gallery
+   - `imagePath` — relative path from the site root (no leading slash)
+   - `category` — use `"standard"` or `"special"`
