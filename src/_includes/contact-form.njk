@@ -1,0 +1,43 @@
+<div class="contact-form-wrapper">
+  <div class="row">
+    <div class="col-xl-10 col-lg-8 mx-auto">
+      <div class="section-title text-center">
+        <h2>{{ heading }}</h2>
+        <p>{{ description }}</p>
+      </div>
+    </div>
+  </div>
+  <form action="#" class="contact-form">
+    <div class="row">
+      <!-- Name and Phone in one row -->
+      <div class="col-md-6">
+        <input type="text" name="name" id="name" placeholder="Namn" required aria-label="Namn" {% if disabled %}disabled{% endif %} />
+      </div>
+      <div class="col-md-6">
+        <input type="tel" name="phone" id="phone" placeholder="Telefonnummer" required aria-label="Telefonnummer" {% if disabled %}disabled{% endif %} />
+      </div>
+    </div>
+    <input type="text" name="page" id="page" value="{{ page.url }}" style="display:none;" />
+    <div class="row">
+      <!-- Email in a separate row -->
+      <div class="col-12">
+        <input type="email" name="email" id="email" placeholder="E-post" required aria-label="E-post" {% if disabled %}disabled{% endif %} />
+      </div>
+    </div>
+    <div class="row">
+      <!-- Message field -->
+      <div class="col-12">
+        <textarea name="message" id="message" placeholder="Meddelande" rows="5" aria-label="Meddelande" {% if disabled %}disabled{% endif %}></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="button text-center rounded-buttons">
+          <button type="submit" class="btn primary-btn rounded-full" title="Skicka meddelande" {% if disabled %}disabled{% endif %}>
+            Skicka meddelande
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

@@ -4,7 +4,7 @@
       "number": 1,
       "title": "Rob's Mad Cat",
       "description": "Dubbla rosaskära blommor med blå fantasistänk och röd-lila kanter. Mörkt, sågtandat lövverk i semiminiatyrformat.",
-      "imagePath": "assets/images/blog/madcat.jpg",
+      "imagePath": "assets/images/blog/madcat-2.jpg",
       "category": "premium"
     },
     {
@@ -25,14 +25,14 @@
       "number": 4,
       "title": "Edge of darkness",
       "description": "Halvdubbla mörklila stjärnblommor med krusiga vita kanter. Brokligt mörkgrönt och elfenbensfärgat bladverk, sågtandat med röd undersida.",
-      "imagePath": "assets/images/blog/edge.jpg",
+      "imagePath": "assets/images/blog/edge3.jpg",
       "category": "premium"
     },
     {
       "number": 5,
       "title": "Pearl Game",
-      "description": "Ett stort antal enkla vita blommor med ljusblå kant och öga. Blommar rikligt och länge. Bladen är ljusgröna med brokiga färger.",
-      "imagePath": "assets/images/blog/biser.jpg",
+      "description": "Ett stort antal enkla lila blommor med vita inslag och öga. Blommar rikligt och länge. Bladen är ljusgröna med brokiga färger.",
+      "imagePath": "assets/images/blog/biser3.jpg",
       "category": "premium"
     },
     {
@@ -67,7 +67,7 @@
       "number": 10,
       "title": "Motsart",
       "description": "Dubbla, krusiga blommor i vit med djup lila mitt som mjukt tonar ut. Mellangrönt, slätt bladverk.",
-      "imagePath": "assets/images/blog/motsart.jpg",
+      "imagePath": "assets/images/blog/motsart2.jpg",
       "category": "exklusiv"
     },
     {
@@ -102,7 +102,7 @@
       "number": 15,
       "title": "Vit Saintpaulia",
       "description": "Enkla men vackra vita blommor. Mellangrönt, slätt bladverk.",
-      "imagePath": "assets/images/blog/white.jpg",
+      "imagePath": "assets/images/blog/white2.jpg",
       "category": "standard"
     },
     {

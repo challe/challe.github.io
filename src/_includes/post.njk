@@ -66,29 +66,12 @@ layout: base.njk
 </section>
 <!-- End Post Hero Area -->
 
-<!-- Breadcrumbs -->
-<section class="breadcrumbs py-3 bg-light">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item">
-              <a href="/" class="text-decoration-none text-dark">Hem</a>
-            </li>
-            <li class="breadcrumb-item">
-              <a href="/aktuellt/" class="text-decoration-none text-dark">Aktuellt</a>
-            </li>
-            <li class="breadcrumb-item active text-muted" aria-current="page">
-              {{ title }}
-            </li>
-          </ol>
-        </nav>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Breadcrumbs -->
+{% set breadcrumbs = [
+  { name: "Hem", url: "/", current: false },
+  { name: "Aktuellt", url: "/aktuellt/", current: false },
+  { name: title, url: page.url, current: true }
+] %}
+{% include "breadcrumbs.njk" %}
 
 <!-- Post Image -->
 <section class="post-image py-4 bg-light">
@@ -96,7 +79,7 @@ layout: base.njk
     <div class="row">
       <div class="col-lg-8 mx-auto">
         <div class="text-center">
-          <div class="rounded-3 overflow-hidden" style="max-height: 300px;">
+          <div class="rounded-3 overflow-hidden">
             {% image image or "assets/images/blog/forsagarden.jpg", title, "(max-width: 768px) 100vw, 66vw" %}
           </div>
         </div>
