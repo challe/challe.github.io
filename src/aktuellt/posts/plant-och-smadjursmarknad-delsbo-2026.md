@@ -3,7 +3,7 @@ title: "Plant- och smådjursmarknad i Delsbo"
 description: "Jag deltar på Plant- och smådjursmarknaden i Delsbo på Kristi himmelsfärdsdag den 14 maj. Kom och handla sticklingar!"
 date: 2026-03-26
 eventDate: 2026-05-14
-eventTime: "11:00 - 15:00"
+eventTime: "11:00 - 14:00"
 location: "Delsbo Bygdegård"
 tags:
   - blog
