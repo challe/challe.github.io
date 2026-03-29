@@ -39,7 +39,7 @@ ogType: "article"
     "@type": "WebPage",
     "@id": "{{ site.url }}{{ page.url }}"
   }{% if tags %},
-  "keywords": {{ tags | dump }}{% endif %}{% if location %},
+  "keywords": {{ tags | dump | safe }}{% endif %}{% if location %},
   "locationCreated": {
     "@type": "Place",
     "name": "{{ location }}"
