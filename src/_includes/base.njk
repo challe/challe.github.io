@@ -25,7 +25,7 @@
   <meta property="og:description" content="{{ ogDescription | safe or description or site.description }}" />
   <meta property="og:image" content="{{ site.url }}{{ ogImage or site.defaultImage }}" />
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="{{ ogType or 'website' }}" />
   <meta property="og:locale" content="{{ site.locale }}" />
   
   <!--====== Twitter Cards ======-->

@@ -1,5 +1,6 @@
 ---
 layout: base.njk
+ogType: "article"
 ---
 
 {% block styles %}
@@ -33,16 +34,38 @@ layout: base.njk
   "dateModified": "{{ date | date('iso') }}",
   "url": "{{ site.url }}{{ page.url }}",
   "image": "{{ site.url }}/{{ image or 'assets/images/blog/forsagarden.jpg' }}",
+  "inLanguage": "sv",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "{{ site.url }}{{ page.url }}"
-  }{% if location %},
+  }{% if tags %},
+  "keywords": {{ tags | dump }}{% endif %}{% if location %},
   "locationCreated": {
     "@type": "Place",
     "name": "{{ location }}"
   }{% endif %}
 }
 </script>
+{% if eventDate %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "{{ title }}",
+  "description": "{{ description }}",
+  "startDate": "{{ eventDate | date('iso') }}",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "{{ location }}"
+  },
+  "image": "{{ site.url }}/{{ image or 'assets/images/blog/forsagarden.jpg' }}",
+  "url": "{{ site.url }}{{ page.url }}"{% if eventLink %},
+  "sameAs": "{{ eventLink }}"{% endif %}
+}
+</script>
+{% endif %}
 {% endblock %}
 
 <!-- Start Post Hero Area -->

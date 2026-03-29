@@ -64,15 +64,38 @@ ogUrl: "https://drumla.se/"
         "itemOffered": {
           "@type": "Product",
           "name": "Sticklingar av Saintpaulia",
-          "category": "Växter"
+          "category": "Växter",
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "SEK",
+            "lowPrice": "45",
+            "highPrice": "125",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock"
+          }
         }
       },
       {
-        "@type": "Offer", 
+        "@type": "Offer",
         "itemOffered": {
           "@type": "Product",
           "name": "Färska hallon",
-          "category": "Bär"
+          "category": "Bär",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "1",
+            "bestRating": "5"
+          },
+          "review": [
+            {
+              "@type": "Review",
+              "author": {"@type": "Person", "name": "Berit"},
+              "datePublished": "2025-08-02",
+              "reviewBody": "Idag köpte jag jättefina och väldigt goda hallon, tack Therese🌸 och utmärkt rensade också, så lyxigt👍",
+              "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+            }
+          ]
         }
       }
     ]
