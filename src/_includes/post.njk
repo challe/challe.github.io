@@ -8,6 +8,70 @@ ogType: "article"
   .post-content p:not(.lead) {
     margin-top: 1.5rem !important;
   }
+  .event-info-box {
+    background: var(--beige-1);
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 14px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .event-info-heading {
+    font-family: var(--font-family-header);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.25rem;
+  }
+  .event-info-heading::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 1.15em;
+    background: #637554;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+  .event-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .event-info-item:last-child {
+    margin-bottom: 0;
+  }
+  .event-info-icon {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, #7a8f68 0%, #526244 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+  .event-info-item strong {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #526244;
+  }
+  .event-info-item span {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  .event-info-link {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0,0,0,0.06);
+  }
 </style>
 {% endblock %}
 
@@ -121,32 +185,46 @@ ogType: "article"
           <p class="lead">{{ description }}</p>
           
           {% if eventDate or location or eventTime %}
-            <div class="mt-4 p-4 border rounded bg-light">
-              <h3 class="mb-3"><i class="lni lni-clipboard"></i> Praktisk information</h3>
-              <div class="row">
-                {% if eventDate %}
-                  <div class="col-md-4 mb-2">
-                    <strong><i class="lni lni-calendar"></i> Datum:</strong><br>
-                    {{ eventDate | date("D MMMM YYYY", "sv") }}
+            <div class="event-info-box">
+              <h3 class="event-info-heading">Praktisk information</h3>
+              <div class="row g-3">
+              {% if eventDate %}
+                <div class="col-md-4">
+                  <div class="event-info-item">
+                    <div class="event-info-icon"><i class="lni lni-calendar"></i></div>
+                    <div>
+                      <strong>Datum</strong>
+                      <span>{{ eventDate | date("D MMMM YYYY", "sv") }}</span>
+                    </div>
                   </div>
-                {% endif %}
-                {% if eventTime %}
-                  <div class="col-md-4 mb-2">
-                    <strong><i class="lni lni-clock"></i> Tid:</strong><br>
-                    {{ eventTime }}
+                </div>
+              {% endif %}
+              {% if eventTime %}
+                <div class="col-md-4">
+                  <div class="event-info-item">
+                    <div class="event-info-icon"><i class="lni lni-timer"></i></div>
+                    <div>
+                      <strong>Tid</strong>
+                      <span>{{ eventTime }}</span>
+                    </div>
                   </div>
-                {% endif %}
-                {% if location %}
-                  <div class="col-md-4 mb-2">
-                    <strong><i class="lni lni-map-marker"></i> Plats:</strong><br>
-                    {{ location }}
+                </div>
+              {% endif %}
+              {% if location %}
+                <div class="col-md-4">
+                  <div class="event-info-item">
+                    <div class="event-info-icon"><i class="lni lni-map-marker"></i></div>
+                    <div>
+                      <strong>Plats</strong>
+                      <span>{{ location }}</span>
+                    </div>
                   </div>
-                {% endif %}
+                </div>
+              {% endif %}
               </div>
               {% if eventLink %}
-                <div class="mt-3 pt-3 border-top">
-                  <strong><i class="lni lni-link"></i> Evenemangslänk:</strong>
-                  <a href="{{ eventLink }}" target="_blank" rel="noopener" class="text-decoration-none text-dark ms-2">
+                <div class="event-info-link">
+                  <a href="{{ eventLink }}" target="_blank" rel="noopener" class="text-decoration-none" style="color: #526244; font-weight: 600;">
                     <i class="lni lni-facebook-original me-1"></i>
                     Gå till evenemanget
                   </a>

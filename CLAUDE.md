@@ -1,5 +1,13 @@
 # Drumla — Claude Code Guide
 
+## About Therese
+Therese is the owner and sole operator of Drumla. She sells hand-propagated Saintpaulia cuttings and seasonal raspberries from her home in Rogsta, Hudiksvall. The business was founded 2025-06-27.
+
+- All site content is in Swedish
+- Not deeply technical but has strong aesthetic opinions — will call out bad design immediately
+- Understands web concepts well enough to follow technical explanations
+- Keep responses concise and practical
+
 ## Project
 Static site for **drumla.se** — a small Swedish business selling Saintpaulia (African violet) cuttings and raspberries from Rogsta, Hudiksvall. Built with **Eleventy (11ty)**, Nunjucks templates, Bootstrap 5.
 
@@ -15,7 +23,7 @@ Static site for **drumla.se** — a small Swedish business selling Saintpaulia (
 **Colors:**
 - `--primary: #333` / `--primary-dark: #202020` — charcoal, used for buttons and headings
 - `--beige-1: #f9f8f4` — warm background for cards and highlighted sections
-- `--accent: #00d4d7` — site teal (avoid for new components; use moss green `#637554` / `#526244` instead)
+- `--accent: #00d4d7` — site teal (Therese dislikes this; never use for new components — use moss green `#637554` / `#526244` instead)
 
 **Fonts:** `Merriweather` (headers via `--font-family-header`), `Inter` (body via `--font-family`)
 
@@ -39,6 +47,10 @@ Do not skip the hero or breadcrumbs — Therese expects them on every page.
   .product-image-wrap img { width: 100%; height: 100%; object-fit: cover; }
   ```
 - Always grep `style.css` before applying class names — many carry significant side effects.
+- **Never use Bootstrap's `rounded-3` class** — style.css overrides it with `height: 300px !important` for images. Use `style="border-radius: 0.75rem"` inline instead.
+
+## Copy rules
+- **Do not use em dashes (—) in page copy.** Use a period or comma instead, or rewrite the sentence. Applies to headings, body text, labels, and CTAs.
 
 ## Individual product pages
 Generated from `products.json` via `src/saintpaulior-produkt.njk` (Eleventy pagination, size: 1).

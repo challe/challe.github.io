@@ -36,6 +36,10 @@
 
   <!--====== Canonical URL ======-->
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+  {% if pagination %}
+    {% if pagination.href.previous %}<link rel="prev" href="{{ site.url }}{{ pagination.href.previous }}" />{% endif %}
+    {% if pagination.href.next %}<link rel="next" href="{{ site.url }}{{ pagination.href.next }}" />{% endif %}
+  {% endif %}
   <link rel="stylesheet" href="/assets/css/bootstrap.css" />
 
   <!--====== Line Icons css ======-->
