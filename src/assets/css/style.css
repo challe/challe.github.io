@@ -95,6 +95,8 @@ img {
 
 a {
   display: inline-block;
+  color: var(--black);
+  font-weight: 500;
 }
 
 a,
@@ -1784,10 +1786,6 @@ h1, h2, h3 {
 }
 .footer-eleven .f-link li:last-child {
   margin: 0;
-}
-.about-area a {
-  color: var(--black);
-  font-weight: 500;
 }
 
 /* Sidebar submenu styling */
