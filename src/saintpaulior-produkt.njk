@@ -7,7 +7,8 @@ pagination:
 permalink: "saintpaulior/{{ product.title | slugify }}/"
 eleventyComputed:
   title: "{{ product.title }} - Saintpaulia-stickling i Hudiksvall"
-  description: "{{ product.description }} Köp stickling av {{ product.title }} hos Drumla i Rogsta, Hudiksvall."
+  description: "{{ product.description }} Köp stickling av {{ product.title }} hos Drumla i Rogsta, Hudiksvall. Handodlad krukväxt."
+  keywords: "{{ product.title }}, Saintpaulia, stickling, krukväxt, köpa blommor Hudiksvall, köpa växter Hudiksvall, Drumla, Rogsta"
   ogDescription: "{{ product.description }} Köp stickling av {{ product.title }} hos Drumla i Rogsta, Hudiksvall."
   ogImage: "/{{ product.imagePath }}"
 ---
@@ -39,9 +40,15 @@ eleventyComputed:
   "name": "{{ product.title }}",
   "description": "{{ product.description }}",
   "image": "{{ site.url }}/{{ product.imagePath }}",
+  "category": "Krukväxter > Saintpaulia",
   "brand": {
     "@type": "Brand",
     "name": "{{ site.business.name }}"
+  },
+  "isRelatedTo": {
+    "@type": "ItemList",
+    "name": "Alla Saintpaulior",
+    "url": "{{ site.url }}/saintpaulior/"
   },
   "offers": {
     "@type": "Offer",
@@ -96,7 +103,7 @@ eleventyComputed:
 
       <div class="col-lg-6">
         <div class="product-image-wrap">
-          {% image product.imagePath, product.title, "(max-width: 768px) 100vw, 50vw" %}
+          {% image product.imagePath, product.imageAlt or product.title, "(max-width: 768px) 100vw, 50vw" %}
         </div>
       </div>
 
@@ -109,7 +116,7 @@ eleventyComputed:
           &nbsp;&middot;&nbsp;
           <strong>{{ price }} kr</strong>
         </p>
-        <p class="text-muted mb-4" style="font-size: 0.9rem;">Hämtas hemma hos mig i Rogsta, Hudiksvall.</p>
+        <p class="text-muted mb-4" style="font-size: 0.9rem;">Hämtas hemma hos mig i Rogsta, Hudiksvall. Läs mina <a href="/skötselråd/">skötselråd</a> för att ge din stickling bästa start.</p>
         <a href="#beställ" class="btn primary-btn">Beställ stickling</a>
       </div>
 

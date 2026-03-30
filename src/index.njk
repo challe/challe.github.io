@@ -1,10 +1,11 @@
 ---
 layout: base.njk
-title: "Växter och bär från Rogsta, Hudiksvall"
-description: "Drumla säljer sticklingar av Saintpaulior och färska hallon från Rogsta, Hudiksvall. Ekologiskt och handplockat."
-keywords: "Saintpaulior, sticklingar, växter, hallon, Rogsta, Hudiksvall, ekologiska bär, odling"
-ogDescription: "Drumla erbjuder sticklingar av Saintpaulior och färska hallon från Rogsta, Hudiksvall. Ekologiskt och handplockat."
+title: "Köp Saintpaulior, krukväxter och hallon i Hudiksvall"
+description: "Drumla säljer handodlade sticklingar av Saintpaulior och färska hallon från Rogsta, Hudiksvall. Unika krukväxter och blommor i tre prisklasser."
+keywords: "Saintpaulior, afrikansk viol, sticklingar, krukväxter, inomhusväxter, blommor Hudiksvall, köpa blommor Hudiksvall, köpa växter Hudiksvall, växtförsäljning Hudiksvall, hallon, Rogsta, ekologiska bär, odling"
+ogDescription: "Handodlade Saintpaulior och färska hallon från Rogsta, Hudiksvall. Unika krukväxter och blommor i tre prisklasser."
 ogImage: "/assets/images/header/hero-image-flower.jpg"
+preloadImage: "/assets/images/header/hero-image-flower.jpg"
 ogUrl: "https://drumla.se/"
 ---
 
@@ -21,7 +22,9 @@ ogUrl: "https://drumla.se/"
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "additionalType": ["https://schema.org/Florist", "https://schema.org/Store"],
   "name": "{{ site.business.name }}",
+  "alternateName": ["Drumla Växter", "Drumla Saintpaulior"],
   "description": "{{ description }}",
   "image": "{{ site.url }}{{ site.defaultImage }}",
   "address": {
@@ -45,6 +48,12 @@ ogUrl: "https://drumla.se/"
   "currenciesAccepted": "SEK",
   "priceRange": "45-125",
   "foundingDate": "2025-06-27",
+  "sameAs": [
+    "https://www.instagram.com/drumla.se",
+    "https://www.facebook.com/people/Drumlase/61578983571719/",
+    "https://www.linkedin.com/company/drumla/",
+    "https://www.google.com/maps/place/Drumla/@61.7646983,17.1717567,17z/data=!3m1!4b1!4m6!3m5!1s0x46641d5fdd6fc90f:0xdc2922381ce99f4a!8m2!3d61.7646983!4d17.1717567!16s%2Fg%2F11xs3dnd2x"
+  ],
   "areaServed": [
     {
       "@type": "City",
@@ -170,8 +179,24 @@ ogUrl: "https://drumla.se/"
       "@type": "Question",
       "name": "Säljer du hallon?",
       "acceptedAnswer": {
-        "@type": "Answer", 
+        "@type": "Answer",
         "text": "Ja, jag säljer färska ekologiska hallon under säsong (juli-augusti). Hallonen är handplockade och kostar 50 kr per ask (250g)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Var kan jag köpa blommor och krukväxter i Hudiksvall?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hos Drumla i Rogsta, Hudiksvall kan du köpa handodlade Saintpaulior, en populär krukväxt som blommar året om. Jag har ett brett sortiment med unika sorter i tre prisklasser, från 45 till 125 kr."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vilka växter säljer Drumla?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Drumla säljer sticklingar av Saintpaulior i många olika sorter, från vanliga till sällsynta samlarväxter. Under sommaren säljer jag även färska handplockade hallon. Allt hämtas i Rogsta, Hudiksvall."
       }
     }
   ]
@@ -185,9 +210,9 @@ ogUrl: "https://drumla.se/"
       <div class="row align-items-center">
         <div class="col-lg-6 col-md-12 col-12">
           <div class="header-content">
-            <h1>Växter och bär från Rogsta, Hudiksvall</h1>
+            <h1>Saintpaulior och hallon från Rogsta, Hudiksvall</h1>
             <p>
-              Jag driver ett litet företag i Rogsta som odlar och säljer sticklingar av Saintpaulior - en växt som är lätt att tycka om och rolig att samla.
+              Jag odlar och säljer sticklingar av Saintpaulior. En vacker krukväxt som blommar året om och är rolig att samla.
             </p>
             <div class="button">
               <a href="/saintpaulior/" class="btn primary-btn" title="Läs mer om mina Saintpaulior">Se mina Saintpaulior</a>

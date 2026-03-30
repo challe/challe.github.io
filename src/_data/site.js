@@ -1,6 +1,6 @@
 module.exports = {
   title: "Drumla | Växter och bär från Rogsta, Hudiksvall",
-  description: "Drumla säljer sticklingar av Saintpaulior och färska hallon från Rogsta, Hudiksvall. Ekologiskt och handplockat.",
+  description: "Drumla säljer handodlade sticklingar av Saintpaulior och färska hallon från Rogsta, Hudiksvall. Krukväxter och blommor i tre prisklasser.",
   url: "https://drumla.se",
   author: "Therese",
   language: "sv",

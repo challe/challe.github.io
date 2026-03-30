@@ -11,7 +11,8 @@
 
   <!--====== Meta tags ======-->
   <meta name="description" content="{{ description | safe or site.description }}" />
-  <meta name="keywords" content="{{ keywords or 'Saintpaulior, sticklingar, växter, hallon, Rogsta, Hudiksvall, ekologiska bär, odling' }}" />
+  <meta name="keywords" content="{{ keywords or 'Saintpaulior, afrikansk viol, afrikavioler, sticklingar, krukväxter, inomhusväxter, blommor, växter, hallon, Rogsta, Hudiksvall, köpa blommor Hudiksvall, växtförsäljning, ekologiska bär, odling' }}" />
+  {% if robots %}<meta name="robots" content="{{ robots }}" />{% endif %}
   <meta name="author" content="{{ site.author }}" />
   <meta name="language" content="{{ site.language }}" />
   
@@ -55,6 +56,7 @@
 
   {% block styles %}{% endblock %}
 
+  {% if preloadImage %}<link rel="preload" as="image" href="{{ preloadImage }}">{% endif %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
@@ -65,6 +67,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Drumla" />
   <link rel="manifest" href="/assets/images/site.webmanifest" />
+  <link rel="alternate" type="application/rss+xml" title="Drumla - Aktuellt" href="/feed.xml" />
 
   <!--====== Bootstrap css ======-->
 
@@ -83,17 +86,17 @@
   {% include "footer.njk" %}
 
   <!--====== js ======-->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
     // Only load on production environment.
     if (window.location.host !== 'drumla.se')
         window.goatcounter = {no_onload: true}
   </script>
   <script data-goatcounter="https://drumla.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-  <script src="/assets/js/bootstrap.bundle.min.js"></script>
-  <script src="/assets/js/simple-lightbox.min.js"></script>
-  <script src="{% asset '/assets/js/main.js' %}"></script>
-  <script src="/assets/js/tiny-slider.min.js"></script>
+  <script defer src="/assets/js/bootstrap.bundle.min.js"></script>
+  <script defer src="/assets/js/simple-lightbox.min.js"></script>
+  <script defer src="{% asset '/assets/js/main.js' %}"></script>
+  <script defer src="/assets/js/tiny-slider.min.js"></script>
   
   {% block scripts %}{% endblock %}
 </body>

@@ -4,6 +4,7 @@
       "number": 1,
       "title": "Rob's Mad Cat",
       "description": "Dubbla rosaskära blommor med blå fantasistänk och röd-lila kanter. Mörkt, sågtandat lövverk i semiminiatyrformat.",
+      "imageAlt": "Rob's Mad Cat Saintpaulia stickling med dubbla rosaskära blommor och blå fantasistänk",
       "imagePath": "assets/images/blog/madcat-2.jpg",
       "category": "premium"
     },
@@ -11,6 +12,7 @@
       "number": 2,
       "title": "Two W Miss Sophie",
       "description": "Dubbla ljusrosa stjärnblommor med tunna fuchsiaröda kanter. Mörkgrönt, snäckkantat bladverk med lätt textur. Rikblommande och pålitlig sort.",
+      "imageAlt": "Two W Miss Sophie Saintpaulia med dubbla ljusrosa stjärnblommor och fuchsiaröda kanter",
       "imagePath": "assets/images/blog/misssohpie.jpg",
       "category": "exklusiv"
     },
@@ -18,6 +20,7 @@
       "number": 3,
       "title": "Rhapsodie Rosalie",
       "description": "Halvdubbla korallrosa och vita blommor med krusiga kanter. Mellangrönt, slätt bladverk.",
+      "imageAlt": "Rhapsodie Rosalie Saintpaulia med halvdubbla korallrosa och vita blommor",
       "imagePath": "assets/images/blog/rosalie.jpg",
       "category": "premium"
     },
@@ -25,6 +28,7 @@
       "number": 4,
       "title": "Edge of darkness",
       "description": "Halvdubbla mörklila stjärnblommor med krusiga vita kanter. Brokligt mörkgrönt och elfenbensfärgat bladverk, sågtandat med röd undersida.",
+      "imageAlt": "Edge of Darkness Saintpaulia med halvdubbla mörklila stjärnblommor och vita kanter",
       "imagePath": "assets/images/blog/edge3.jpg",
       "category": "premium"
     },
@@ -32,6 +36,7 @@
       "number": 5,
       "title": "Pearl Game",
       "description": "Ett stort antal enkla lila blommor med vita inslag och öga. Blommar rikligt och länge. Bladen är ljusgröna med brokiga färger.",
+      "imageAlt": "Pearl Game Saintpaulia med enkla lila blommor och vita inslag, ljusgröna brokiga blad",
       "imagePath": "assets/images/blog/biser3.jpg",
       "category": "premium"
     },
@@ -39,6 +44,7 @@
       "number": 6,
       "title": "Rob's Vanilla Trail",
       "description": "Fyllda blommor i gräddvitt till svagt rosaskimrande nyanser. Mörkgrönt bladverk i semiminiatyrformat med sågtandade, spetsiga blad och en lätt bucklig struktur.",
+      "imageAlt": "Rob's Vanilla Trail Saintpaulia med fyllda gräddvita blommor i semiminiatyrformat",
       "imagePath": "assets/images/blog/vanilla.jpg",
       "category": "premium"
     },
@@ -46,6 +52,7 @@
       "number": 7,
       "title": "Kleopatra",
       "description": "Stora, dubbla stjärnblommor med lila kant, blått stänk och strimmor i kontrastfärg. Mellangrönt, slätt bladverk.",
+      "imageAlt": "Kleopatra Saintpaulia med stora dubbla stjärnblommor i lila, blått och kontrastfärg",
       "imagePath": "assets/images/blog/kleopatra.jpg",
       "category": "premium"
     },
@@ -53,6 +60,7 @@
       "number": 8,
       "title": "Optimara My Love",
       "description": "Enkel vit stjärnblomma med röd till purpurröd mitt och kronblad som sitter kvar länge. Mellangrönt, slätt och hjärtformat bladverk.",
+      "imageAlt": "Optimara My Love Saintpaulia med enkel vit stjärnblomma och purpurröd mitt",
       "imagePath": "assets/images/blog/optimara.jpg",
       "category": "exklusiv"
     },
@@ -60,6 +68,7 @@
       "number": 9,
       "title": "Red Summer",
       "description": "Halvdubbla röda stjärnblommor med vågiga, vita kanter som varierar i bredd. Mellangrönt, snäckkantat bladverk.",
+      "imageAlt": "Red Summer Saintpaulia med halvdubbla röda stjärnblommor och vita kanter",
       "imagePath": "assets/images/blog/redsummer.jpg",
       "category": "exklusiv"
     },
@@ -67,6 +76,7 @@
       "number": 10,
       "title": "Motsart",
       "description": "Dubbla, krusiga blommor i vit med djup lila mitt som mjukt tonar ut. Mellangrönt, slätt bladverk.",
+      "imageAlt": "Motsart Saintpaulia med dubbla krusiga vita blommor och djup lila mitt",
       "imagePath": "assets/images/blog/motsart2.jpg",
       "category": "exklusiv"
     },
@@ -74,6 +84,7 @@
       "number": 11,
       "title": "My Blue-Eyed Girl",
       "description": "Dubbla vita blommor med vacker form och mörkblå mitt, yttre kronblad med grön ton. Symmetrisk rosett med runda, snittade och brokiga blad.",
+      "imageAlt": "My Blue-Eyed Girl Saintpaulia med dubbla vita blommor och mörkblå mitt",
       "imagePath": "assets/images/blog/flicka.jpg",
       "category": "exklusiv"
     },
@@ -81,6 +92,7 @@
       "number": 12,
       "title": "Blå Saintpaulia",
       "description": "Enkla men vackra blå blommor. Mellangrönt, slätt bladverk.",
+      "imageAlt": "Blå Saintpaulia med enkla blå blommor och mellangrönt bladverk",
       "imagePath": "assets/images/blog/blue.jpg",
       "category": "standard"
     },
@@ -88,6 +100,7 @@
       "number": 13,
       "title": "Cerise Saintpaulia",
       "description": "Enkla men vackra cerisa blommor. Mellangrönt, slätt bladverk.",
+      "imageAlt": "Cerise Saintpaulia med enkla cerisa blommor och mellangrönt bladverk",
       "imagePath": "assets/images/blog/cerise.jpg",
       "category": "standard"
     },
@@ -95,6 +108,7 @@
       "number": 14,
       "title": "Lila Saintpaulia",
       "description": "Enkla men vackra lila blommor. Mellangrönt, slätt bladverk.",
+      "imageAlt": "Lila Saintpaulia med enkla lila blommor och mellangrönt bladverk",
       "imagePath": "assets/images/blog/lila.jpg",
       "category": "standard"
     },
@@ -102,6 +116,7 @@
       "number": 15,
       "title": "Vit Saintpaulia",
       "description": "Enkla men vackra vita blommor. Mellangrönt, slätt bladverk.",
+      "imageAlt": "Vit Saintpaulia med enkla vita blommor och mellangrönt bladverk",
       "imagePath": "assets/images/blog/white2.jpg",
       "category": "standard"
     },
@@ -109,6 +124,7 @@
       "number": 16,
       "title": "Rosa Saintpaulia",
       "description": "Enkla men vackra rosa blommor. Mellangrönt, slätt bladverk.",
+      "imageAlt": "Rosa Saintpaulia med enkla rosa blommor och mellangrönt bladverk",
       "imagePath": "assets/images/blog/rosa.jpg",
       "category": "standard"
     }
