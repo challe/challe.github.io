@@ -35,7 +35,10 @@ breadcrumbs:
     "price": "50",
     "itemCondition": "https://schema.org/NewCondition",
     "availability": "{% if for_sale %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
-    "url": "https://drumla.se/hallon/"
+    "url": "https://drumla.se/hallon/",
+    "seller": {
+      "@id": "https://drumla.se/#business"
+    }
   },
   "review": [
     {
@@ -63,7 +66,8 @@ breadcrumbs:
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",
-    "reviewCount": "3"
+    "reviewCount": "3",
+    "bestRating": "5"
   }
 }
 </script>

@@ -6,7 +6,7 @@ const Image = require("@11ty/eleventy-img");
 
 module.exports = function(eleventyConfig) {
   // Image optimization shortcode
-  eleventyConfig.addShortcode("image", async function(src, alt, sizes = "100vw", loading = "lazy") {
+  eleventyConfig.addShortcode("image", async function(src, alt, sizes = "100vw", loading = "lazy", fetchpriority) {
     const imagePath = path.join("src", src);
     
     if (!fs.existsSync(imagePath)) {
@@ -32,8 +32,11 @@ module.exports = function(eleventyConfig) {
         sizes,
         loading,
         decoding: "async",
-        style: "width: 100%; height: auto; object-fit: cover;", // Add responsive styling
+        style: "width: 100%; height: auto; object-fit: cover;",
       };
+      if (fetchpriority) {
+        imageAttributes.fetchpriority = fetchpriority;
+      }
 
       return Image.generateHTML(metadata, imageAttributes);
     } catch (error) {
@@ -77,7 +80,7 @@ module.exports = function(eleventyConfig) {
         <picture>
           <source type="image/webp" srcset="${webp.map(img => `${img.url} ${img.width}w`).join(', ')}" sizes="(max-width: 768px) 100vw, 400px">
           <source type="image/jpeg" srcset="${jpeg.map(img => `${img.url} ${img.width}w`).join(', ')}" sizes="(max-width: 768px) 100vw, 400px">
-          <img src="${jpeg[0].url}" alt="${alt}" loading="lazy" decoding="async">
+          <img src="${jpeg[0].url}" alt="${alt}" loading="lazy" decoding="async" width="600" height="800">
         </picture>
       </a>`;
 
@@ -279,6 +282,13 @@ module.exports = function(eleventyConfig) {
       return dateObj.toISOString();
     }
     
+    if (format === "YYYY-MM-DD") {
+      const y = dateObj.getFullYear();
+      const m = String(dateObj.getMonth() + 1).padStart(2, '0');
+      const d = String(dateObj.getDate()).padStart(2, '0');
+      return `${y}-${m}-${d}`;
+    }
+
     // Default format
     return dateObj.toLocaleDateString(locale);
   });

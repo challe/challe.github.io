@@ -24,6 +24,8 @@ canonical: "https://drumla.se/saintpaulior/"
         "name": "{{ product.title }}",
         "description": "{{ product.description }}",
         "image": "{{ site.url }}/{{ product.imagePath }}",
+        "url": "{{ site.url }}/saintpaulior/{{ product.title | slugify }}/",
+        "sku": "SP-{{ loop.index }}",
         "brand": {
           "@type": "Brand",
           "name": "{{ site.business.name }}"
@@ -34,7 +36,10 @@ canonical: "https://drumla.se/saintpaulior/"
           "price": "{{ price }}",
           "itemCondition": "https://schema.org/NewCondition",
           "availability": "https://schema.org/InStock",
-          "url": "{{ site.url }}/saintpaulior/{{ product.title | slugify }}/"
+          "url": "{{ site.url }}/saintpaulior/{{ product.title | slugify }}/",
+          "seller": {
+            "@id": "https://drumla.se/#business"
+          }
         }
       }
     }{% if not loop.last %},{% endif %}

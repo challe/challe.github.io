@@ -177,8 +177,8 @@ breadcrumbs:
       "url": "{{ site.url }}/assets/images/favicon-96x96.png"
     }
   },
-  "datePublished": "{{ build.date }}T00:00:00Z",
-  "dateModified": "{{ build.date }}T00:00:00Z",
+  "datePublished": "2025-07-15T00:00:00+02:00",
+  "dateModified": "2026-03-30T00:00:00+02:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "{{ site.url }}/skötselråd/"
@@ -196,7 +196,7 @@ breadcrumbs:
       "name": "{{ faq.question }}",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "{{ faq.answer }}"
+        "text": "{{ faq.detailedAnswer }}"
       }
     }{% if not loop.last %},{% endif %}
     {%- endfor %}

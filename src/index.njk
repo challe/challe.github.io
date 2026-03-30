@@ -28,6 +28,10 @@ ogUrl: "https://drumla.se/"
   "alternateName": ["Drumla Växter", "Drumla Saintpaulior"],
   "description": "{{ description }}",
   "image": "{{ site.url }}{{ site.defaultImage }}",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "{{ site.url }}/assets/images/favicon-96x96.png"
+  },
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Åkre 103",
@@ -152,7 +156,7 @@ ogUrl: "https://drumla.se/"
       "name": "Var finns Drumla?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Drumla finns i Rogsta, Hudiksvall. Jag har min verksamhet på Åkre 103, 82493 Hudiksvall."
+        "text": "Drumla finns i Rogsta, Hudiksvall. Jag har min verksamhet på Åkre 103, 824 93 Hudiksvall."
       }
     },
     {
@@ -217,7 +221,7 @@ ogUrl: "https://drumla.se/"
         </div>
         <div class="col-lg-6 col-md-12 col-12">
           <div class="header-image">
-            {% image "assets/images/header/hero-image-flower.jpg", "Saintpaulior och växter från Rogsta", "(max-width: 768px) 100vw, 50vw", "eager" %}
+            {% image "assets/images/header/hero-image-flower.jpg", "Saintpaulior och växter från Rogsta", "(max-width: 768px) 100vw, 50vw", "eager", "high" %}
           </div>
         </div>
       </div>
@@ -436,7 +440,7 @@ ogUrl: "https://drumla.se/"
                   </div>
                   <div class="contact-content">
                     <h4>Kontaktuppgifter</h4>
-                    <p>072 212 17 24</p>
+                    <p>072-212 17 24</p>
                     <p><a id="email-link" href="#" rel="nofollow"></a></p>
                   </div>
                 </div>

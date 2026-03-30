@@ -41,6 +41,8 @@ eleventyComputed:
   "name": "{{ product.title }}",
   "description": "{{ product.description }}",
   "image": "{{ site.url }}/{{ product.imagePath }}",
+  "url": "{{ site.url }}/saintpaulior/{{ product.title | slugify }}/",
+  "sku": "SP-{{ product.number or loop.index }}",
   "category": "Krukväxter > Saintpaulia",
   "brand": {
     "@type": "Brand",
@@ -48,6 +50,7 @@ eleventyComputed:
   },
   "isRelatedTo": {
     "@type": "ItemList",
+    "@id": "{{ site.url }}/saintpaulior/#itemlist",
     "name": "Alla Saintpaulior",
     "url": "{{ site.url }}/saintpaulior/"
   },
@@ -57,7 +60,10 @@ eleventyComputed:
     "price": "{{ price }}",
     "itemCondition": "https://schema.org/NewCondition",
     "availability": "https://schema.org/InStock",
-    "url": "{{ site.url }}/saintpaulior/{{ product.title | slugify }}/"
+    "url": "{{ site.url }}/saintpaulior/{{ product.title | slugify }}/",
+    "seller": {
+      "@id": "https://drumla.se/#business"
+    }
   }
 }
 </script>
