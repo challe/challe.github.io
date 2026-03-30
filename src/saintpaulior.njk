@@ -33,7 +33,8 @@ canonical: "https://drumla.se/saintpaulior/"
           "priceCurrency": "SEK",
           "price": "{{ price }}",
           "itemCondition": "https://schema.org/NewCondition",
-          "availability": "https://schema.org/InStock"
+          "availability": "https://schema.org/InStock",
+          "url": "{{ site.url }}/saintpaulior/{{ product.title | slugify }}/"
         }
       }
     }{% if not loop.last %},{% endif %}

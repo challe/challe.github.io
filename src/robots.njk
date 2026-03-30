@@ -7,4 +7,33 @@ User-agent: *
 Disallow: {{ page }}
 {%- endfor %}
 
+# AI search crawlers (allowed)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# AI training crawlers (blocked)
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
 Sitemap: {{ site.url }}/sitemap.xml

@@ -1,5 +1,5 @@
 ---
-title: "Ystegårns höstmarknad 2025 🍂"
+title: "Ystegårns höstmarknad 2025"
 description: "Jag deltar på Ystegårns höstmarknad söndag 14:e september kl. 11-16. Kom och handla vackra sticklingar!"
 date: 2025-09-07
 eventDate: 2025-09-14
@@ -9,12 +9,26 @@ eventLink: "https://www.facebook.com/events/hillsta-8-forsa/h%C3%B6stmarknad-p%C
 tags:
   - blog
   - höstmarknad
-  - Ystegårn
+  - ystegårn
 layout: post.njk
 permalink: "aktuellt/ystegarn-hostmarknad-2025/"
 image: "assets/images/blog/ystegarn.jpg"
 ---
 
-Kom och handla sticklingar av Saintpaulior på Ystegårns höstmarknad söndag den 14:e september! Jag finns på plats mellan kl. 11-16 med ett utvalt sortiment av Saintpaulia-sticklingar i olika färger och sorter. Välkommen att besöka mig och ta del av höstens utbud! 🍂
+Söndagen den 14 september finns jag på plats på Ystegårns höstmarknad i Hillsta. Marknaden pågår mellan kl. 11 och 16, och det brukar vara ett riktigt trivsamt arrangemang med mycket att se och göra.
 
-Jag ser fram emot att träffa er på marknaden!
+## Vad jag tar med
+
+Jag har med mig Saintpaulia-sticklingar i flera sorter, från klassiska enkel-blommande i blått, rosa och lila till mer ovanliga sorter med dubbla blommor och brokiga blad. Priserna ligger på 45 kr (standard), 75 kr (exklusiv) och 125 kr (premium).
+
+Alla sticklingar är handodlade hemma i Rogsta i ekologisk jord. De är rotade och redo att växa vidare hos dig.
+
+## Om Ystegårns höstmarknad
+
+Ystegårn i Hillsta är känt för sina fina marknader. Höstmarknaden samlar försäljare av hantverk, livsmedel, växter och mycket annat. Det är en bra anledning att ta en utflykt till Forsa-trakten och njuta av den hälsingska hösten.
+
+Förutom mina Saintpaulior brukar det finnas allt från hemgjord sylt och honung till trähantverk och textilier. Ta gärna med dig familjen, det finns något för alla.
+
+## Praktiskt
+
+Marknaden ligger på Ystegårn i Hillsta, strax utanför Forsa. Parkering finns på plats. Jag tar betalt med Swish. Välkommen att hälsa på!

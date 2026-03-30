@@ -37,29 +37,27 @@
 
   <!--====== Canonical URL ======-->
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+  <link rel="alternate" hreflang="sv" href="{{ site.url }}{{ page.url }}" />
   {% if pagination %}
     {% if pagination.href.previous %}<link rel="prev" href="{{ site.url }}{{ pagination.href.previous }}" />{% endif %}
     {% if pagination.href.next %}<link rel="next" href="{{ site.url }}{{ pagination.href.next }}" />{% endif %}
   {% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link rel="stylesheet" href="/assets/css/bootstrap.css" />
-
-  <!--====== Line Icons css ======-->
-  <link rel="stylesheet" href="/assets/css/lineicons.css" />
-
-  <!--====== Tiny Slider css ======-->
-  <link rel="stylesheet" href="/assets/css/tiny-slider.css" />
-
-  <!--====== Simple Lightbox css ======-->
-  <link rel="stylesheet" href="/assets/css/simple-lightbox.min.css" />
-
   <link rel="stylesheet" href="{% asset '/assets/css/style.css' %}" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+
+  <!--====== Non-critical CSS (deferred) ======-->
+  <link rel="stylesheet" href="/assets/css/lineicons.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="/assets/css/tiny-slider.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="/assets/css/simple-lightbox.min.css" media="print" onload="this.media='all'" />
 
   {% block styles %}{% endblock %}
 
-  {% if preloadImage %}<link rel="preload" as="image" href="{{ preloadImage }}">{% endif %}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+  {% if preloadImage %}<link rel="preload" as="image" imagesrcset="/assets/images/optimized/hero-image-flower-300w.webp 300w, /assets/images/optimized/hero-image-flower-600w.webp 600w, /assets/images/optimized/hero-image-flower-900w.webp 900w, /assets/images/optimized/hero-image-flower-1200w.webp 1200w" imagesizes="(max-width: 768px) 100vw, 50vw" type="image/webp">{% endif %}
 
   <link rel="icon" type="image/png" href="/assets/images/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />

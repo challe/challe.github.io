@@ -122,7 +122,18 @@ ogType: "article"
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "location": {
     "@type": "Place",
-    "name": "{{ location }}"
+    "name": "{{ location }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "{{ location }}",
+      "addressRegion": "Gävleborgs län",
+      "addressCountry": "SE"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Drumla",
+    "url": "{{ site.url }}"
   },
   "image": "{{ site.url }}/{{ image or 'assets/images/blog/forsagarden.jpg' }}",
   "url": "{{ site.url }}{{ page.url }}"{% if eventLink %},

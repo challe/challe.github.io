@@ -21,8 +21,9 @@ ogUrl: "https://drumla.se/"
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "additionalType": ["https://schema.org/Florist", "https://schema.org/Store"],
+  "@type": "Florist",
+  "@id": "https://drumla.se/#business",
+  "additionalType": ["https://schema.org/Store"],
   "name": "{{ site.business.name }}",
   "alternateName": ["Drumla Växter", "Drumla Saintpaulior"],
   "description": "{{ description }}",
@@ -31,7 +32,7 @@ ogUrl: "https://drumla.se/"
     "@type": "PostalAddress",
     "streetAddress": "Åkre 103",
     "addressLocality": "Hudiksvall",
-    "postalCode": "82493",
+    "postalCode": "824 93",
     "addressCountry": "SE",
     "addressRegion": "Gävleborgs län"
   },
@@ -42,11 +43,14 @@ ogUrl: "https://drumla.se/"
   },
   "telephone": "+46722121724",
   "url": "{{ site.url }}",
-  "openingHours": "Mo,We,Fr 12:00-17:00",
-  "acceptsReservations": true,
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "12:00", "closes": "17:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "12:00", "closes": "17:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "12:00", "closes": "17:00"}
+  ],
   "paymentAccepted": ["Swish"],
   "currenciesAccepted": "SEK",
-  "priceRange": "45-125",
+  "priceRange": "45 SEK - 125 SEK",
   "foundingDate": "2025-06-27",
   "sameAs": [
     "https://www.instagram.com/drumla.se",
@@ -93,7 +97,7 @@ ogUrl: "https://drumla.se/"
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5",
-            "reviewCount": "1",
+            "reviewCount": "3",
             "bestRating": "5"
           },
           "review": [
@@ -102,6 +106,20 @@ ogUrl: "https://drumla.se/"
               "author": {"@type": "Person", "name": "Berit"},
               "datePublished": "2025-08-02",
               "reviewBody": "Idag köpte jag jättefina och väldigt goda hallon, tack Therese🌸 och utmärkt rensade också, så lyxigt👍",
+              "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+            },
+            {
+              "@type": "Review",
+              "author": {"@type": "Person", "name": "Katrin Franck"},
+              "datePublished": "2025-08-30",
+              "reviewBody": "Hallonen är så stora och fina och mycket goda! Vi åt dom lätt värmda med vaniljglass och det var sååå gott!!",
+              "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+            },
+            {
+              "@type": "Review",
+              "author": {"@type": "Person", "name": "Ernst Lindberg"},
+              "datePublished": "2025-12-30",
+              "reviewBody": "Tack Drumla för alla goda hallon och fina växter du levererar!",
               "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
             }
           ]
@@ -114,35 +132,13 @@ ogUrl: "https://drumla.se/"
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Review",
-  "author": {
-    "@type": "Person",
-    "name": "Berit"
-  },
-  "datePublished": "2025-08-02",
-  "reviewBody": "Idag köpte jag jättefina och väldigt goda hallon, tack Therese🌸 och utmärkt rensade också, så lyxigt👍",
-  "reviewRating": {
-    "@type": "Rating",
-    "ratingValue": "5",
-    "bestRating": "5"
-  },
-  "itemReviewed": {
-    "@type": "Product",
-    "name": "Färska Hallon",
-    "description": "Färska hallon från Rogsta, Hudiksvall. Handplockade och ekologiska, perfekta för alla tillfällen.",
-    "image": "{{ site.url }}/assets/images/askar.jpeg",
-    "brand": {
-      "@type": "Brand",
-      "name": "{{ site.business.name }}"
-    },
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "SEK",
-      "price": "50",
-      "itemCondition": "https://schema.org/NewCondition",
-      "availability": "https://schema.org/InStock",
-      "url": "{{ site.url }}/hallon/"
-    }
+  "@type": "WebSite",
+  "name": "Drumla",
+  "url": "{{ site.url }}",
+  "inLanguage": "sv",
+  "description": "{{ description }}",
+  "publisher": {
+    "@id": "https://drumla.se/#business"
   }
 }
 </script>
@@ -367,6 +363,8 @@ ogUrl: "https://drumla.se/"
           <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="4" aria-label="Slide 5"></button>
         </div>
         
         <div class="row justify-content-center carousel-inner">
@@ -375,6 +373,18 @@ ogUrl: "https://drumla.se/"
               <div class="inner-content quote">
                 <h2>Idag köpte jag jättefina och väldigt goda hallon, tack Therese🌸 och utmärkt rensade också, så lyxigt👍</h2>
                 <p>Ett fint meddelande från en kund via Facebook</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+              <div class="inner-content quote">
+                <h2>Tack Drumla för alla goda hallon och fina växter du levererar!</h2>
+                <p>Ernst Lindberg via Google</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+              <div class="inner-content quote">
+                <h2>Hallonen är så stora och fina och mycket goda! Vi åt dom lätt värmda med vaniljglass och det var sååå gott!!</h2>
+                <p>Katrin Franck via Google</p>
               </div>
             </div>
             <div class="carousel-item" data-bs-interval="10000">
@@ -439,7 +449,7 @@ ogUrl: "https://drumla.se/"
                   <div class="contact-content">
                     <h4>Adress</h4>
                     <p>Åkre 103</p>
-                    <p>82493 Hudiksvall</p>
+                    <p>824 93 Hudiksvall</p>
                   </div>
                 </div>
               </div>

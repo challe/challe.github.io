@@ -1,0 +1,100 @@
+---
+layout: base.njk
+permalink: "/om/"
+title: "Om Drumla"
+description: "Drumla drivs av Therese i Rogsta, Hudiksvall. Handodlade Saintpaulia-sticklingar och färska hallon från en liten odling i Hälsingland."
+keywords: "om Drumla, Therese, Rogsta, Hudiksvall, Hälsingland, saintpaulior, växtodling, småföretag"
+ogDescription: "Drumla drivs av Therese i Rogsta, Hudiksvall. Handodlade Saintpaulia-sticklingar och färska hallon."
+ogImage: "/assets/images/about/baklucke-smaller.jpg"
+breadcrumbs:
+  - name: "Hem"
+    url: "/"
+    current: false
+  - name: "Om Drumla"
+    url: "/om/"
+    current: true
+---
+
+{% block jsonld %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "Om Drumla",
+  "description": "{{ description }}",
+  "url": "{{ site.url }}/om/",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Therese",
+    "jobTitle": "Ägare",
+    "worksFor": {
+      "@id": "https://drumla.se/#business"
+    },
+    "knowsAbout": ["Saintpaulia", "Afrikanska violer", "Växtförökning", "Sticklingar", "Ekologisk odling"],
+    "sameAs": [
+      "https://www.instagram.com/drumla.se"
+    ]
+  }
+}
+</script>
+{% endblock %}
+
+<!-- Hero -->
+<section class="header-area header-eight">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-12 col-md-12 col-12">
+        <div class="header-content text-center">
+          <h1>Om Drumla</h1>
+          <p>Handodlade växter och bär från Rogsta i Hälsingland</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "breadcrumbs.njk" %}
+
+<section class="about-five py-5">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-6">
+        <div style="aspect-ratio: 4/3; overflow: hidden; border-radius: 0.5rem;">
+          {% image "assets/images/about/baklucke-smaller.jpg", "Therese säljer Saintpaulior på marknad i Hälsingland", "(max-width: 768px) 100vw, 50vw" %}
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-3">Från hobby till småföretag</h2>
+        <p>Jag heter Therese och bor i Rogsta, en liten by ungefär 15 minuter norr om Hudiksvalls centrum. Drumla startade den 27 juni 2025, men idén hade vuxit fram under hela våren ur ett allt större intresse för Saintpaulior.</p>
+        <p>Det började med att jag köpte några sticklingar på nätet. En sort blev snart tio, och tio blev trettio. Jag märkte att det fanns en värld av färger, former och mönster som jag aldrig sett i vanliga butiker. Dubbla, krusiga, fransiga, tvåfärgade. Varje sort hade sitt eget uttryck.</p>
+        <p>Snart började jag föröka dem själv. Ett enda blad kan bli en hel planta, men det tar tid. Tre månader eller mer för att ett blad ska rota sig och bilda en stickling som är stark nog att flytta hem till någon annan. Den väntan tar jag hand om, så att du får en frisk och rotad planta direkt.</p>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="fw-bold mb-3">Hur jag odlar</h2>
+        <p>Alla mina sticklingar växer i ekologisk jord, helt utan bekämpningsmedel eller konstgödsel. Det ger friska plantor som mår bra från början. Jag odlar hemma i Rogsta och har hand om varje planta från blad till färdig stickling.</p>
+        <p>Just nu har jag ett sortiment med både vanliga och sällsynta Saintpaulior. En del är klassiska sorter som är lätta att sköta, andra är ovanliga samlarsorter som är svåra att hitta någon annanstans. Priset beror på sortens sällsynthet: standard kostar 45 kr, exklusiva 75 kr och premium 125 kr.</p>
+
+        <h2 class="fw-bold mt-5 mb-3">Hallon på sommaren</h2>
+        <p>Under juli och augusti säljer jag också färska hallon från min odling. De plockas för hand och säljs färdigrensade, redo att ätas direkt, bakas med eller frysas in. Även hallonen odlas utan bekämpningsmedel.</p>
+
+        <h2 class="fw-bold mt-5 mb-3">Så handlar du</h2>
+        <p>Jag har ingen webbutik. Allt hämtas hemma hos mig i Rogsta, Hudiksvall. Du är välkommen att höra av dig via telefon (072-212 17 24), mejl eller kontaktformuläret på hemsidan. Jag dyker också upp på bakluckeloppisar och skördedagar ibland. Kolla <a href="/aktuellt/">aktuellt</a> för kommande evenemang, eller <a href="https://www.instagram.com/drumla.se" target="_blank">följ mig på Instagram</a> för att hänga med.</p>
+
+        <div class="mt-5 p-4" style="background: var(--beige-1); border: 1px solid rgba(0,0,0,0.06); border-radius: 0.75rem;">
+          <div class="row align-items-center g-3">
+            <div class="col-md-8">
+              <h3 style="font-family: var(--font-family-header); font-size: 1.3rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem;">Vill du se sortimentet?</h3>
+              <p class="mb-0" style="color: #555; font-size: 0.95rem;">Kolla in vilka Saintpaulior jag har just nu.</p>
+            </div>
+            <div class="col-md-4 text-md-end">
+              <a href="/saintpaulior/" class="btn primary-btn">Se mina sorter</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
