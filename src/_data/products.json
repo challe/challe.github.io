@@ -4,6 +4,9 @@
       "number": 1,
       "title": "Rob's Mad Cat",
       "description": "Dubbla rosaskära blommor med blå fantasistänk och röd-lila kanter. Mörkt, sågtandat lövverk i semiminiatyrformat.",
+      "highlight": "En av mina absoluta favoriter. Fantasistänket gör att ingen blomma ser likadan ut, varje gång den slår ut blir det en liten överraskning. Semiminiatyrformatet gör den perfekt för den som inte har så mycket plats.",
+      "careNote": "Trivs bäst i ljust, indirekt ljus. Semiminiatyrer behöver mindre krukor än vanliga sorter, så välj en kruka på max 6-7 cm. Vattna försiktigt underifrån.",
+      "size": "Semiminiatyr",
       "imageAlt": "Rob's Mad Cat Saintpaulia stickling med dubbla rosaskära blommor och blå fantasistänk",
       "imagePath": "assets/images/blog/madcat-2.jpg",
       "category": "premium"
@@ -12,6 +15,9 @@
       "number": 2,
       "title": "Two W Miss Sophie",
       "description": "Dubbla ljusrosa stjärnblommor med tunna fuchsiaröda kanter. Mörkgrönt, snäckkantat bladverk med lätt textur. Rikblommande och pålitlig sort.",
+      "highlight": "Miss Sophie har ett väldigt elegant uttryck tack vare de fuchsiaröda kanterna på de ljusrosa blommorna. En pålitlig sort som brukar tacka bra för en ljus plats.",
+      "careNote": "Snäckkantade blad samlar lätt damm, så torka försiktigt med en mjuk pensel ibland. Trivs bäst i ett östfönster med morgonljus.",
+      "size": "Standard",
       "imageAlt": "Two W Miss Sophie Saintpaulia med dubbla ljusrosa stjärnblommor och fuchsiaröda kanter",
       "imagePath": "assets/images/blog/misssohpie.jpg",
       "category": "exklusiv"
@@ -20,6 +26,9 @@
       "number": 3,
       "title": "Rhapsodie Rosalie",
       "description": "Halvdubbla korallrosa och vita blommor med krusiga kanter. Mellangrönt, slätt bladverk.",
+      "highlight": "Rosalie sticker ut med sin ovanliga korallrosa ton som skiftar beroende på ljuset. De krusiga kanterna ger blommorna en fyllig, nästan rosliknande känsla. En sort som ofta väcker frågor från besökare.",
+      "careNote": "Gillar jämn temperatur och mår bra av regelbunden men svag gödning under växtsäsongen. Undvik att flytta runt den för mycket, den trivs bäst när den får stå kvar på sin plats.",
+      "size": "Standard",
       "imageAlt": "Rhapsodie Rosalie Saintpaulia med halvdubbla korallrosa och vita blommor",
       "imagePath": "assets/images/blog/rosalie.jpg",
       "category": "premium"
@@ -28,6 +37,9 @@
       "number": 4,
       "title": "Edge of darkness",
       "description": "Halvdubbla mörklila stjärnblommor med krusiga vita kanter. Brokligt mörkgrönt och elfenbensfärgat bladverk, sågtandat med röd undersida.",
+      "highlight": "Det brokiga bladverket gör att den här sorten är vacker även utan blommor. Kontrasten mellan de mörklila blommorna och de ljusa bladkanterna är slående. En riktig samlarfavorit som inte går att hitta i vanliga butiker.",
+      "careNote": "Brokiga sorter behöver lite mer ljus än vanliga för att behålla sina bladmönster. Undvik direkt sol men ge den en riktigt ljus plats. Vattna som vanligt underifrån med ljummet vatten.",
+      "size": "Standard",
       "imageAlt": "Edge of Darkness Saintpaulia med halvdubbla mörklila stjärnblommor och vita kanter",
       "imagePath": "assets/images/blog/edge3.jpg",
       "category": "premium"
@@ -36,6 +48,9 @@
       "number": 5,
       "title": "Pearl Game",
       "description": "Ett stort antal enkla lila blommor med vita inslag och öga. Blommar rikligt och länge. Bladen är ljusgröna med brokiga färger.",
+      "highlight": "Pearl Game har ett fint samspel mellan de lila blommorna med sitt vita öga och det brokiga bladverket. De enkla blommorna bildar fina klasar, och bladen ger den extra charm även mellan blomningarna.",
+      "careNote": "Brokiga blad behöver lite mer ljus för att mönstret ska vara tydligt. Se till att den får en ljus plats utan direkt sol. Vattna något sparsammare än helgröna sorter.",
+      "size": "Standard",
       "imageAlt": "Pearl Game Saintpaulia med enkla lila blommor och vita inslag, ljusgröna brokiga blad",
       "imagePath": "assets/images/blog/biser3.jpg",
       "category": "premium"
@@ -44,6 +59,9 @@
       "number": 6,
       "title": "Rob's Vanilla Trail",
       "description": "Fyllda blommor i gräddvitt till svagt rosaskimrande nyanser. Mörkgrönt bladverk i semiminiatyrformat med sågtandade, spetsiga blad och en lätt bucklig struktur.",
+      "highlight": "En trail-sort, vilket betyder att den växer hängande och passar perfekt i en ampel eller på en hylla. De gräddvita blommorna ser nästan ätbara ut. Ovanlig och eftertraktad bland samlare.",
+      "careNote": "Som trail-sort växer den utåt och nedåt snarare än uppåt. Låt den hänga fritt eller ge den utrymme åt sidorna. Behöver en liten kruka, max 6-7 cm, precis som andra semiminiatyrer.",
+      "size": "Semiminiatyr (trail)",
       "imageAlt": "Rob's Vanilla Trail Saintpaulia med fyllda gräddvita blommor i semiminiatyrformat",
       "imagePath": "assets/images/blog/vanilla.jpg",
       "category": "premium"
@@ -52,6 +70,9 @@
       "number": 7,
       "title": "Kleopatra",
       "description": "Stora, dubbla stjärnblommor med lila kant, blått stänk och strimmor i kontrastfärg. Mellangrönt, slätt bladverk.",
+      "highlight": "Kleopatra lever upp till sitt namn. Blommorna är stora och dramatiska med en färgkombination som verkligen sticker ut. Stänket och strimmorna gör varje blomma unik. En sort som drar blickarna till sig direkt.",
+      "careNote": "Ger sina mest intensiva färger i svalare rumstemperatur, runt 18-20 grader. I varmare miljö kan blommorna bli lite blekare. Trivs i östfönster eller under växtbelysning.",
+      "size": "Standard",
       "imageAlt": "Kleopatra Saintpaulia med stora dubbla stjärnblommor i lila, blått och kontrastfärg",
       "imagePath": "assets/images/blog/kleopatra.jpg",
       "category": "premium"
@@ -60,6 +81,9 @@
       "number": 8,
       "title": "Optimara My Love",
       "description": "Enkel vit stjärnblomma med röd till purpurröd mitt och kronblad som sitter kvar länge. Mellangrönt, slätt och hjärtformat bladverk.",
+      "highlight": "Det röda mittfältet mot de vita kronbladen ger ett grafiskt, nästan målat intryck. En väldigt tacksam och lättskött sort som passar bra för nybörjare.",
+      "careNote": "En av de enklare sorterna att sköta, perfekt för dig som är ny med Saintpaulior. Vattna underifrån när jorden känns torr och ge den ljust, indirekt ljus.",
+      "size": "Standard",
       "imageAlt": "Optimara My Love Saintpaulia med enkel vit stjärnblomma och purpurröd mitt",
       "imagePath": "assets/images/blog/optimara.jpg",
       "category": "exklusiv"
@@ -68,6 +92,9 @@
       "number": 9,
       "title": "Red Summer",
       "description": "Halvdubbla röda stjärnblommor med vågiga, vita kanter som varierar i bredd. Mellangrönt, snäckkantat bladverk.",
+      "highlight": "De röda blommorna med sina vita kanter ger ett livfullt intryck som verkligen lyser upp fönsterbrädan. Kanterna varierar från blomma till blomma, så varje ny blomning ser lite annorlunda ut.",
+      "careNote": "Snäckkantade blad kan ibland krulla sig inåt om luften är för torr. Ställ gärna en skål med vatten i närheten för att höja luftfuktigheten lite.",
+      "size": "Standard",
       "imageAlt": "Red Summer Saintpaulia med halvdubbla röda stjärnblommor och vita kanter",
       "imagePath": "assets/images/blog/redsummer.jpg",
       "category": "exklusiv"
@@ -76,6 +103,9 @@
       "number": 10,
       "title": "Motsart",
       "description": "Dubbla, krusiga blommor i vit med djup lila mitt som mjukt tonar ut. Mellangrönt, slätt bladverk.",
+      "highlight": "Namnet syftar på Mozart, och sorten har verkligen en harmonisk elegans. Den djupa lila mitten som mjukt tonar ut i vitt skapar en fin övergång. En av de vackraste tvåfärgade sorterna jag har.",
+      "careNote": "Trivs i rumstemperatur kring 20 grader. Ge den en ljus plats och undvik kalla drag från fönster på vintern. Mår bra av svag gödning varannan vecka under växtsäsongen.",
+      "size": "Standard",
       "imageAlt": "Motsart Saintpaulia med dubbla krusiga vita blommor och djup lila mitt",
       "imagePath": "assets/images/blog/motsart2.jpg",
       "category": "exklusiv"
@@ -84,6 +114,9 @@
       "number": 11,
       "title": "My Blue-Eyed Girl",
       "description": "Dubbla vita blommor med vacker form och mörkblå mitt, yttre kronblad med grön ton. Symmetrisk rosett med runda, snittade och brokiga blad.",
+      "highlight": "Den mörkblå mitten mot de vita kronbladen ger ett nästan handmålat uttryck. Rosetten växer fint symmetriskt, och de brokiga bladen gör att den ser elegant ut även utan blommor.",
+      "careNote": "Brokiga blad behöver lite extra ljus för att behålla sina mönster. Ge den en ljus plats och håll jämn temperatur. Sorten bildar en fin, kompakt rosett med tiden.",
+      "size": "Standard",
       "imageAlt": "My Blue-Eyed Girl Saintpaulia med dubbla vita blommor och mörkblå mitt",
       "imagePath": "assets/images/blog/flicka.jpg",
       "category": "exklusiv"
@@ -92,6 +125,9 @@
       "number": 12,
       "title": "Blå Saintpaulia",
       "description": "Klassisk sort med enkla blå blommor som påminner om vilda violer. Mellangrönt, slätt bladverk. En tidlös favorit som passar bra i alla fönster.",
+      "highlight": "Den klassiska blå Saintpaulian är den sort som de flesta tänker på när de hör \"afrikansk viol\". Den har odlats i svenska fönster i generationer och är fortfarande lika omtyckt. Enkel, vacker och tacksam.",
+      "careNote": "Perfekt nybörjarsort som tål mycket. Vattna underifrån med ljummet vatten och ge den en ljus plats. En tacksam sort som inte kräver mycket uppmärksamhet.",
+      "size": "Standard",
       "imageAlt": "Blå Saintpaulia med enkla blå blommor och mellangrönt bladverk",
       "imagePath": "assets/images/blog/blue.jpg",
       "category": "standard"
@@ -100,6 +136,9 @@
       "number": 13,
       "title": "Cerise Saintpaulia",
       "description": "Livfull sort med enkla cerisa blommor som ger en stark färgklick i fönstret. Mellangrönt, slätt bladverk. En sort som sticker ut med sin intensiva färg.",
+      "highlight": "Den cerisa färgen är ovanligt intensiv och lyser verkligen upp i fönstret. En bra sort om du vill ha färg utan krångel. Passar fint ihop med de blå och vita sorterna om du vill bygga en samling.",
+      "careNote": "Lättskött sort som inte kräver mycket. Ge den ljus utan direkt sol och vattna när jorden torkat. Bra val för nybörjare.",
+      "size": "Standard",
       "imageAlt": "Cerise Saintpaulia med enkla cerisa blommor och mellangrönt bladverk",
       "imagePath": "assets/images/blog/cerise.jpg",
       "category": "standard"
@@ -108,6 +147,9 @@
       "number": 14,
       "title": "Lila Saintpaulia",
       "description": "Elegant sort med enkla lila blommor i en djup, varm nyans. Mellangrönt, slätt bladverk. Passar fint tillsammans med andra sorter i en samling.",
+      "highlight": "Den djupa lila nyansen har en värme som skiljer den från de blå sorterna. Fin att kombinera med ljusare sorter i en samling. En populär sort bland mina kunder som gillar klassiska, eleganta färger.",
+      "careNote": "Lika enkel att sköta som de andra standardsorterna. Ge den en bra plats med ljus, vattna med ljummet vatten underifrån och undvik att blöta bladen.",
+      "size": "Standard",
       "imageAlt": "Lila Saintpaulia med enkla lila blommor och mellangrönt bladverk",
       "imagePath": "assets/images/blog/lila.jpg",
       "category": "standard"
@@ -116,6 +158,9 @@
       "number": 15,
       "title": "Vit Saintpaulia",
       "description": "Ren och stilfull sort med enkla vita blommor som lyser upp fönsterbrädan. Mellangrönt, slätt bladverk. En fin present och ett bra val för den som är ny med Saintpaulior.",
+      "highlight": "De vita blommorna ger ett rent, lugnt intryck som passar i alla hem. En väldigt populär sort som present, kanske för att den känns tidlös och passar alla. Bra för den som inte odlat Saintpaulior förut.",
+      "careNote": "Vita blommor kan ibland visa bruna kanter om de träffas av kallt vatten. Var extra noga med att vattna underifrån och använd ljummet vatten. I övrigt väldigt lättskött.",
+      "size": "Standard",
       "imageAlt": "Vit Saintpaulia med enkla vita blommor och mellangrönt bladverk",
       "imagePath": "assets/images/blog/white2.jpg",
       "category": "standard"
@@ -124,6 +169,9 @@
       "number": 16,
       "title": "Rosa Saintpaulia",
       "description": "Mjuk och charmig sort med enkla rosa blommor i en varm ton. Mellangrönt, slätt bladverk. En omtyckt sort som gör sig fint på fönsterbrädan.",
+      "highlight": "Den varma rosatonen ger en mjuk och mysig känsla i fönstret. En av de sorter som jag oftast får frågor om på marknader. Passar perfekt om du vill ha en lättskött växt med lite mer färg än den vita.",
+      "careNote": "Enkel att sköta, precis som de andra standardsorterna. Ge den ljust, indirekt ljus och vattna med ljummet vatten underifrån. Mår bra av svag gödning under våren och sommaren.",
+      "size": "Standard",
       "imageAlt": "Rosa Saintpaulia med enkla rosa blommor och mellangrönt bladverk",
       "imagePath": "assets/images/blog/rosa.jpg",
       "category": "standard"
