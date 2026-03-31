@@ -104,16 +104,14 @@ eleventyComputed:
       </div>
 
       <div class="col-lg-6">
-        <p class="text-muted mb-1" style="font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase;">Saintpaulia-stickling{% if product.size %} &middot; {{ product.size }}{% endif %}</p>
+        <p class="mb-1" style="font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #637554;">{{ categoryLabel }}{% if product.size %} &middot; {{ product.size }}{% endif %}</p>
         <h2 class="fw-bold mb-3">{{ product.title }}</h2>
         <p class="mb-3">{{ product.description }}</p>
         {% if product.highlight %}
         <p class="mb-3">{{ product.highlight }}</p>
         {% endif %}
-        <p class="mb-4">
-          <i class="lni {{ categoryIcon }}"></i> {{ categoryLabel }}
-          &nbsp;&middot;&nbsp;
-          <strong>{{ price }} kr</strong>
+        <p class="mb-4" style="font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: #888;">
+          Saintpaulia-stickling &middot; <strong style="color: var(--primary);">{{ price }} kr</strong>
         </p>
         <p class="text-muted mb-4" style="font-size: 0.9rem;">Hämtas hemma hos mig i Rogsta, Hudiksvall. Läs mina <a href="/skötselråd/">skötselråd</a> för att ge din stickling bästa start.</p>
         <a href="#beställ" class="btn primary-btn">Beställ stickling</a>
@@ -145,13 +143,9 @@ eleventyComputed:
     <div class="row">
       <div class="col-xl-8 mx-auto">
         {% set heading = "Intresserad av " + product.title + "?" %}
-        {% set description = "Skicka ett meddelande så svarar jag så snart jag kan. Allt hämtas hemma hos mig i Rogsta, Hudiksvall." %}
+        {% set description = "Skicka ett meddelande så svarar jag så snart jag kan.<br>Allt hämtas hemma hos mig i Rogsta, Hudiksvall." %}
         {% include "contact-form.njk" %}
       </div>
     </div>
   </div>
 </section>
-
-<div class="text-center py-5">
-  <a href="/saintpaulior/" class="btn primary-btn">Se alla sticklingar</a>
-</div>

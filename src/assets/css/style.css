@@ -99,6 +99,10 @@ a {
   font-weight: 500;
 }
 
+a:hover {
+  color: var(--primary);
+}
+
 a,
 button,
 a:hover,
