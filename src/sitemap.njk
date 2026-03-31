@@ -3,12 +3,20 @@ permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 {%- for page in collections.all %}
   {%- if page.url and not (page.url in site.excludedPages) %}
   <url>
     <loc>{{ site.url }}{{ page.url | url }}</loc>
     <lastmod>{{ page.date | date("YYYY-MM-DD") }}</lastmod>
+    {%- if page.data.product and page.data.product.imagePath %}
+    <image:image>
+      <image:loc>{{ site.url }}/{{ page.data.product.imagePath }}</image:loc>
+      <image:title>{{ page.data.product.title }}</image:title>
+      <image:caption>{{ page.data.product.imageAlt }}</image:caption>
+    </image:image>
+    {%- endif %}
   </url>
   {%- endif %}
 {%- endfor %}

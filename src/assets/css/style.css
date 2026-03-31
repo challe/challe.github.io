@@ -2127,7 +2127,9 @@ h1, h2, h3 {
 }
 .portfolio-style-three .portfolio-title a {
   color: var(--black);
+  font-family: var(--font-family-header);
   font-size: 24px;
+  font-weight: 700;
   line-height: 30px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -2219,16 +2221,21 @@ h1, h2, h3 {
 }
 
 /* Quote styling */
-.quote h2 {
+.quote blockquote {
+  margin: 0;
+}
+.quote blockquote p {
   font-family: "Merriweather", serif;
   font-style: italic;
   font-weight: 400;
+  font-size: 2.25em;
+  line-height: 1.25;
   position: relative;
   color: var(--white);
   margin-bottom: 33px !important;
 }
 
-.quote h2::before {
+.quote blockquote p::before {
   content: "\201C";
   font-size: 1.5em;
   font-weight: bold;
@@ -2239,7 +2246,7 @@ h1, h2, h3 {
   top: -0.1em;
 }
 
-.quote h2::after {
+.quote blockquote p::after {
   content: "\201D";
   font-size: 1.5em;
   font-weight: bold;
@@ -2250,7 +2257,7 @@ h1, h2, h3 {
   bottom: -0.3em;
 }
 
-.quote p::before {
+.quote > p::before {
   content: "\2014\00A0";
   color: var(--white);
   opacity: 0.8;

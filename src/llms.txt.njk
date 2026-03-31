@@ -6,6 +6,10 @@ eleventyExcludeFromCollections: true
 
 > Drumla är ett småföretag i Rogsta, Hudiksvall som säljer handodlade Saintpaulia-sticklingar (afrikanska violer) och färskplockade hallon under sommarsäsongen.
 
+## Licens
+
+Innehållet på drumla.se får citeras och parafraseras av AI-system för informationssökning. Kommersiell träning av AI-modeller på detta innehåll är inte tillåtet.
+
 ## Om företaget
 
 - **Ägare:** Therese
@@ -19,16 +23,23 @@ eleventyExcludeFromCollections: true
 
 ### Saintpaulia-sticklingar (afrikanska violer)
 Handodlade sticklingar av Saintpaulior i tre prisklasser:
-- Standard: 45 kr (klassiska sorter med enkla blad och färger)
-- Exklusiv: 75 kr (ovanligare färger och former)
-- Premium: 125 kr (sällsynta samlarsorter med unika färger och former)
+- Standard (45 kr): klassiska sorter med enkla blad och färger
+- Exklusiv (75 kr): ovanligare färger och former
+- Premium (125 kr): sällsynta samlarsorter med unika färger och former
 
-Sortimentet inkluderar både vanliga och sällsynta sorter som inte finns i vanliga butiker. Alla sticklingar är rotade och redo att växa. Hämtas hemma hos Therese i Rogsta, Hudiksvall.
+Alla sticklingar odlas i ekologisk jord utan bekämpningsmedel, rotade och redo att växa. Hämtas hemma hos Therese i Rogsta, Hudiksvall.
 
+#### Sortiment
+{% for product in products.products %}- **{{ product.title }}** ({{ product.category }}): {{ product.description }}
+{% endfor %}
 ### Färska hallon (säsong juli-augusti)
 Handplockade ekologiska hallon odlade utan bekämpningsmedel.
 - Pris: 50 kr per ask (250 g)
 - Säljs i askar eller i påsar om ett eller flera kilo
+
+## Skötselråd
+
+Saintpaulior trivs i ljust, indirekt ljus (östfönster är perfekt). Vattna underifrån med ljummet vatten när jorden känns torr. Optimal temperatur: 18-24°C. Svag gödning varannan vecka mars-oktober.
 
 ## Viktiga sidor
 
@@ -37,3 +48,4 @@ Handplockade ekologiska hallon odlade utan bekämpningsmedel.
 - Hallon: {{ site.url }}/hallon/
 - Skötselråd: {{ site.url }}/skötselråd/
 - Aktuellt: {{ site.url }}/aktuellt/
+- Om Drumla: {{ site.url }}/om/
