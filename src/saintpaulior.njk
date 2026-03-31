@@ -13,6 +13,9 @@ canonical: "https://drumla.se/saintpaulior/"
 {
   "@context": "https://schema.org",
   "@type": "ItemList",
+  "@id": "{{ site.url }}/saintpaulior/#itemlist",
+  "name": "Alla Saintpaulior hos Drumla",
+  "url": "{{ site.url }}/saintpaulior/",
   "itemListElement": [
     {%- for product in products.products %}
     {%- set price = site.pricing[product.category].price or site.pricing.standard.price %}

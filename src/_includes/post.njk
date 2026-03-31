@@ -91,7 +91,9 @@ ogType: "article"
     "name": "{{ site.business.name }}",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ site.url }}{{ site.defaultImage }}"
+      "url": "{{ site.url }}/assets/images/favicon-96x96.png",
+      "width": 96,
+      "height": 96
     }
   },
   "datePublished": "{{ date | date('iso') }}",
@@ -125,7 +127,6 @@ ogType: "article"
     "name": "{{ location }}",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "{{ location }}",
       "addressRegion": "Gävleborgs län",
       "addressCountry": "SE"
     }
