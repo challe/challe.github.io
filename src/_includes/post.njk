@@ -8,6 +8,20 @@ ogType: "article"
   .post-content p:not(.lead) {
     margin-top: 1.5rem !important;
   }
+  .post-content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .post-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
   .event-info-box {
     background: var(--beige-1);
     border: 1px solid rgba(0,0,0,0.05);
@@ -84,7 +98,8 @@ ogType: "article"
   "description": "{{ description }}",
   "author": {
     "@type": "Person",
-    "name": "{{ site.author }}"
+    "name": "{{ site.author }}",
+    "url": "{{ site.url }}/om/"
   },
   "publisher": {
     "@type": "Organization",
@@ -178,7 +193,7 @@ ogType: "article"
     <div class="row">
       <div class="col-lg-8 mx-auto">
         <div class="text-center">
-          <div class="rounded-3 overflow-hidden">
+          <div style="border-radius: 0.75rem; overflow: hidden; height: 350px; display: flex; align-items: center;">
             {% image image or "assets/images/blog/forsagarden.jpg", title, "(max-width: 768px) 100vw, 66vw" %}
           </div>
         </div>

@@ -38,7 +38,8 @@ breadcrumbs:
     "url": "https://drumla.se/hallon/",
     "seller": {
       "@id": "https://drumla.se/#business"
-    }
+    },
+    "priceValidUntil": "2026-12-31"
   },
   "review": [
     {
@@ -46,28 +47,29 @@ breadcrumbs:
       "author": {"@type": "Person", "name": "Berit"},
       "datePublished": "2025-08-02",
       "reviewBody": "Idag köpte jag jättefina och väldigt goda hallon, tack Therese🌸 och utmärkt rensade också, så lyxigt👍",
-      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}
     },
     {
       "@type": "Review",
       "author": {"@type": "Person", "name": "Katrin Franck"},
       "datePublished": "2025-08-30",
       "reviewBody": "Hallonen är så stora och fina och mycket goda! Vi åt dom lätt värmda med vaniljglass och det var sååå gott!!",
-      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}
     },
     {
       "@type": "Review",
       "author": {"@type": "Person", "name": "Ernst Lindberg"},
       "datePublished": "2025-08-15",
       "reviewBody": "Tack Drumla för alla goda hallon och fina växter du levererar!",
-      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",
     "reviewCount": "3",
-    "bestRating": "5"
+    "bestRating": "5",
+    "worstRating": "1"
   }
 }
 </script>
@@ -131,7 +133,7 @@ breadcrumbs:
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <div class="text-center">
-            <div class="rounded-3 overflow-hidden">
+            <div style="border-radius: 0.75rem; overflow: hidden; height: 350px; display: flex; align-items: center;">
               {% image "assets/images/askar.jpeg", "Färska ekologiska hallon i askar från Drumla, Rogsta Hudiksvall", "(max-width: 768px) 100vw, 80vw" %}
             </div>
           </div>
@@ -154,6 +156,9 @@ breadcrumbs:
             {% endif %}
             <p>Mina hallon odlas i Rogsta, Hudiksvall, helt utan bekämpningsmedel eller konstgödsel. De plockas för hand när de är solmogna och som godast. Varje ask rensas noggrant innan den säljs, så hallonen är redo att ätas direkt, bakas med eller frysas in.</p>
 
+            <h3>Om hallonodlingen i Rogsta</h3>
+            <p>Mina hallonbuskar växer i Rogsta, strax utanför Hudiksvall, på ungefär 62 graders nordlig bredd. Här uppe i Hälsingland är sommaren kort men intensiv, med långa ljusa dagar som ger hallonen extra tid att mogna och utveckla smak. Jag odlar härdiga sorter som passar det norrländska klimatet och klarar kalla vintrar. Buskarna odlas helt utan bekämpningsmedel och konstgödsel. Jag gödslar med kompost och låter naturen sköta pollineringen. Det tar några år innan hallonbuskar ger full skörd, men när de väl är etablerade kommer de tillbaka starkare för varje säsong. Jordmånen här i Rogsta, med sin blandning av lera och sand, passar hallonen bra.</p>
+
             <h3>Säsong och tillgänglighet</h3>
             <p>Hallonsäsongen varar normalt från mitten av juli till slutet av augusti, beroende på väder och sol. Det bästa sättet att veta när det finns hallon att köpa är att följa mig på <a href="https://www.instagram.com/drumla.se" target="_blank">Instagram</a> eller skicka ett meddelande via formuläret nedan så kontaktar jag dig när säsongen börjar.</p>
             <p>Hallonen tar ofta slut snabbt, så det kan vara bra att boka i förväg om du vill ha en större mängd.</p>
@@ -164,6 +169,11 @@ breadcrumbs:
             <h3>Förvaring och tips</h3>
             <p>Färska hallon håller sig bäst i kylskåp och bör ätas inom ett par dagar. Vill du spara dem längre går det utmärkt att frysa in dem. Sprid ut hallonen i ett enda lager på en bricka och frys, flytta sedan över till en påse. Då fryser de inte ihop och du kan ta ut precis så många du behöver.</p>
             <p>Hallonen passar perfekt till frukost med yoghurt, som dessert med glass, i smoothies eller till bakning. Lätt värmda med en klick vaniljglass är en favorit bland mina kunder.</p>
+
+            <h3>Så får du ut mest av dina hallon</h3>
+            <p>Ett perfekt moget hallon släpper lätt från plantan när du försiktigt drar i det. Om du behöver rycka sitter det kvar lite till. Hallonen har allra bäst smak om du äter dem samma dag, men i kylen håller de sig fina i 2 till 3 dagar. I rumstemperatur bör de ätas inom ett dygn.</p>
+
+            <p>Frusna hallon behöver inte tinas helt innan du använder dem. Lägg dem frysta direkt i smoothies eller gröt, eller värm dem lätt i en kastrull med lite socker till en snabb hallonsås. Till bakning fungerar det bra att lägga dem frusna i smeten, de tinar under gräddningen.</p>
           </div>
 
           {% set heading = "Intresserad av färska hallon?" %}
