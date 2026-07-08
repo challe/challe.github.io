@@ -21,16 +21,17 @@ ogUrl: "https://drumla.se/"
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Florist",
+  "@type": "GardenStore",
   "@id": "https://drumla.se/#business",
-  "additionalType": ["https://schema.org/Store"],
   "name": "{{ site.business.name }}",
   "alternateName": ["Drumla Växter", "Drumla Saintpaulior"],
   "description": "{{ description }}",
   "image": "{{ site.url }}{{ site.defaultImage }}",
   "logo": {
     "@type": "ImageObject",
-    "url": "{{ site.url }}/assets/images/favicon-96x96.png"
+    "url": "{{ site.url }}/assets/images/favicon-96x96.png",
+    "width": 96,
+    "height": 96
   },
   "address": {
     "@type": "PostalAddress",
@@ -42,8 +43,8 @@ ogUrl: "https://drumla.se/"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "61.751296",
-    "longitude": "17.121280"
+    "latitude": 61.7646983,
+    "longitude": 17.1717567
   },
   "telephone": "+46722121724",
   "url": "{{ site.url }}",
@@ -72,6 +73,37 @@ ogUrl: "https://drumla.se/"
       "name": "Gävleborgs län"
     }
   ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "3",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Berit"},
+      "datePublished": "2025-08-02",
+      "reviewBody": "Idag köpte jag jättefina och väldigt goda hallon, tack Therese🌸 och utmärkt rensade också, så lyxigt👍",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Katrin Franck"},
+      "datePublished": "2025-08-30",
+      "reviewBody": "Hallonen är så stora och fina och mycket goda! Vi åt dom lätt värmda med vaniljglass och det var sååå gott!!",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Ernst Lindberg"},
+      "datePublished": "2025-08-15",
+      "reviewBody": "Tack Drumla för alla goda hallon och fina växter du levererar!",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}
+    }
+  ],
+  "hasMap": "https://www.google.com/maps/place/Drumla/@61.7646983,17.1717567,17z/data=!3m1!4b1!4m6!3m5!1s0x46641d5fdd6fc90f:0xdc2922381ce99f4a",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Växter och bär",
@@ -97,36 +129,7 @@ ogUrl: "https://drumla.se/"
         "itemOffered": {
           "@type": "Product",
           "name": "Färska hallon",
-          "category": "Bär",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "3",
-            "bestRating": "5"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "author": {"@type": "Person", "name": "Berit"},
-              "datePublished": "2025-08-02",
-              "reviewBody": "Idag köpte jag jättefina och väldigt goda hallon, tack Therese🌸 och utmärkt rensade också, så lyxigt👍",
-              "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
-            },
-            {
-              "@type": "Review",
-              "author": {"@type": "Person", "name": "Katrin Franck"},
-              "datePublished": "2025-08-30",
-              "reviewBody": "Hallonen är så stora och fina och mycket goda! Vi åt dom lätt värmda med vaniljglass och det var sååå gott!!",
-              "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
-            },
-            {
-              "@type": "Review",
-              "author": {"@type": "Person", "name": "Ernst Lindberg"},
-              "datePublished": "2025-12-30",
-              "reviewBody": "Tack Drumla för alla goda hallon och fina växter du levererar!",
-              "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
-            }
-          ]
+          "category": "Bär"
         }
       }
     ]
@@ -172,7 +175,7 @@ ogUrl: "https://drumla.se/"
       "name": "Kan jag beställa sticklingar?", 
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja, du kan kontakta mig på telefon 072 212 17 24 eller via mitt kontaktformulär för att beställa sticklingar. Alla sticklingar hämtas hos mig i Rogsta, Hudiksvall."
+        "text": "Ja, du kan kontakta mig på telefon 072-212 17 24 eller via mitt kontaktformulär för att beställa sticklingar. Alla sticklingar hämtas hos mig i Rogsta, Hudiksvall."
       }
     },
     {
@@ -324,7 +327,7 @@ ogUrl: "https://drumla.se/"
         </div>
         <div class="col-lg-6 col-12">
           <div class="about-five-content">
-            <h6 class="small-title text-lg">OM DRUMLA</h6>
+            <p class="small-title text-lg">OM DRUMLA</p>
             <h2 class="main-title fw-bold">Från hobby till småföretag</h2>
             <div class="about-five-tab">
               <nav>
@@ -375,19 +378,19 @@ ogUrl: "https://drumla.se/"
           <div class="col-xxl-6 col-xl-7 col-lg-8 col-md-9">
             <div class="carousel-item active" data-bs-interval="10000">
               <div class="inner-content quote">
-                <h2>Idag köpte jag jättefina och väldigt goda hallon, tack Therese🌸 och utmärkt rensade också, så lyxigt👍</h2>
+                <blockquote><p>Idag köpte jag jättefina och väldigt goda hallon, tack Therese🌸 och utmärkt rensade också, så lyxigt👍</p></blockquote>
                 <p>Ett fint meddelande från en kund via Facebook</p>
               </div>
             </div>
             <div class="carousel-item" data-bs-interval="10000">
               <div class="inner-content quote">
-                <h2>Tack Drumla för alla goda hallon och fina växter du levererar!</h2>
+                <blockquote><p>Tack Drumla för alla goda hallon och fina växter du levererar!</p></blockquote>
                 <p>Ernst Lindberg via Google</p>
               </div>
             </div>
             <div class="carousel-item" data-bs-interval="10000">
               <div class="inner-content quote">
-                <h2>Hallonen är så stora och fina och mycket goda! Vi åt dom lätt värmda med vaniljglass och det var sååå gott!!</h2>
+                <blockquote><p>Hallonen är så stora och fina och mycket goda! Vi åt dom lätt värmda med vaniljglass och det var sååå gott!!</p></blockquote>
                 <p>Katrin Franck via Google</p>
               </div>
             </div>
@@ -487,7 +490,7 @@ ogUrl: "https://drumla.se/"
     <div class="map-container">
       <object 
       style="border:0; height: 500px; width: 100%;" 
-      data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30214.07969257941!2d17.12128!3d61.751295999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46641d5fdd6fc90f%3A0xdc2922381ce99f4a!2sDrumla!5e0!3m2!1ssv!2sse!4v1755019918479!5m2!1ssv!2sse" 
+      data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1888.5!2d17.1717567!3d61.7646983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46641d5fdd6fc90f%3A0xdc2922381ce99f4a!2sDrumla!5e0!3m2!1ssv!2sse!4v1755019918479!5m2!1ssv!2sse" 
       allowfullscreen 
       loading="lazy" 
       referrerpolicy="no-referrer-when-downgrade">

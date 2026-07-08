@@ -24,6 +24,22 @@ breadcrumbs:
 {% block styles %}
 {% endblock %}
 
+{% block jsonld %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Aktuellt från Drumla",
+  "description": "{{ description }}",
+  "url": "{{ site.url }}/aktuellt/",
+  "inLanguage": "sv",
+  "publisher": {
+    "@id": "https://drumla.se/#business"
+  }
+}
+</script>
+{% endblock %}
+
 <!-- Start Aktuellt Hero Area -->
 <section id="aktuellt-hero" class="header-area header-eight">
   <div class="container">
