@@ -1689,6 +1689,30 @@ h1, h2, h3 {
 .contact-form-wrapper .section-title p {
   color: var(--dark-3);
 }
+.contact-form-wrapper .section-title .pickup-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px auto 0;
+  padding: 10px 20px;
+  background: var(--beige-1);
+  border: 1px solid #e4e1d6;
+  border-radius: 30px;
+  color: var(--primary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: left;
+}
+.contact-form-wrapper .section-title .pickup-note i {
+  color: #637554;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+@media (max-width: 575px) {
+  .contact-form-wrapper .section-title .pickup-note {
+    border-radius: 14px;
+  }
+}
 .contact-form-wrapper .contact-form input,
 .contact-form-wrapper .contact-form textarea {
   padding: 15px 25px;
